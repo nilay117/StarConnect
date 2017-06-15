@@ -11,7 +11,7 @@ app.controller("ArtistCtrl",function ($scope){
 			"img":"img/mw.jpg"
 		},
 		"2": {
-			"code":"1",
+			"code":"2",
 			"name": "Madhur Wadhwa",
 			"subtitle":"Graphic Designer",
 			"fb":"https://www.google.com",
@@ -20,7 +20,7 @@ app.controller("ArtistCtrl",function ($scope){
 			"img":"img/mw.jpg"
 		},
 		"3": {
-			"code":"1",
+			"code":"3",
 			"name": "Madhur Wadhwa",
 			"subtitle":"Graphic Designer",
 			"fb":"https://www.google.com",
@@ -29,7 +29,7 @@ app.controller("ArtistCtrl",function ($scope){
 			"img":"img/mw.jpg"
 		},
 		"4": {
-			"code":"1",
+			"code":"4",
 			"name": "Madhur Wadhwa",
 			"subtitle":"Graphic Designer",
 			"fb":"https://www.google.com",
@@ -38,7 +38,7 @@ app.controller("ArtistCtrl",function ($scope){
 			"img":"img/mw.jpg"
 		},
 		"5": {
-			"code":"1",
+			"code":"5",
 			"name": "Madhur Wadhwa",
 			"subtitle":"Graphic Designer",
 			"fb":"https://www.google.com",
@@ -47,6 +47,12 @@ app.controller("ArtistCtrl",function ($scope){
 			"img":"img/mw.jpg"
 		}
 		
+	}
+
+	$scope.currentArtist = null;
+
+	$scope.setArtist = function(code){
+		$scope.currentArtist = $scope.artists[code];
 	}
 });
 app.controller("CelebCtrl",function ($scope){
