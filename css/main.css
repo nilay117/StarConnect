@@ -168,7 +168,7 @@ body{
 	overflow-x: scroll;
 }
 .artistCard{
-	box-shadow: -2px 2px 5px #808080;
+	box-shadow: 0px 0px 15px #808080;
 	cursor: pointer;
 	height: 210px;
 	padding:2%;
@@ -219,7 +219,7 @@ body{
 	background-color: #5a449a;
 }
 .celebCard{
-	box-shadow: -2px 2px 5px #808080;
+	box-shadow: 0px 0px 15px #808080;
 	cursor: pointer;
 	padding: 0;
 	flex-basis: 200px;
@@ -274,4 +274,131 @@ body{
 {
   background: #5a449a;
   width: 100px;
+}
+.artistWrapper{
+	margin-left:0;
+	overflow-x: hidden;
+	margin-top:0;
+	display: flex;
+	flex-direction: column;
+	width: 100vw;
+	background-color: #f2f2f2;
+}
+.content{
+	margin-left: 5%;
+	display: flex;
+	padding-right: 5%;
+	padding-bottom: 5%;
+}
+.card{
+	position: relative;
+	top: -15vh;
+	margin-right:5%; 
+	background-color: #fff;
+	flex-grow: 0;
+	flex-shrink: 0;
+	flex-basis: 20%;
+	display: flex;
+	box-shadow: 0px 0px 10px #808080;
+	flex-direction: column;
+}
+.card .image{
+	width: 100%;
+	height: 66vh;
+}
+.card .image .button{
+	position: relative;
+	top: 80%;
+	margin:auto; 
+	color: #5a449a;
+	font-size: 120%;
+	font-weight: bold;
+	cursor: pointer;
+	background-color: #fff;
+	border-radius: 50px;
+	width: 25%;
+	padding: 5%;
+	padding-left: 15%;
+	padding-right: 15%;	
+}
+.card .dataArtist{
+	display: flex;
+	flex-direction: column;
+	padding: 25px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.card .dataArtist .about{
+	width: 100%;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	font-size: 80%;
+	text-align:left;
+}
+
+.card .dataArtist .follow{
+	font-size: 90%;
+	margin-top: 5px;
+}
+.sb{
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+.card .dataArtist .follow .sb{
+	color: #808080;
+	display: flex;
+	font-weight: bold;
+	justify-content: space-between;
+	margin-bottom: 5px;
+}
+.videoPlayer{
+	margin-top: 5vh;
+	height: 70vh;
+	padding: 25px;
+	padding-bottom: 60px;
+	margin-bottom: 50px;
+	background-color: #fff;
+	box-shadow: 0px 0px 15px #808080;
+}
+.logos img{
+	width: 40px;
+	margin-right: 10px;
+	height:40px;
+}
+.video{
+	height: 55vh;
+	width: 70%;
+	margin:auto;
+	border: solid 1px #808080;
+	margin-top:3%;
+	margin-bottom: 5%;
+	border-radius: 20px;
+}
+.video iframe{
+	width: 100%;
+	height: 100%;
+	border-7adius: 20px;
+}
+.endorsements{
+	flex-basis: 70%;
+	flex-grow: 0;
+	flex-shrink: 0;
+}
+.endorse{
+	display: flex;
+	color: #999c9e;
+	font-size: 90%;
+	margin-bottom: 5%;
+}
+.endorse .img{
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+}
+.endorse .name{
+	font-size: 150%;
+	font-weight: bold;
+	color: #5a449a;
 }
