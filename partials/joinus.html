@@ -7,11 +7,30 @@
 				</div>
 				<div class="navbar">
 					<ul>
-						<li>What's Up?</li>
+						<li><a ng-href="#!whatsup">What's Up?</a></li>
 						<li>Artists</li>
 						<li class="button"><a ng-href="/#!/joinus">Join Us</a></li>
 					</ul>
 				</div>
 			</div>
-		</div>
+</div>
+<div style="display:flex;flex-direction:column;align-items:center">
+	<p style="font-size:250%;color:#464c4c;font-weight:bold;margin:0;margin-top:3%;padding:0">Join Us</p>
+	<div class="underline" style="width:4em"></div>
+	<div class="form">
+		<form>
+			<label>Name</label>
+			<input type="text" name="name" placeholder="John Doe">
+			<label>E-mail</label>
+			<input type="text" name="email" placeholder="doejohn@contact.com">
+			<label>Password</label>
+			<input type="password" name="password" placeholder="123456">
+			<label>Genre</label>
+			<input type="text" name="genre" placeholder="for eg. Country, Rock">
+			<label>Type</label>
+			<input type="text" name="type" placeholder="for eg. Solo,Band">
+		</form>
+	</div>
+	<buton class="submitButton">Submit</buton>
+</div>
 </div>

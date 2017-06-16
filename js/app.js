@@ -11,5 +11,6 @@ app.config(function($routeProvider){
 			.when("/celebrity/:celebCode",{
 				templateUrl:"../partials/celebrity.html",
 				controller:'celebController'
-			});
+			})
+			.when("/whatsup",{templateUrl:"../partials/whatsup.html"});
 });
