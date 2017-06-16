@@ -379,7 +379,7 @@ body{
 .video iframe{
 	width: 100%;
 	height: 100%;
-	border-7adius: 20px;
+	border-radius: 20px;
 }
 .endorsements{
 	flex-basis: 70%;
@@ -401,4 +401,38 @@ body{
 	font-size: 150%;
 	font-weight: bold;
 	color: #5a449a;
+}
+.content .title{
+	font-size: 300%;
+	color: #5a449a;
+	font-weight:bold;
+	margin-bottom: 5%;
+	margin-left: 2%;
+}
+.applyButton{
+	background-color: #00ffcb;
+	position: relative;
+	top:-3%;
+	left: 70%;
+	width: 20%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	display: flex;
+	cursor: pointer;
+	align-items: center;
+	font-size: 180%;
+	color: #fff;
+	border-radius: 50px;
+	box-shadow: 0px 0px 10px #808080;
+}
+.plus{
+	margin-left: 15px;
+	background-color: #fff;
+	height: 100%;
+	width: 23%;
+	border-radius: 50%;
+}
+.plus img{
+	height: 100%;
+	width: 100%;
 }
