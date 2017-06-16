@@ -1,7 +1,7 @@
-var app = angular.module('starconnect',['ngRoute']);
+var app = angular.module("starconnect",["ngRoute"]);
 
 app.config(function($routeProvider){
 	$routeProvider
-			.when('/',{templateUrl:"partials/main.html"});
+			.when("/",{templateUrl:"partials/main.html"});
 });
 
