@@ -507,3 +507,19 @@ input[type=text],input[type=password]{
 	border-radius: 50px;
 	margin-bottom: 3%;
 }
+.noscroll{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	overflow-x: hidden;
+	margin-bottom: 5%;
+}
+.noscroll .celebCard{
+	margin-top: 7%;
+	flex-basis: 270px;
+	height: 340px;
+	margin-right: 0px;
+}
+.noscroll .celebCard .wrapper{
+	width: 270px;
+}

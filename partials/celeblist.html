@@ -1,0 +1,39 @@
+<div class="artistWrapper">
+	<div class="header" style="height:30vh">
+		<div class="top">
+			<div class="logo">
+				<img src="img/logo.png"/>
+				<div class="text" style="z-index:5;"><a ng-href="#!/">star connect</a></div>
+			</div>
+			<div class="navbar">
+				<ul>
+					<li><a ng-href="#!whatsup">What's Up?</a></li>
+					<li><a ng-href="#!artistlist">Artists</a></li>
+					<li><a ng-href="#!celebritylist">Celebrities</a></li>
+					<li class="button"><a ng-href="/#!/joinus">Join Us</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="heading">
+			<p style="font-size:350%;position:relative;top:-30%;">Celebrities</p>
+		</div>
+	</div>
+	<div class="celebCards">
+		<div class="noscroll">
+			<div class="celebCard" ng-repeat="celeb in celebs" ng-click="setCeleb(celeb.code)">
+			<a ng-href="#!celebrity/{{currentCeleb.code}}">
+				<div class= "image" style="background:url({{celeb.img}});background-size:cover;background-position:50% 50% ;"></div></a>
+				<div class="wrapper">
+					<div class="name">{{celeb.name}}</div>
+						<div class="subtitle">{{celeb.subtitle}}</div>
+						<div class="underline" style="width:8em;height:4px;"></div>
+						<div class="links" >
+							<a href={{celeb.fb}}><img src="img/fb.png" /></a>
+							<a href={{celeb.twitter}}><img src="img/twitter.png" /></a>
+							<a href={{celeb.insta}}><img src="img/insta.png" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -12,5 +12,7 @@ app.config(function($routeProvider){
 				templateUrl:"../partials/celebrity.html",
 				controller:'celebController'
 			})
+			.when("/artistlist",{templateUrl:"../partials/artistlist.html"})
+			.when("/celebritylist",{templateUrl:"../partials/celeblist.html"})
 			.when("/whatsup",{templateUrl:"../partials/whatsup.html"});
 });

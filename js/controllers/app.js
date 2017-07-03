@@ -2,58 +2,63 @@ app.controller("AppController",function ($scope){
 	$scope.artists = {
 		"1": {
 			"code":"1",
-			"name": "Madhur Wadhwa",
+			"name": "Madhur Wadhwa1",
 			"subtitle":"Graphic Designer",
 			"fb":"https://www.google.com",
 			"twitter":"https://www.google.com",
 			"insta":"https://www.google.com",
 			"img":"img/mw.jpg",
 			"followers":"2",
-			"following":"2,000"
+			"following":"2,000",
+			"ranking":"5"
 		},
 		"2": {
 			"code":"2",
-			"name": "Madhur Wadhwa",
+			"name": "Madhur Wadhwa2",
 			"subtitle":"Graphic Designer",
 			"fb":"https://www.google.com",
 			"twitter":"https://www.google.com",
 			"insta":"https://www.google.com",
 			"img":"img/mw.jpg",
 			"followers":"2",
-			"following":"2,000"
+			"following":"2,000",
+			"ranking":"4"
 		},
 		"3": {
 			"code":"3",
-			"name": "Madhur Wadhwa",
+			"name": "Madhur Wadhwa3",
 			"subtitle":"Graphic Designer",
 			"fb":"https://www.google.com",
 			"twitter":"https://www.google.com",
 			"insta":"https://www.google.com",
 			"img":"img/mw.jpg",
 			"followers":"2",
-			"following":"2,000"
+			"following":"2,000",
+			"ranking":"3"
 		},
 		"4": {
 			"code":"4",
-			"name": "Madhur Wadhwa",
+			"name": "Madhur Wadhwa4",
 			"subtitle":"Graphic Designer",
 			"fb":"https://www.google.com",
 			"twitter":"https://www.google.com",
 			"insta":"https://www.google.com",
 			"img":"img/mw.jpg",
 			"followers":"2",
-			"following":"2,000"
+			"following":"2,000",
+			"ranking":"2"
 		},
 		"5": {
 			"code":"5",
-			"name": "Madhur Wadhwa",
+			"name": "Madhur Wadhwa5",
 			"subtitle":"Graphic Designer",
 			"fb":"https://www.google.com",
 			"twitter":"https://www.google.com",
 			"insta":"https://www.google.com",
 			"img":"img/mw.jpg",
 			"followers":"2",
-			"following":"2,000"
+			"following":"2,000",
+			"ranking":"1"
 		}
 		
 	};
@@ -68,7 +73,8 @@ app.controller("AppController",function ($scope){
 			"img":"img/cb.jpg",
 			"followers":"2,000,000",
 			"following":"100",
-			"endorsements":"5"
+			"endorsements":"5",
+			"ranking":"1"
 		},
 		"2": {
 			"code":"2",
@@ -80,7 +86,8 @@ app.controller("AppController",function ($scope){
 			"img":"img/cb.jpg",
 			"followers":"2,000,000",
 			"following":"100",
-			"endorsements":"5"
+			"endorsements":"5",
+			"ranking":"3"
 		},
 		"3": {
 			"code":"3",
@@ -92,7 +99,8 @@ app.controller("AppController",function ($scope){
 			"img":"img/cb.jpg",
 			"followers":"2,000,000",
 			"following":"100",
-			"endorsements":"5"
+			"endorsements":"5",
+			"ranking":"2"
 		},
 		"4": {
 			"code":"4",
@@ -104,7 +112,8 @@ app.controller("AppController",function ($scope){
 			"img":"img/cb.jpg",
 			"followers":"2,000,000",
 			"following":"100",
-			"endorsements":"5"
+			"endorsements":"5",
+			"ranking":"5"
 		},
 		"5": {
 			"code":"5",
@@ -116,7 +125,8 @@ app.controller("AppController",function ($scope){
 			"img":"img/cb.jpg",
 			"followers":"2,000,000",
 			"following":"100",
-			"endorsements":"5"
+			"endorsements":"5",
+			"ranking":"4"
 		}
 		
 	};
