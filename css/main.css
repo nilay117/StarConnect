@@ -101,7 +101,6 @@ a{
 }
 .about{
 	width: 80%;
-	height: 60vh;
 	padding: 10%;
 	margin-left: 0;
 	margin-top:1%;
@@ -145,7 +144,7 @@ a{
 	width: 150px;
 	height: 150px;
 }
-.about .section li .title{
+.title{
 	color: #5a449a;
 	font-size: 200%;
 	font-weight: bold;
@@ -496,6 +495,9 @@ input[type=text],input[type=password]{
 	margin-bottom: 30px;
 }
 .submitButton{
+	border: none;
+	background:none;
+	outline:none;
 	background-color:#fd059f;
 	color: #fff;
 	font-size: 250%;
@@ -522,4 +524,86 @@ input[type=text],input[type=password]{
 }
 .noscroll .celebCard .wrapper{
 	width: 270px;
+}
+.centerpara{
+	padding-left: 5%;
+	width: 90%;
+	font-size: 110%;
+	line-height: 1.3em;
+	color: #808080;
+	text-align: center;
+	padding-bottom: 30px;
+}
+.altlist{
+	display: flex;
+	list-style-type: none;
+	flex-direction: column;
+	width: 80%;
+	margin-left: 10%;
+}
+.altlist li{
+	display: flex;
+	align-items: center;
+	margin-bottom: 5%;
+}
+.altlist li p{
+	color: #808080;
+}
+.altlist li:nth-of-type(even) p{
+	text-align: right;
+}
+.altlist li img{
+	width: 70px;
+	height:100px;
+	margin-right: 20px;
+}
+.altlist li:nth-of-type(even) img{
+	margin-left: 20px;
+}
+.videos{
+	display: flex;
+	justify-content: space-between;
+	width: 80%;
+	margin-left: 10%;
+	list-style-type: none;
+	flex-wrap: wrap;
+}
+.videos li{
+	flex-grow: 0;
+	flex-shrink: 0;
+	flex-basis: 300px;
+	font-weight: bold;
+	color: #808080;
+	margin-bottom: 10px;
+	font-size: 150%;
+}
+.videobox{
+	width: 100%;
+	height: 200px;
+	border: 2px solid #808080;
+	margin-bottom: 10px;
+}
+.videobox iframe{
+	width: 100%;
+	height: 100%;
+}
+.seeall{
+	border: none;
+	outline: none;
+	background:none;
+	margin: auto;
+	font-size: 150%;
+	background-color:#5a449a;
+	color: #fff;
+	padding: 10px;
+	padding-left: 50px;
+	padding-right: 50px;
+	cursor: pointer;
+	z-index: 2;
+	border-radius: 50px;
+	margin-bottom: 7%;
+}
+.seeall a{
+	color: #fff;
+	text-decoration: none;
 }

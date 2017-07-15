@@ -14,5 +14,6 @@ app.config(function($routeProvider){
 			})
 			.when("/artistlist",{templateUrl:"../partials/artistlist.html"})
 			.when("/celebritylist",{templateUrl:"../partials/celeblist.html"})
-			.when("/whatsup",{templateUrl:"../partials/whatsup.html"});
+			.when("/whatsup",{templateUrl:"../partials/whatsup.html"})
+			.when("/trending",{templateUrl:"../partials/trending.html"});
 });

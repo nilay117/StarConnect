@@ -130,7 +130,38 @@ app.controller("AppController",function ($scope){
 		}
 		
 	};
-
+	$scope.trending = {
+		"1":{
+			"src":"https://www.youtube.com/embed/hQDck3xT9TY",
+			"title":"Still Brazy",
+			"artist":"YG"
+		},
+		"2":{
+			"src":"https://www.youtube.com/embed/hQDck3xT9TY",
+			"title":"Still Brazy",
+			"artist":"YG"
+		},
+		"3":{
+			"src":"https://www.youtube.com/embed/hQDck3xT9TY",
+			"title":"Still Brazy",
+			"artist":"YG"
+		},
+		"4":{
+			"src":"https://www.youtube.com/embed/hQDck3xT9TY",
+			"title":"Still Brazy",
+			"artist":"YG"
+		},
+		"5":{
+			"src":"https://www.youtube.com/embed/hQDck3xT9TY",
+			"title":"Still Brazy",
+			"artist":"YG"
+		},
+		"6":{
+			"src":"https://www.youtube.com/embed/hQDck3xT9TY",
+			"title":"Still Brazy",
+			"artist":"YG"
+		}
+	};
 	$scope.currentArtist = null;
 
 	$scope.setArtist = function(code){
