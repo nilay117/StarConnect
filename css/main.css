@@ -2,7 +2,16 @@
 	font-family: 'Mosk';
 	src:url('../fonts/Mosk.ttf');
 }
-
+*,*:before,*:after{
+	padding: 0;
+	margin: 0;
+	box-sizing: content-box !important;
+}
+.container,.row,.col{
+	box-sizing: border-box !important;
+	margin: 0;
+	padding: 0;
+}
 body{
 	margin:0;
 	padding:0;
@@ -10,7 +19,7 @@ body{
 	overflow-x: hidden;
 }
 a{
-	color: inherit;
+	color: #fff !important;
 	text-decoration: none;
 }
 
@@ -89,7 +98,7 @@ a{
 	white-space: nowrap;
 	color: #fff;
 	width: 100%;
-	margin-left:15%;
+	margin-left:10%;
 	padding: 10px;
 	z-index: 5;
 }
@@ -108,6 +117,7 @@ a{
 	padding-bottom: 3%;
 }
 .about .heading,.celebCards .heading,.artistCards .heading{
+	margin-bottom: 5%;
 	color: #464c4c;
 	font-size: 250%;
 	width: 100%;
@@ -310,7 +320,7 @@ a{
 	padding-right: 5%;
 	padding-bottom: 5%;
 }
-.card{
+.box{
 	position: relative;
 	top: -15vh;
 	margin-right:5%; 
@@ -322,11 +332,11 @@ a{
 	box-shadow: 0px 0px 10px #808080;
 	flex-direction: column;
 }
-.card .image{
+.box .image{
 	width: 100%;
 	height: 66vh;
 }
-.card .image .button{
+.box .image .button{
 	position: relative;
 	top: 80%;
 	margin:auto; 
@@ -341,23 +351,25 @@ a{
 	padding-left: 15%;
 	padding-right: 15%;	
 }
-.card .dataArtist{
+.box .dataArtist{
 	display: flex;
 	flex-direction: column;
 	padding: 25px;
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
-.card .dataArtist .about{
+.box .dataArtist .about{
 	width: 100%;
 	height: auto;
 	margin: 0;
 	padding: 0;
 	font-size: 80%;
 	text-align:left;
+	margin-top: 5%;
+	margin-bottom: 15%;
 }
 
-.card .dataArtist .follow{
+.box .dataArtist .follow{
 	font-size: 90%;
 	margin-top: 5px;
 }
@@ -366,12 +378,12 @@ a{
 	width: 100%;
 	justify-content: space-between;
 }
-.card .dataArtist .follow .sb{
+.box .dataArtist .follow .sb{
 	color: #808080;
 	display: flex;
 	font-weight: bold;
 	justify-content: space-between;
-	margin-bottom: 5px;
+	margin-bottom: 5%;
 }
 .videoPlayer{
 	margin-top: 5vh;
@@ -477,22 +489,22 @@ form{
 	height: auto;
 }
 label{
-	color: #d6d0e3;
-	font-size: 120%;
-	text-align: left;
-	margin-bottom: 15px;
+	color: #d6d0e3 !important;
+	font-size: 120% !important;
+	text-align: left !important;
+	margin-bottom: 15px !important;
 }
 input[type=text],input[type=password]{
-	background:none;
-	font-size: 120%;
-	border:none;
-	outline: none;
-	background-color: #fff;
-	width: 100%;
-	border-radius: 15px;
-	padding: 10px;
-	margin-top: 10px;
-	margin-bottom: 30px;
+	background:none !important;
+	font-size: 120% !important;
+	border:none !important;
+	outline: none !important;
+	background-color: #fff !important;
+	width: 100% !important;
+	border-radius: 15px !important;
+	padding: 10px !important;
+	margin-top: 10px !important;
+	margin-bottom: 30px !important;
 }
 .submitButton{
 	border: none;
@@ -553,7 +565,7 @@ input[type=text],input[type=password]{
 	text-align: right;
 }
 .altlist li img{
-	width: 70px;
+	width: 100px;
 	height:100px;
 	margin-right: 20px;
 }
@@ -606,4 +618,82 @@ input[type=text],input[type=password]{
 .seeall a{
 	color: #fff;
 	text-decoration: none;
+}
+.grid{
+	height: 400px;
+	margin-bottom: 50px;
+}
+.grid .img{
+	height: 100%;
+	width: 100%;
+	background:url("../img/mw.jpg");
+	background-size: cover;
+	background-position: 50% 0%;
+}
+.grid .img2{
+	height: 100%;
+	width: 100%;
+	background:url("../img/cb.jpg");
+	background-size: cover;
+	background-position: 50% 0%;
+}
+.leaderboard{
+	height: 450px;
+	margin-bottom: 10%;
+}
+.leaderboard .cover{
+	box-shadow: 0px 0px 20px #808080;
+	z-index: 5;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #5a4793;
+	padding:0 !important;
+	padding-top: 1% !important;
+	padding-bottom: 1% !important;
+}
+.leaderboard .cover p{
+	color: #fff;
+	text-align: center;
+}
+.leaderboard .cover img{
+	width: 100px;
+	height:100px;
+}
+.leaderboard .list{
+	background-color: #e5e5e5;
+	box-shadow: 0px 0px 10px #808080;
+}
+.leaderboard .list ul{
+	height: 80%;
+	margin-top: 10%;
+	overflow-y: scroll;
+	padding: 0;
+	padding-right: 15%;
+	padding-left: 15%;
+}
+.leaderboard .list a{
+	display: flex;
+	cursor: pointer;
+	margin-bottom: 7%;
+	padding-bottom: 10px;
+	border-bottom:0.5px solid #808080;
+}
+.leaderboard .list .image{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	margin-right: 10%;
+}
+.leaderboard .list li div{
+	color: #808080;
+}
+.leaderboard .list li .name{
+	font-weight: bolder;
+	font-size: 150%;
+}
+
+.leaderboard .list li .views{
+	font-size: 80%;
 }

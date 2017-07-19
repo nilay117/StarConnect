@@ -9,6 +9,8 @@
 			<ul>
 					<li><a ng-href="#!trending">Trending</a></li>
 					<li><a ng-href="#!whatsup">What's Up?</a></li>
+						<li><a ng-href="#!artistlist">Artists</a></li>
+					<li><a ng-href="#!celebritylist">Celebrities</a></li>
 					<li class="button"><a ng-href="/#!/joinus">Join Us</a></li>
 				</ul>
 			</div>
@@ -28,7 +30,38 @@
 			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 		</p>
 	</div>
-	<div class="tab"></div>
+		<div class="grid">
+			<div class="container" style="height:100%">
+				<div class="row" style="height:100%">
+					<div class="col s4 #e3f2fd blue lighten-5" style="height:100%;padding:0;overflow:hidden">
+						<div class="img2"></div>
+					</div>
+					<div class="col s8"  style="height:100%;padding:0;overflow:hidden">
+						<div class="container" style="height:100%;margin:0;width:100%"">
+							<div class="row" style="height:100%">
+								<div class="col s12" style="height:50%;padding:0;overflow:hidden">
+									<div class="container" style="height:100%;margin:0;width:100%">
+										<div class="row" style="height:100%">
+											<div class="col s4 #e3f2fd blue lighten-5" style="height:100%;padding:0;overflow:hidden"><div class="img2"></div></div>
+											<div class="col s8 #e3f2fd blue lighten-5" style="height:100%;padding:0;overflow:hidden"><div class="img2"></div></div>
+										</div>
+									</div>
+								</div>
+								<div class="col s12" style="height:50%">
+									<div class="container" style="height:100%;margin:0;width:100%">
+										<div class="row" style="height:100%"> 
+											<div class="col s4 #e3f2fd blue lighten-5" style="height:100%;padding:0;overflow:hidden"><div class="img2"></div></div>
+											<div class="col s4 #e3f2fd blue lighten-5" style="height:100%;padding:0;overflow:hidden"><div class="img2"></div></div>
+											<div class="col s4 #e3f2fd blue lighten-5" style="height:100%;padding:0;overflow:hidden"><div class="img2"></div></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	<div class="celebCards" style="margin-top:0;padding-top:0">
 		<div class="noscroll">
 			<div class="celebCard" ng-repeat="celeb in celebs" ng-click="setCeleb(celeb.code)">

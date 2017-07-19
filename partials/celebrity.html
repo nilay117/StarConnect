@@ -10,6 +10,8 @@
 					<ul>
 					<li><a ng-href="#!trending">Trending</a></li>
 					<li><a ng-href="#!whatsup">What's Up?</a></li>
+					<li><a ng-href="#!artistlist">Artists</a></li>
+					<li><a ng-href="#!celebritylist">Celebrities</a></li>
 					<li class="button"><a ng-href="/#!/joinus">Join Us</a></li>
 				</ul>
 				</div>
@@ -21,16 +23,12 @@
 			</div>
 		</div>
 		<div class="content">
-			<div class="card">
+			<div class="box">
 					<div class="image" style="background:url({{currentCeleb.img}});background-size:cover;background-position: 60% 50%;"><div class="button">FOLLOW</div></div>
 					<div class="dataArtist">
 							<div class="about">
-								<p style="color:#5a449a;font-weight:bold">ABOUT</p>
-								<!-- <p>{{currentArtist.text}}</p> -->
-								<p style="color:#808080">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-								consequat. </p>
+								<p style="color:#5a449a;font-weight:bold;margin-bottom:3%">ABOUT</p>
+								<p style="color:#808080">{{currentCeleb.text}}</p>
 							</div>
 							<div class="follow">
 								<div class="sb">
@@ -50,7 +48,6 @@
 			</div>
 			<div>	
 				<div class="applyButton">
-				<div class="plus"><img src="../img/plus.svg"></div>
 				<div style="margin:auto"> Apply</div>
 				</div>
 				<div class="title">Recent Enodrsements</div>
