@@ -185,6 +185,104 @@ app.controller("AppController",function ($scope){
 			"views":"500k"
 		}
 	};
+	$scope.videos = {
+		"1":{
+			"code":"1",
+			"src":"https://www.youtube.com/embed/hQDck3xT9TY",
+			"title":"Still Brazy",
+			"artist":"YG",
+			"img":"img/cb.jpg",
+			"views":"500k"
+		},
+		"2":{
+			"code":"2",
+			"src":"https://www.youtube.com/embed/hQDck3xT9TY",
+			"title":"Still Brazy",
+			"artist":"YG",
+			"img":"img/cb.jpg",
+			"views":"500k"
+		},
+		"3":{
+			"code":"3",
+			"src":"https://www.youtube.com/embed/hQDck3xT9TY",
+			"title":"Still Brazy",
+			"artist":"YG",
+			"img":"img/cb.jpg",
+			"views":"500k"
+		},
+		"4":{
+			"code":"4",
+			"src":"https://www.youtube.com/embed/hQDck3xT9TY",
+			"title":"Still Brazy",
+			"artist":"YG",
+			"img":"img/cb.jpg",
+			"views":"500k"
+		},
+		"5":{
+			"code":"5",
+			"src":"https://www.youtube.com/embed/hQDck3xT9TY",
+			"title":"Still Brazy",
+			"artist":"YG",
+			"img":"img/cb.jpg",
+			"views":"500k"
+		},
+		"6":{
+			"code":"6",
+			"src":"https://www.youtube.com/embed/hQDck3xT9TY",
+			"title":"Still Brazy",
+			"artist":"YG",
+			"img":"img/cb.jpg",
+			"views":"500k"
+		},
+		"7":{
+			"code":"7",
+			"src":"https://www.youtube.com/embed/hQDck3xT9TY",
+			"title":"Still Brazy",
+			"artist":"YG",
+			"img":"img/cb.jpg",
+			"views":"500k"
+		},
+		"8":{
+			"code":"8",
+			"src":"https://www.youtube.com/embed/hQDck3xT9TY",
+			"title":"Still Brazy",
+			"artist":"YG",
+			"img":"img/cb.jpg",
+			"views":"500k"
+		},
+		"9":{
+			"code":"9",
+			"src":"https://www.youtube.com/embed/hQDck3xT9TY",
+			"title":"Still Brazy",
+			"artist":"YG",
+			"img":"img/cb.jpg",
+			"views":"500k"
+		},
+		"10":{
+			"code":"10",
+			"src":"https://www.youtube.com/embed/hQDck3xT9TY",
+			"title":"Still Brazy",
+			"artist":"YG",
+			"img":"img/cb.jpg",
+			"views":"500k"
+		},
+		"11":{
+			"code":"11",
+			"src":"https://www.youtube.com/embed/hQDck3xT9TY",
+			"title":"Still Brazy",
+			"artist":"YG",
+			"img":"img/cb.jpg",
+			"views":"500k"
+		},
+		"12":{
+			"code":"12",
+			"src":"https://www.youtube.com/embed/hQDck3xT9TY",
+			"title":"Still Brazy",
+			"artist":"YG",
+			"img":"img/cb.jpg",
+			"views":"500k"
+		}
+	};
 	$scope.colleges = {
 		"1":{
 			"img":"img/college.jpg",

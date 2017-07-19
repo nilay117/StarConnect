@@ -94,13 +94,14 @@ a{
 .navbar li{
 	cursor: pointer;
 	line-height: 0.7em;
-	font-size: 90%;
 	white-space: nowrap;
 	color: #fff;
 	width: 100%;
-	margin-left:10%;
+	margin-left:7%;
 	padding: 10px;
 	z-index: 5;
+	font-size: 120%;
+	font-weight: bold;
 }
 .navbar li.button{
 	background-color: #00ffcb;
