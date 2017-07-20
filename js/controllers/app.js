@@ -13,13 +13,13 @@ app.controller("AppController",function ($scope){
 			"ranking":"1"
 		},
 		"2": {
-			"code":"2",
-			"name": "Varun",
+			"code":"",
+			"name": "Hitesh Kumar",
 			"subtitle":"Musician",
 			"fb":"https://www.google.com",
 			"twitter":"https://www.google.com",
 			"insta":"https://www.google.com",
-			"img":"img/artist.png",
+			"img":"img/hitesh.jpg",
 			"followers":"0",
 			"following":"0",
 			"ranking":"4"
@@ -146,12 +146,12 @@ app.controller("AppController",function ($scope){
 		},
 		"13": {
 			"code":"13",
-			"name": "Hitesh Kumar",
+			"name": "Varun",
 			"subtitle":"Musician",
 			"fb":"https://www.google.com",
 			"twitter":"https://www.google.com",
 			"insta":"https://www.google.com",
-			"img":"img/hitesh.jpg",
+			"img":"img/artist.png",
 			"followers":"0",
 			"following":"0",
 			"ranking":"4"
@@ -199,7 +199,7 @@ app.controller("AppController",function ($scope){
 			"fb":"https://www.google.com",
 			"twitter":"https://www.google.com",
 			"insta":"https://www.google.com",
-			"img":"img/tyrhenian.jpg",
+			"img":"img/tyrrhenian.jpg",
 			"followers":"0",
 			"following":"0",
 			"ranking":"4"
@@ -211,7 +211,7 @@ app.controller("AppController",function ($scope){
 			"fb":"https://www.google.com",
 			"twitter":"https://www.google.com",
 			"insta":"https://www.google.com",
-			"img":"img/sahili.jpg",
+			"img":"img/shaili.jpg",
 			"followers":"0",
 			"following":"0",
 			"ranking":"4"
@@ -247,7 +247,7 @@ app.controller("AppController",function ($scope){
 			"fb":"https://www.google.com",
 			"twitter":"https://www.google.com",
 			"insta":"https://www.google.com",
-			"img":"img/brahmasta.jpg",
+			"img":"img/brahmastra.jpg",
 			"followers":"0",
 			"following":"0",
 			"ranking":"4"
