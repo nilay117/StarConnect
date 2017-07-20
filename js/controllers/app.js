@@ -26,24 +26,24 @@ app.controller("AppController",function ($scope){
 		},
 		"3": {
 			"code":"3",
-			"name": "Tialk Chakraborty",
+			"name": "Sahili Shah",
 			"subtitle":"Musician",
 			"fb":"https://www.google.com",
 			"twitter":"https://www.google.com",
 			"insta":"https://www.google.com",
-			"img":"img/tilak.jpg",
+			"img":"img/shaili.jpg",
 			"followers":"0",
 			"following":"0",
-			"ranking":"3"
+			"ranking":"4"
 		},
 		"4": {
 			"code":"4",
-			"name": "Love Sagar",
+			"name": "Kushal Jasoria",
 			"subtitle":"Musician",
 			"fb":"https://www.google.com",
 			"twitter":"https://www.google.com",
 			"insta":"https://www.google.com",
-			"img":"img/artist.png",
+			"img":"img/kushal.jpg",
 			"followers":"0",
 			"following":"0",
 			"ranking":"4"
@@ -98,12 +98,12 @@ app.controller("AppController",function ($scope){
 		},
 		"9": {
 			"code":"9",
-			"name": "Kushal Jasoria",
+			"name": "Love Sagar",
 			"subtitle":"Musician",
 			"fb":"https://www.google.com",
 			"twitter":"https://www.google.com",
 			"insta":"https://www.google.com",
-			"img":"img/kushal.jpg",
+			"img":"img/artist.png",
 			"followers":"0",
 			"following":"0",
 			"ranking":"4"
@@ -206,15 +206,15 @@ app.controller("AppController",function ($scope){
 		},
 		"18": {
 			"code":"18",
-			"name": "Sahili Shah",
+			"name": "Tialk Chakraborty",
 			"subtitle":"Musician",
 			"fb":"https://www.google.com",
 			"twitter":"https://www.google.com",
 			"insta":"https://www.google.com",
-			"img":"img/shaili.jpg",
+			"img":"img/tilak.jpg",
 			"followers":"0",
 			"following":"0",
-			"ranking":"4"
+			"ranking":"3"
 		},
 		"19": {
 			"code":"19",
@@ -257,7 +257,7 @@ app.controller("AppController",function ($scope){
 	$scope.celebs = {
 		"1": {
 			"code":"1",
-			"name": "Daft Punk",
+			"name": "Tushar Lall",
 			"subtitle":"Musician",
 			"fb":"https://www.google.com",
 			"twitter":"https://www.google.com",
@@ -271,7 +271,7 @@ app.controller("AppController",function ($scope){
 		},
 		"2": {
 			"code":"2",
-			"name": "Daft Punk",
+			"name": "Tushar Lall",
 			"subtitle":"Musician",
 			"fb":"https://www.google.com",
 			"twitter":"https://www.google.com",
@@ -285,7 +285,7 @@ app.controller("AppController",function ($scope){
 		},
 		"3": {
 			"code":"3",
-			"name": "Daft Punk",
+			"name": "Tushar Lall",
 			"subtitle":"Musician",
 			"fb":"https://www.google.com",
 			"twitter":"https://www.google.com",
@@ -299,7 +299,7 @@ app.controller("AppController",function ($scope){
 		},
 		"4": {
 			"code":"4",
-			"name": "Daft Punk",
+			"name": "Tushar Lall",
 			"subtitle":"Musician",
 			"fb":"https://www.google.com",
 			"twitter":"https://www.google.com",
@@ -313,7 +313,7 @@ app.controller("AppController",function ($scope){
 		},
 		"5": {
 			"code":"5",
-			"name": "Daft Punk",
+			"name": "Tushar Lall",
 			"subtitle":"Musician",
 			"fb":"https://www.google.com",
 			"twitter":"https://www.google.com",
