@@ -30,7 +30,7 @@
 							<div class="about">
 								<p style="color:#5a449a;font-weight:bold;font-size:250%:;text-align:center">ABOUT</p>
 								<!-- <p>{{currentArtist.text}}</p> -->
-								<p style="color:#808080;font-size:150%;text-align:center">Aspiring Artist</p>
+								<p style="color:#808080;font-size:150%;text-align:center">{{currentArtist.about}}</p>
 							</div>
 							<div class="follow">
 								<div class="sb">
@@ -49,15 +49,17 @@
 						<div class="sb">
 							<div>
 								<div style="color:#edeeee;font-size:100%;margin-bottom:5px;font-weight:bold">Latest Workpiece</div>
-								<div style="color:#757575;font-size:200%;font-weight:bold">Battle Symphony Cover</div>
+								<div style="color:#757575;font-size:200%;font-weight:bold">{{currentArtist.song}}</div>
 							</div>	
 							<div class="logos">
 								<img src="../img/share.svg">
 								<img src="../img/like.svg">
 							</div>	
 						</div>
+						<a ng-href={{currentArtist.vodeo}}>
 						<div class="video">
-							<iframe id= "player" src="https://www.youtube.com/embed/y1yR6AJM0Rk" frameborder="0" allowfullscreen></iframe>
+							<a ng-href={{currentArtist.url}} target="_blank"><div style="width:100%;height:100%;background:url('../{{currentArtist.thumbnail}}');background-size:cover;"></div></a>
+							<!-- <iframe ng-src={{currentArtist.video}} frameborder="0" allowfullscreen></iframe> -->
 						</div>
 				</div>
 				<!-- <div class="endorsements">
