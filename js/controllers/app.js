@@ -13,7 +13,7 @@ app.controller("AppController",function ($scope){
 			"ranking":"1"
 		},
 		"2": {
-			"code":"",
+			"code":"2",
 			"name": "Hitesh Kumar",
 			"subtitle":"Musician",
 			"fb":"https://www.google.com",
@@ -267,65 +267,8 @@ app.controller("AppController",function ($scope){
 			"following":"100",
 			"endorsements":"5",
 			"ranking":"1",
-			"text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+			"text":"21, Youtuber, Composer | The Indian Jam Project"
 		},
-		"2": {
-			"code":"2",
-			"name": "Tushar Lall",
-			"subtitle":"Musician",
-			"fb":"https://www.google.com",
-			"twitter":"https://www.google.com",
-			"insta":"https://www.google.com",
-			"img":"img/cb.jpg",
-			"followers":"2,000,000",
-			"following":"100",
-			"endorsements":"5",
-			"ranking":"3",
-			"text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-		},
-		"3": {
-			"code":"3",
-			"name": "Tushar Lall",
-			"subtitle":"Musician",
-			"fb":"https://www.google.com",
-			"twitter":"https://www.google.com",
-			"insta":"https://www.google.com",
-			"img":"img/cb.jpg",
-			"followers":"2,000,000",
-			"following":"100",
-			"endorsements":"5",
-			"ranking":"2",
-			"text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-		},
-		"4": {
-			"code":"4",
-			"name": "Tushar Lall",
-			"subtitle":"Musician",
-			"fb":"https://www.google.com",
-			"twitter":"https://www.google.com",
-			"insta":"https://www.google.com",
-			"img":"img/cb.jpg",
-			"followers":"2,000,000",
-			"following":"100",
-			"endorsements":"5",
-			"ranking":"5",
-			"text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-		},
-		"5": {
-			"code":"5",
-			"name": "Tushar Lall",
-			"subtitle":"Musician",
-			"fb":"https://www.google.com",
-			"twitter":"https://www.google.com",
-			"insta":"https://www.google.com",
-			"img":"img/cb.jpg",
-			"followers":"2,000,000",
-			"following":"100",
-			"endorsements":"5",
-			"ranking":"4",
-			"text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-		}
-		
 	};
 	$scope.trending = {
 		"1":{
