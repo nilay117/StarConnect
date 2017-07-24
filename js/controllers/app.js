@@ -11,7 +11,7 @@ app.controller("AppController",function ($scope){
 			"followers":"0",
 			"following":"0",
 			"ranking":"1",
-			"thumbnail":"img/fame.jpg",
+			"thumbnail":"img/just.jpg",
 			"song":"Just This Smile",
 			"url":"https://www.youtube.com/watch?v=ncgRnjc940g",
 			"about":"We as a band have many influences (who doesn't though?), which is why we prefer to be not maybe just be 'in the box."
@@ -27,7 +27,7 @@ app.controller("AppController",function ($scope){
 			"followers":"0",
 			"following":"0",
 			"ranking":"4",
-			"thumbnail":"img/old.jpg",
+			"thumbnail":"img/old.png",
 			"song":"The Old Peace",
 			"url":"https://www.youtube.com/watch?v=_YDuEHrzs5c",
 			"about":"A singer and songwriter, I aspire to be the best at what I do."
@@ -75,7 +75,7 @@ app.controller("AppController",function ($scope){
 			"followers":"0",
 			"following":"0",
 			"ranking":"5",
-			"thumbnail":"img/ishq.jpg",
+			"thumbnail":"img/ishq.png",
 			"song":"Ishq Sufiana",
 			"url":"https://www.youtube.com/watch?v=Mx_0vEdv2T0",
 			"about":"Lead vocalist and band manager at Heptonik, a versatile hindi-rock band That composes own music on popular Bollywood songs. Covers include old & new Bollywood Semi-Classical and Rock tracks along with vocals and instrumental solos."
@@ -92,7 +92,7 @@ app.controller("AppController",function ($scope){
 			"following":"0",
 			"ranking":"4",
 			"thumbnail":"img/sabtera.jpg",
-			"song":"Sab Tera",
+			"song":"Bollywood Mashup",
 			"url":"https://www.youtube.com/watch?v=C_ANRc-x1XA",
 			"about":"Aspiring Artist"
 		},
