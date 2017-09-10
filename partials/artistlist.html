@@ -2,7 +2,7 @@
 	<div class="header" style="height:auto">
 		<div class="top">
 			<div class="logo">
-				<img src="img/logo.png"/>
+				<img src="media/logo.png"/>
 				<div class="text" style="z-index:5;"><a ng-href="#!/">star connect</a></div>
 			</div>
 			<div class="navbar">
@@ -12,6 +12,8 @@
 						<li><a ng-href="#!artistlist">Artists</a></li>
 					<li><a ng-href="#!celebritylist">Celebrities</a></li>
 					<li><a ng-href="#!videolist">Videos</a></li>
+					<li><a ng-href="#!login">Login</a></li>
+					
 					<li class="button"><a ng-href="/#!/joinus">Join Us</a></li>
 				</ul>
 			</div>
@@ -30,7 +32,7 @@
 			<div class="container" style="height:100%">
 				<div class="row" style="height:100%">
 					<div class="col s4 #e3f2fd blue lighten-5" style="height:100%;padding:0;overflow:hidden">
-						<div class="img" style="background:url('../img/fame.jpg');	background-size: cover;background-position: 27% 0%;"></div>
+						<div class="img" style="background:url('../media/fame.jpg');	background-size: cover;background-position: 27% 0%;"></div>
 					</div>
 					<div class="col s8"  style="height:100%;padding:0;overflow:hidden">
 						<div class="container" style="height:100%;margin:0;width:100%"">
@@ -38,17 +40,17 @@
 								<div class="col s12" style="height:50%;padding:0;overflow:hidden">
 									<div class="container" style="height:100%;margin:0;width:100%">
 										<div class="row" style="height:100%">
-											<div class="col s4 #e3f2fd blue lighten-5" style="height:100%;padding:0;overflow:hidden"><div class="img" style="background:url('../img/hitesh.jpg');	background-size: cover;background-position: 50% 0%;"></div></div>
-											<div class="col s8 #e3f2fd blue lighten-5" style="height:100%;padding:0;overflow:hidden"><div class="img" style="background:url('../img/shaili.jpg');	background-size: cover;background-position: 50% 35%;"></div></div>
+											<div class="col s4 #e3f2fd blue lighten-5" style="height:100%;padding:0;overflow:hidden"><div class="img" style="background:url('../media/hitesh.jpg');	background-size: cover;background-position: 50% 0%;"></div></div>
+											<div class="col s8 #e3f2fd blue lighten-5" style="height:100%;padding:0;overflow:hidden"><div class="img" style="background:url('../media/shaili.jpg');	background-size: cover;background-position: 50% 35%;"></div></div>
 										</div>
 									</div>
 								</div>
 								<div class="col s12" style="height:50%">
 									<div class="container" style="height:100%;margin:0;width:100%">
 										<div class="row" style="height:100%"> 
-											<div class="col s4 #e3f2fd blue lighten-5" style="height:100%;padding:0;overflow:hidden"><div class="img" style="background:url('../img/kushal.jpg');	background-size: cover;background-position: 50% 0%;"></div></div>
-											<div class="col s4 #e3f2fd blue lighten-5" style="height:100%;padding:0;overflow:hidden"><div class="img" style="background:url('../img/ujwal.jpg');	background-size: cover;background-position: 50% 0%;"></div></div>
-											<div class="col s4 #e3f2fd blue lighten-5" style="height:100%;padding:0;overflow:hidden"><div class="img" style="background:url('../img/tailored.jpg');	background-size: cover;background-position: 50% 0%;"></div></div>
+											<div class="col s4 #e3f2fd blue lighten-5" style="height:100%;padding:0;overflow:hidden"><div class="img" style="background:url('../media/kushal.jpg');	background-size: cover;background-position: 50% 0%;"></div></div>
+											<div class="col s4 #e3f2fd blue lighten-5" style="height:100%;padding:0;overflow:hidden"><div class="img" style="background:url('../media/ujwal.jpg');	background-size: cover;background-position: 50% 0%;"></div></div>
+											<div class="col s4 #e3f2fd blue lighten-5" style="height:100%;padding:0;overflow:hidden"><div class="img" style="background:url('../media/tailored.jpg');	background-size: cover;background-position: 50% 0%;"></div></div>
 										</div>
 									</div>
 								</div>
@@ -62,15 +64,15 @@
 		<div class="noscroll">
 			<div class="celebCard" ng-repeat="artist in artists" ng-click="setArtist(artist.code)">
 			<a ng-href="#!artist/{{artist.code}}">
-				<div class= "image" style="background:url({{artist.img}});background-size:cover;background-position:50% 50% ;"></div></a>
+				<div class= "image" style="background:url({{artist.profile_pic}});background-size:cover;background-position:50% 50% ;"></div></a>
 				<div class="wrapper">
-					<div class="name">No:{{artist.ranking}} {{artist.name}}</div>
-						<div class="subtitle">{{artist.subtitle}}</div>
+					<div class="name">No:{{artist.code}} {{artist.first_name}}</div>
+						<div class="subtitle">{{artist.last_name}}</div>
 						<div class="underline" style="width:8em;height:4px;"></div>
 						<div class="links" >
-							<a href={{artist.fb}}><img src="img/fb.png" /></a>
-							<a href={{artist.twitter}}><img src="img/twitter.png" /></a>
-							<a href={{artist.insta}}><img src="img/insta.png" /></a>
+							<a href={{artist.fb}}><img src="media/fb.png" /></a>
+							<a href={{artist.twitter}}><img src="media/twitter.png" /></a>
+							<a href={{artist.insta}}><img src="media/insta.png" /></a>
 					</div>
 				</div>
 			</div>

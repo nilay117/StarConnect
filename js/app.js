@@ -3,7 +3,10 @@ var app = angular.module("starConnect",["ngRoute"]);
 app.config(function($routeProvider){
 	$routeProvider
 			.when("/",{templateUrl:"../partials/main.html"})
-			.when("/joinus",{templateUrl:"../partials/joinus.html"})
+			.when("/joinus",{
+				templateUrl:"../partials/joinus.html",
+				controller:'formController'
+			})
 			.when("/artist/:artistCode",{
 				templateUrl:"../partials/artists.html",
 				controller:'artistController'
@@ -15,6 +18,14 @@ app.config(function($routeProvider){
 			.when("/artistlist",{templateUrl:"../partials/artistlist.html"})
 			.when("/celebritylist",{templateUrl:"../partials/celeblist.html"})
 			.when("/whatsup",{templateUrl:"../partials/whatsup.html"})
-			.when("/videolist",{templateUrl:"../partials/videolist.html"})
-			.when("/trending",{templateUrl:"../partials/trending.html"});
+			.when("/videolist",{
+				templateUrl:"../partials/videolist.html",
+				controller:'videoController'
+			})
+			.when("/trending",{templateUrl:"../partials/trending.html"})
+			.when("/login",{
+				templateUrl:"../partials/login.html",
+				controller:'loginController'
+			})
+			.when("/user",{templateUrl:"../partials/user.html"})
 });

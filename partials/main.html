@@ -1,7 +1,7 @@
 <div class="header">
 			<div class="top">
 				<div class="logo">
-					<img src="img/logo.png"/>
+					<img src="media/logo.png"/>
 					<div class="text" style="z-index:5;"><a ng-href="#!/">star connect</a></div>
 				</div>
 				<div class="navbar">
@@ -11,6 +11,8 @@
 					<li><a ng-href="#!artistlist">Artists</a></li>
 					<li><a ng-href="#!celebritylist">Celebrities</a></li>
 					<li><a ng-href="#!videolist">Videos</a></li>
+					<li><a ng-href="#!login">Login</a></li>
+					
 					<li class="button"><a ng-href="/#!/joinus">Join Us</a></li>
 				</ul>
 				</div>
@@ -32,27 +34,27 @@
 			<p style="text-align:center;color:#808080;font-size:120%">We take content from promising musicians, showcase it on our platform and get the best video shared by celebrities from their Facebook pages. We then donate all money collected from registered artists to our partner NGO, which then acknowledges the celebrity’s contribution on Social Media.</p>
 			<ul class="section">
 				<li>
-					<img src="img/artist.png"/>
+					<img src="media/artist.png"/>
 					<div class="title">Artists</div>
 					<div class="small-underline" style="width:3em;"></div>
 					<p>If you’re an artist, this is your opportunity to get your work publicly shared by top music                
                           celebrities and showcase your content to a niche community of music fans<p>
 				</li>
 				<li>
-					<img src="img/celeb.png"/>
+					<img src="media/celeb.png"/>
 					<div class="title">Celebrities</div>
 					<div class="small-underline" style="width:3em;"></div>
 					<p>Music celebrities, your support helps discover and promote hidden talent while 
                         contributing to a social cause at the same time.<p>
 				</li>
 				<li>
-					<img src="img/ngo.png"/>
+					<img src="media/ngo.png"/>
 					<div class="title">NGOs</div>
 					<div class="small-underline" style="width:3em;"></div>
 					<p> Use funds donated by us to boost social projects and benefit the society at large.<p>
 				</li>
 				<li>
-					<img src="img/exposure.png"/>
+					<img src="media/exposure.png"/>
 					<div class="title">Exposure</div>
 					<div class="small-underline" style="width:3em;"></div>
 					<p>This self - sustaining cycle discovers new talent and empowers social causes through 
@@ -85,7 +87,7 @@
 
 		</div>
 		<a href="/#!/celebrity/1">
-			<div class="container" style="height:80vh;background:url('../img/cb2.jpg');background-size:cover;background-repeat:no-repeat;">
+			<div class="container" style="height:80vh;background:url('../media/cb2.jpg');background-size:cover;background-repeat:no-repeat;">
 			<div style="width:100%;height:100%;display:flex;font-size:400%;color:#fff;justify-content:center;align-items:center">
 				Tushar Lall
 			</div>
@@ -96,17 +98,17 @@
 			<div class="underline" style="width:5em;"></div>
 			</div>
 			<ul >
-				<li class="celebCard" ng-repeat="artist in artists" ng-click="setArtist(artist.code)">
+				<li class="celebCard" ng-repeat="artist in artists" ng-click="setArtist(artist.id)">
 				<a ng-href="#!artist/{{currentArtist.code}}">
-					<div class= "image" style="background:url({{artist.img}});background-size:cover;background-position:50% 50% ;"></div></a>
+					<div class= "image" style="background:url({{artist.profile_pic}});background-size:cover;background-position:50% 50% ;"></div></a>
 					<div class="wrapper">
-						<div class="name">{{artist.name}}</div>
-							<div class="subtitle">{{artist.subtitle}}</div>
+						<div class="name">{{artist.first_name}}</div>
+							<div class="subtitle">{{artist.last_name}}</div>
 							<div class="underline" style="width:8em;height:4px;"></div>
 							<div class="links" >
-								<a href={{artist.fb}}><img src="img/fb.png" /></a>
-								<a href={{artist.twitter}}><img src="img/twitter.png" /></a>
-								<a href={{artist.insta}}><img src="img/insta.png" /></a>
+								<a href={{artist.fb}}><img src="media/fb.png" /></a>
+								<a href={{artist.twitter}}><img src="media/twitter.png" /></a>
+								<a href={{artist.insta}}><img src="media/insta.png" /></a>
 						</div>
 					</div>
 				</li>

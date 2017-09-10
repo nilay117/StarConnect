@@ -32,7 +32,7 @@ a{
 	width: 100vw;
 }
 .header{
-	background: url('../img/head.png');
+	background: url('../media/head.png');
 	background-size: cover;
 	width: 80%;
 	height: 50vh;
@@ -499,7 +499,7 @@ label{
 	text-align: left !important;
 	margin-bottom: 15px !important;
 }
-input[type=text],input[type=password]{
+input[type=text],input[type=password],select{
 	background:none !important;
 	font-size: 120% !important;
 	border:none !important;
@@ -510,6 +510,10 @@ input[type=text],input[type=password]{
 	padding: 10px !important;
 	margin-top: 10px !important;
 	margin-bottom: 30px !important;
+}
+input[type=file]{
+	margin-top: 10px !important;
+	margin-bottom: 30px !important;	
 }
 .submitButton{
 	border: none;
@@ -618,6 +622,7 @@ input[type=text],input[type=password]{
 	cursor: pointer;
 	z-index: 2;
 	border-radius: 50px;
+	margin-top: 5%;
 	margin-bottom: 7%;
 }
 .seeall a{
@@ -636,7 +641,7 @@ input[type=text],input[type=password]{
 .grid .img2{
 	height: 100%;
 	width: 100%;
-	background:url("../img/cb.jpg");
+	background:url("../media/cb.jpg");
 	background-size: cover;
 	background-position: 50% 0%;
 }
@@ -699,4 +704,9 @@ input[type=text],input[type=password]{
 
 .leaderboard .list li .views{
 	font-size: 80%;
+}
+p .user_heading{
+	font-weight: bold;
+	font-size: 200%;
+	color:#464c4c;
 }

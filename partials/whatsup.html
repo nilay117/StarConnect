@@ -2,7 +2,7 @@
 	<div class="header" style="height:auto">
 		<div class="top">
 			<div class="logo">
-				<img src="img/logo.png"/>
+				<img src="media/logo.png"/>
 				<div class="text" style="z-index:5;"><a ng-href="#!/">star connect</a></div>
 			</div>
 			<div class="navbar">
@@ -12,6 +12,8 @@
 						<li><a ng-href="#!artistlist">Artists</a></li>
 					<li><a ng-href="#!celebritylist">Celebrities</a></li>
 					<li><a ng-href="#!videolist">Videos</a></li>
+					<li><a ng-href="#!login">Login</a></li>
+					
 					<li class="button"><a ng-href="/#!/joinus">Join Us</a></li>
 				</ul>
 			</div>
@@ -31,7 +33,7 @@
 		</div>
 		<ul class="altlist">
 			<li>
-				<img src="img/artist.png"/>
+				<img src="media/artist.png"/>
 				<div>
 					<div class="title">Artists</div>
 					<div class="small-underline" style="width:5.5em"></div>
@@ -46,10 +48,10 @@
 					<div class="small-underline" style="width:12em;position:relative;left:75%;"></div>
 					<p>Support your college, view undiscovered content, exert the power of being a music enthusiast by voting for the top musicians! Show us some love!</p>
 				</div>
-				<img src="img/artist.png"/>
+				<img src="media/artist.png"/>
 			</li>
 			<li>
-				<img src="img/artist.png"/>
+				<img src="media/artist.png"/>
 				<div>
 					<div class="title">Leaderboard</div>
 					<div class="small-underline" style="width:11em"></div>
@@ -69,17 +71,17 @@
 						<p style="font-weight:10">WEEKLY</p>
 						<p style="margin-top:0;font-weight:10">LEADERBOARD</p>
 					</div>
-					<img src="../img/logo.png">
+					<img src="../media/logo.png">
 					<p style="font-size:60%;font-weight:100;padding-left:10%;padding-right:10%;">Disclaimer:The leaderboard is compiled by comparing the view over a week starting on monday.</p>
 					</div>
 					<div class="col s7 list" style="height:96.5%;padding:0;margin-top:1%;">
 						<ul>
-							<li ng-repeat="artist in trending" ng-click="setArtist(artist.code)">
+							<li ng-repeat="artist in artists" ng-click="setArtist(artist.code)">
 								<a ng-href="#!artist/{{currentArtist.code}}">
-								<div class= "image" style="background:url({{artist.img}});background-size:cover;background-position:50% 50%;"></div>
+								<div class= "image" style="background:url({{artist.profile_pic}});background-size:cover;background-position:50% 50%;"></div>
 								<div>
-									<div class="name">{{artist.artist}}</div>
-									<div style="font-weight:bold;font-size:120%">{{artist.title}}</div>
+									<div class="name">{{artist.first_name}}</div>
+									<div style="font-weight:bold;font-size:120%">{{artist.last_name}}</div>
 									<div class="views">{{artist.views}} Views</div>
 								</div>
 								</a>
@@ -102,7 +104,7 @@
 						<p style="font-weight:10">WEEKLY</p>
 						<p style="margin-top:0;font-weight:10">LEADERBOARD</p>
 					</div>
-					<img src="../img/logo.png">
+					<img src="../media/logo.png">
 					<p style="font-size:60%;font-weight:100;padding-left:10%;padding-right:10%;">Disclaimer:The leaderboard is compiled by comparing the view over a week starting on monday.</p>
 					</div>
 					<div class="col s7 list" style="height:96.5%;padding:0;margin-top:1%;">

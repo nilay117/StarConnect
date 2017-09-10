@@ -1,23 +1,31 @@
-app.controller("artistController",function($scope,$routeParams){
+app.controller("artistController",function($scope,$routeParams,$window){
 	 $scope.currentArtist = $scope.artists[$routeParams.artistCode];
-			
-	// $scope.artists["1"].video=$sce.trustAsResourceUrl("https://www.youtube.com/embed/ncgRnjc940g");
-	// // var tag = document.createElement('script');
-	// tag.src = "https://www.youtube.com/iframe_api";
-	// var firstScriptTag = document.getElementsByTagName('script')[0];
-	// firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+	//This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
 
-	// var player;
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-	// function onYouTubeIframeAPIReady(){
-	// 	player = new YT.Player('player',{
-	// 		events : {
-	// 			'onReady' : onPlayerReady
-	// 		}
-	// 	})
-	// }
-
-	// function onPlayerReady(e){
-	// 	console.log("youtube player is ready");
-	// }
+      console.log("Script loaded")
+      //  This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      $(document).ready(function(){
+      var player;
+      $window.onYouTubeIframeAPIReady = function() {
+      	console.log("Ready")
+        player = new YT.Player('player', {
+          height: '390',
+          width: '640',
+          videoId: $scope.currentArtist.video_id,
+          events: {
+            'onReady': onPlayerReady
+          }
+        });
+      }
+  });
+      // 4. The API will call this function when the video player is ready.
+      function onPlayerReady(event) {
+        event.target.playVideo();
+      }
 });
