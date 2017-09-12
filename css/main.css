@@ -713,3 +713,7 @@ p .user_heading{
 .side-nav a{
 	color: #888888 !important;
 }
+
+nav{
+	font-weight: bold !important;
+}

@@ -29,7 +29,7 @@ $(document).ready(function(){
         console.log(data);
         $http({
             method:'POST',
-            url:'http://https://starconnect.org.in/api/register/',
+            url:'https://starconnect.org.in/api/register/',
             data:data,
         }).then(function successCallback(response){
             alert(response.data['message'])
