@@ -10,7 +10,7 @@ $(document).ready(function(){
     $('#submit').click(function(e){
         var data = {};
         var profile = {};
-    var csrf_token = '{% csrf_token %}'
+        var csrf = '{{ csrf_token }}'
         profile['first_name'] = $('#first_name').val();
         profile['last_name'] = $('#last_name').val();
         profile['college'] = $('#college').val();
