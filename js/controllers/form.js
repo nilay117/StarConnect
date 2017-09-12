@@ -32,7 +32,9 @@ $(document).ready(function(){
             method:'POST',
             url:'https://starconnect.org.in/connect/api/register/',
             data:data,
-            csrf_token:csrf_token
+            headers: {
+                'X-CSRFToken' : csrf_token
+            }
         }).then(function successCallback(response){
             alert(response.data['message'])
             console.log("Form successfully submited!");
