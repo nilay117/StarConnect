@@ -33,7 +33,7 @@ $(document).ready(function(){
             url:'https://starconnect.org.in/connect/api/register/',
             data:data,
             headers: {
-                'X-CSRFToken' : csrf_token
+                'X-CSRFToken' : csrf
             }
         }).then(function successCallback(response){
             alert(response.data['message'])
