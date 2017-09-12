@@ -31,7 +31,7 @@ app.controller("AppController",function ($scope,$http,$window){
 				
 				$http({
 					method:'GET',
-					url:'http://127.0.0.1:8000/api/profile/',
+					url:'http://127.0.0.1:8000/api/profiles/',
 					headers: {
 						'Accept' : undefined,
 						'Authorization' : 'JWT ' + $window.sessionStorage.token,

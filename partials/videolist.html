@@ -46,9 +46,9 @@
 				<div style="text-align:center">{{video.artist}}</div>
 			</li> -->
 			<li style="margin-bottom:4%"; ng-repeat="video in videos" >
-				<div id='{{video_index}}'></div>
-				<div style="text-align:center;font-weight:200;">{{video.name}}</div>
-				<div style="text-align:center">{{video.artist}}</div>
+				<div id='{{video.connect.id}}'></div>
+				<div style="text-align:center;font-weight:200;"></div>
+				<div style="text-align:center">{{video.artist['first_name']}}</div>
 			</li>
 		<!-- 	<li style="margin-bottom:4%";>
 				<iframe src="https://www.youtube.com/embed/I2yYDufXj9E" frameborder="0" allowfullscreen></iframe>
