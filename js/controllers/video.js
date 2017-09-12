@@ -2,7 +2,7 @@ app.controller("videoController",function($scope,$routeParams,$window,$http){
     //AJAX calls to get list of videos
     $http({
       method:'GET',
-      url:'https://starconnect.org.in/api/videos/'
+      url:'https://starconnect.org.in/connect/api/videos/'
     }).then(function successCallback(response){
       $scope.videos = response.data;
       console.log($scope.videos)
