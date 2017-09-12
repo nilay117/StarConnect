@@ -1,4 +1,4 @@
-app.controller("formController", function ($scope, $http) {
+app.controller("formController", function ($scope, $http, $httpProvider) {
 $(document).ready(function(){
     // var fd="";
     // $scope.uploadFile = function(files) {
