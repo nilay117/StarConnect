@@ -18,6 +18,7 @@ $(document).ready(function(){
         profile['referred_by'] = $('#reffered_by').val();
         data['url']=$('#url').val();
         data['username']=$('#username').val();
+        
         if($('#password').val() != $('#confirm_password').val()){
             alert("Password and Confirm Password aren't same!");
             return false;
@@ -31,10 +32,10 @@ $(document).ready(function(){
             url:'http://127.0.0.1:8000/api/register/',
             data:data,
         }).then(function successCallback(response){
-            console.log(response.message)
+            alert(response.data['message'])
             console.log("Form successfully submited!");
         }, function errorCallback(response) {
-            console.log(response["message"]);
+            alert(response.data['message']);
         });
     })
 })

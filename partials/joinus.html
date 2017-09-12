@@ -1,22 +1,33 @@
 <div class="artistWrapper">
 <div class="header" style="height:auto">
 			<div class="top">
-				<div class="logo">
-					<img src="media/logo.png"/>
-					<div class="text" style="z-index:5;"><a ng-href="#!/">star connect</a></div>
-				</div>
-				<div class="navbar">
-					<ul>
-					<li><a ng-href="#!trending">Trending</a></li>
-					<li><a ng-href="#!whatsup">What's Up?</a></li>
-					<li><a ng-href="#!artistlist">Artists</a></li>
-					<li><a ng-href="#!celebritylist">Celebrities</a></li>
-					<li><a ng-href="#!videolist">Videos</a></li>
-					<li><a ng-href="#!login">Login</a></li>
-					
-					<li class="button"><a ng-href="/#!/joinus">Join Us</a></li>
-				</ul>
-				</div>
+				<nav style="background-color:transparent;box-shadow:none;z-index:5">
+					<div class="nav-wrapper">
+					  <a class="brand-logo" style="height:100%;font-weight:bold;display:flex;align-items:center" ng-href="#!/"><img src="media/logo.png"/ style="height:50px;width:50px;">star connect</a>
+				      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+				      <ul class="right hide-on-med-and-down">
+				      	<li><a ng-href="#!trending">Trending</a></li>
+						<li><a ng-href="#!whatsup">What's Up?</a></li>
+						<li><a ng-href="#!artistlist">Artists</a></li>
+						<li><a ng-href="#!celebritylist">Celebrities</a></li>
+						<li><a ng-href="#!videolist">Videos</a></li>
+						<li class="login-link" ng-hide="login"><a ng-href="#!login" >Login</a></li>
+						<li class="signup-button" ng-hide="login"><a ng-href="/#!/joinus">Join Us</a></li>
+						<li class=profile-button ng-show="login"><a ng-href="#!profile">Hi, {{currentUser.first_name}}</a></li>
+				      </ul>
+				      <ul class="side-nav" id="mobile-demo">
+				      	<li><a ng-href="#!trending">Trending</a></li>
+						<li><a ng-href="#!whatsup">What's Up?</a></li>
+						<li><a ng-href="#!artistlist">Artists</a></li>
+						<li><a ng-href="#!celebritylist">Celebrities</a></li>
+						<li><a ng-href="#!videolist">Videos</a></li>
+						<li class="login-link" ng-hide="login"><a ng-href="#!login" >Login</a></li>
+						<li class="signup-button" ng-hide="login"><a ng-href="/#!/joinus">Join Us</a></li>
+<li class=profile-button ng-show="login"><a ng-href="#!profile">Hi, {{currentUser.first_name}}</a></li>
+				      </ul>
+				    </div>
+				    </nav>
+			  </nav>
 			</div>
 </div>
 <div style="display:flex;flex-direction:column;align-items:center">
@@ -24,28 +35,59 @@
 	<div class="underline" style="width:4em"></div>
  	<div class="form">
 		<form id = "register_form">
-			<label>First Name</label>
-			<input type="text" name="first_name" id="first_name" placeholder="John">
-			<label>Last Name</label>
-			<input type="text" name="last_name" id="last_name" placeholder="Doe">
+			<div class="row">
+			<div class="col s12 m6 l6">
+				<label>First Name</label>
+				<input type="text" name="first_name" id="first_name" placeholder="John">
+			</div>
+			<div class="col s12 m6 l6">
+				<label>Last Name</label>
+				<input type="text" name="last_name" id="last_name" placeholder="Doe">
+			</div>
+			</div>
+			<div class="row">
+			<div class="col s12 m6 l6">
 			<label>Username</label>
 			<input type="text" name="username" id="username" placeholder="John_Doe">
-			<label>Password</label>
+			</div>
+			<div class="col s12 m6 l6">
+				<label>Password</label>
 			<input type="password" name="password"  id="password" placeholder="123456">
+			</div>	
+			</div>
+			<div class="row">
+			<div class="col s12">
 			<label>Confirm Password</label>
 			<input type="password" name="confirm_password"  id="confirm_password" placeholder="123456">
+			</div>
+			</div>
+			<div class="row">
+			<div class="col s12 m6 l6">
 			<label>College</label>
 			<input type="text" name="college" id="college" placeholder="John_Doe">
+			</div>
+			<div class="col s12 m6 l6">
 			<label>E-mail</label>
 			<input type="text" name="email" id="email" placeholder="doejohn@contact.com">
-			<label>Youtube/Google Drive Link to video</label>
-			<input type="text" name="url" id="url" placeholder="doejohn@contact.com">
+			</div>	
+			</div>
+			<div class="row">
+				<div class=" col s12">
+					<label>Youtube/Google Drive Link to video</label>
+					<input type="text" name="url" id="url" placeholder="doejohn@contact.com">
+				</div>
+			</div>
 			<!-- <label>Profile Picture</label>
 			<input type="file" name="file" onchange="angular.element(this).scope().uploadFile(this.files)"/> -->
-			<label>Reffered By:</label>
-			<select id="reffered_by" style="display:block">
-  				<option ng-repeat="ca in cas" value='{{ca.id}}'>{{ca.name}}</option>
-			</select>
+			<div class="row">
+				<div class=" col s12">		
+					<label>Referred By:</label>
+					<select id="reffered_by" style="display:block">
+						<option value="">None</option>
+		  				<option ng-repeat="ca in cas" value='{{ca.id}}'>{{ca.name}}</option>
+					</select>
+				</div>
+			</div>
 		</form>
 	</div>
 	<button class="submitButton" id="submit">Submit</button>

@@ -1,7 +1,6 @@
-app.controller("AppController",function ($scope,$http){
-	$(document).ready(function(){
-
-	})
+app.controller("AppController",function ($scope,$http,$window){
+	$scope.currentUser;
+	
 	$scope.baseUrl = '127.0.0.1:8000'
 	$http({
 		method:'GET',
@@ -12,7 +11,40 @@ app.controller("AppController",function ($scope,$http){
 		console.log($scope.artists)
 		$scope.cas = response.data['ambassadors'];
 	});
-
+	$(document).ready(function(){
+		console.log("I am inside");
+		var data = {}
+		$scope.login = false;
+		if($window.sessionStorage.token){
+			delete $window.sessionStorage.token;
+			console.log(data)
+			data['username'] = $window.sessionStorage.username;
+			data['password'] = $window.sessionStorage.password
+			$http({
+				method:'POST',
+				url:'http://127.0.0.1:8000/api/api_token',
+				data:data
+			}).then(function successCallback(response){
+				$window.sessionStorage.token = response.data['token'];
+				$scope.login = true;
+				$http.defaults.headers.common['Authorization'] = 'JWT '+ $window.sessionStorage.token;
+				
+				$http({
+					method:'GET',
+					url:'http://127.0.0.1:8000/api/profile/',
+					headers: {
+						'Accept' : undefined,
+						'Authorization' : 'JWT ' + $window.sessionStorage.token,
+						'Content-Type' : 'text/plain',
+						'Access-Control-Max-Age': 300
+					},
+				}).then(function successCallback(response){
+					$scope.currentUser = response.data;
+					$scope.login = true;
+				});
+			});
+		}
+	})
 	// $scope.artists = {
 	// 	"1": {
 	// 		"code":"1",
@@ -559,13 +591,13 @@ app.controller("AppController",function ($scope,$http){
 	// }
 	$scope.currentArtist = null;
 
-	$scope.setArtist = function(id){
-		$scope.currentArtist = $scope.artists[id];
+	$scope.setArtist = function(code){
+		$scope.currentArtist = $scope.artists[code];
 	}
 
 	$scope.currentCeleb = null;
 
-	$scope.setCeleb = function(id){
-		$scope.currentCeleb = $scope.celebs[id];
+	$scope.setCeleb = function(code){
+		$scope.currentCeleb = $scope.celebs[code];
 	}
 });

@@ -17,7 +17,7 @@ app.controller("artistController",function($scope,$routeParams,$window){
         player = new YT.Player('player', {
           height: '390',
           width: '640',
-          videoId: $scope.currentArtist.video_id,
+          videoId: $scope.currentArtist.connects['upload_link'].slice(32),
           events: {
             'onReady': onPlayerReady
           }

@@ -483,7 +483,7 @@ a{
 	background-color: rgba(90, 68, 154,0.7);
 	border:solid 5px #a186aa;
 	margin-top: 3%;
-	width: 30%;
+	width: 50%;
 	border-radius: 65px;
 	margin-bottom: 3%;
 	padding: 40px;
@@ -495,21 +495,21 @@ form{
 }
 label{
 	color: #d6d0e3 !important;
-	font-size: 120% !important;
+	font-size: 100% !important;
 	text-align: left !important;
-	margin-bottom: 15px !important;
+	margin-bottom: 10px !important;
 }
 input[type=text],input[type=password],select{
 	background:none !important;
-	font-size: 120% !important;
+	font-size: 100% !important;
 	border:none !important;
 	outline: none !important;
 	background-color: #fff !important;
 	width: 100% !important;
-	border-radius: 15px !important;
-	padding: 10px !important;
-	margin-top: 10px !important;
-	margin-bottom: 30px !important;
+	border-radius: 10px !important;
+	padding: 5px !important;
+	margin-top: 5px !important;
+	margin-bottom: 15px !important;
 }
 input[type=file]{
 	margin-top: 10px !important;
@@ -709,4 +709,7 @@ p .user_heading{
 	font-weight: bold;
 	font-size: 200%;
 	color:#464c4c;
+}
+.side-nav a{
+	color: #888888 !important;
 }
