@@ -1,6 +1,5 @@
 app.controller("AppController",function ($scope,$http,$window){
 	$scope.currentUser;
-	var csrf_token = '{% csrf_token %}'
 	$scope.baseUrl = 'https://starconnect.org.in/'
 	$http({
 		method:'GET',
