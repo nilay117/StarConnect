@@ -1,4 +1,4 @@
-app.controller("formController", function ($scope, $http, $httpProvider) {
+app.controller("formController", function ($scope, $http) {
 $(document).ready(function(){
     // var fd="";
     // $scope.uploadFile = function(files) {
@@ -28,8 +28,10 @@ $(document).ready(function(){
         // profile['profile_pic'] = fd;
         data['profile'] = profile;
         console.log(data);
-        $httpProvider.defaults.xsrfCookieName = 'csrftoken';
-        $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken';
+        app.config(['$httpProvider', function($httpProvider) {
+    $httpProvider.defaults.xsrfCookieName = 'csrftoken';
+    $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken';
+}]);
         $http({
             method:'POST',
             url:'https://starconnect.org.in/connect/api/register/',
