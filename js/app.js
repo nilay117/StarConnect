@@ -1,5 +1,8 @@
 var app = angular.module("starConnect",["ngRoute"]);
-
+app.config(['$httpProvider', function($httpProvider) {
+    $httpProvider.defaults.xsrfCookieName = 'csrftoken';
+    $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken';
+}]);
 app.config(function($routeProvider){
 	$routeProvider
 			.when("/",{templateUrl:"../partials/main.html"})

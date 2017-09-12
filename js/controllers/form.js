@@ -28,6 +28,7 @@ $(document).ready(function(){
         // profile['profile_pic'] = fd;
         data['profile'] = profile;
         console.log(data);
+        var app = angular.module('starConnect');
         app.config(['$httpProvider', function($httpProvider) {
     $httpProvider.defaults.xsrfCookieName = 'csrftoken';
     $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken';
