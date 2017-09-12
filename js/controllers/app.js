@@ -391,7 +391,7 @@ app.controller("AppController",function ($scope,$http,$window){
 			"fb":"https://www.google.com",
 			"twitter":"https://www.google.com",
 			"insta":"https://www.google.com",
-			"img":"media/cb.jpg",
+			"img":"img/cb.jpg",
 			"followers":"2,000,000",
 			"following":"100",
 			"endorsements":"5",

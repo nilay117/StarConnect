@@ -32,7 +32,7 @@ a{
 	width: 100vw;
 }
 .header{
-	background: url('../media/head.png');
+	background: url('../img/head.png');
 	background-size: cover;
 	width: 80%;
 	height: 50vh;
@@ -641,7 +641,7 @@ input[type=file]{
 .grid .img2{
 	height: 100%;
 	width: 100%;
-	background:url("../media/cb.jpg");
+	background:url("../img/cb.jpg");
 	background-size: cover;
 	background-position: 50% 0%;
 }
