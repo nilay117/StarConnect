@@ -1,10 +1,10 @@
 app.controller("AppController",function ($scope,$http,$window){
 	$scope.currentUser;
 	
-	$scope.baseUrl = '127.0.0.1:8000'
+	$scope.baseUrl = 'https://starconnect.org.in'
 	$http({
 		method:'GET',
-		url:'http://127.0.0.1:8000/api/get_dashboard/'
+		url:'http://https://starconnect.org.in/api/get_dashboard/'
 	}).then(function successCallback(response){
 		console.log(response.data)
 		$scope.artists = response.data['artists'];
@@ -22,7 +22,7 @@ app.controller("AppController",function ($scope,$http,$window){
 			data['password'] = $window.sessionStorage.password
 			$http({
 				method:'POST',
-				url:'http://127.0.0.1:8000/api/api_token',
+				url:'http://https://starconnect.org.in/api/api_token',
 				data:data
 			}).then(function successCallback(response){
 				$window.sessionStorage.token = response.data['token'];
@@ -31,7 +31,7 @@ app.controller("AppController",function ($scope,$http,$window){
 				
 				$http({
 					method:'GET',
-					url:'http://127.0.0.1:8000/api/profiles/',
+					url:'http://https://starconnect.org.in/api/profiles/',
 					headers: {
 						'Accept' : undefined,
 						'Authorization' : 'JWT ' + $window.sessionStorage.token,

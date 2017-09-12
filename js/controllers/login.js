@@ -10,7 +10,7 @@ app.controller("loginController", function ($scope, $http, $window) {
         $window.sessionStorage.password = $('#login_password').val();
         $http({
             method:'POST',
-            url:'http://127.0.0.1:8000/api/api_token',
+            url:'http://https://starconnect.org.in/api/api_token',
             data:data
         }).then(function successCallback(response){
             $window.sessionStorage.token = response.data['token'];
