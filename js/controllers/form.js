@@ -28,6 +28,8 @@ $(document).ready(function(){
         // profile['profile_pic'] = fd;
         data['profile'] = profile;
         console.log(data);
+        $httpProvider.defaults.xsrfCookieName = 'csrftoken';
+        $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken';
         $http({
             method:'POST',
             url:'https://starconnect.org.in/connect/api/register/',
