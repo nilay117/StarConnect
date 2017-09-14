@@ -38,7 +38,7 @@ $(document).ready(function(){
             url:'https://starconnect.org.in/connect/api/register/',
             data:data,
             headers:{
-                'Content-Type': 'application/x-www-form-urlencoded'
+                'Content-Type': 'application/json'
             }
         }).then(function successCallback(response){
             alert(response.data['message'])
