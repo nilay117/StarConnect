@@ -52,7 +52,7 @@
 			</div>
 			<div class="col s12 m6 l6">
 				<label>Phone Number</label>
-				<input type="text" name="phone_no" id="phone_no" min="10" max="10" placeholder="John_Doe">
+				<input type="text" name="phone_no" id="phone_no" min="10" max="10" placeholder="9898989898">
 			</div>
 			</div>
 			<div class="row">
@@ -78,7 +78,7 @@
 			<div class="row">
 				<div class=" col s12">
 					<label>Youtube/Google Drive Link to video</label>
-					<input type="text" name="url" id="url" placeholder="doejohn@contact.com">
+					<input type="text" name="url" id="url" placeholder="https://youtube.com/">
 				</div>
 			</div>
 			<!-- <label>Profile Picture</label>
@@ -86,10 +86,7 @@
 			<div class="row">
 				<div class=" col s12">		
 					<label>Referred By:</label>
-					<select id="reffered_by" style="display:block">
-						<option value="">None</option>
-		  				<option ng-repeat="ca in cas" value='{{ca.id}}'>{{ca.name}}</option>
-					</select>
+					<input type="text" name="reffered_by" id="reffered_by" placeholder="doejohn@contact.com">
 				</div>
 			</div>
 		</form>
