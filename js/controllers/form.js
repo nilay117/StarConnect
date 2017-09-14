@@ -21,7 +21,7 @@ $(document).ready(function(){
             return false;
         }
         profile['phone_no'] = $('#phone_no').val();
-        if($('#reffered_by').isNaN()){
+        if(isNaN($('#reffered_by'))){
             alert("Refferal code invalid!");
         }
         var referred_by = $('#reffered_by').val();
