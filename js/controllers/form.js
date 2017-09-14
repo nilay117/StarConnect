@@ -15,7 +15,7 @@ $(document).ready(function(){
         profile['last_name'] = $('#last_name').val();
         profile['college'] = $('#college').val();
         profile['email'] = $('#email').val();
-        // profile['profile_pic'] = $('#profile_pic').val();
+        profile['phone_no'] = $('#phone_no').val();
         // profile['referred_by'] = $('#reffered_by').val();
         data['url']=$('#url').val();
         data['username']=$('#username').val();
