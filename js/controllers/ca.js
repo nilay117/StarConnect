@@ -7,13 +7,13 @@ app.controller("caController", function ($scope, $http) {
         })
         $http({
             method:'POST',
-            url:'https://starconnect.org.in/api/campusambassadors/',
+            url:'https://starconnect.org.in/connect/api/createambassador/',
             data:data,
             headers: {
             	'content-type':'application/json'
             }
         }).then(function successCallback(response){
-        	alert(response.message)
+        	alert(response['message'])
         })
 })
 })
