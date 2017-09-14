@@ -21,11 +21,11 @@ $(document).ready(function(){
             return false;
         }
         profile['phone_no'] = $('#phone_no').val();
-        if(isNaN($('#referred_by'))){
-            alert("Referral code invalid!");
+        if(isNaN($('#referred_by').val())){
+            alert("Refferal code invalid!");
         }
         var referred_by = $('#referred_by').val();
-        var initialdata = {"referred_by":reffered_by};
+        var initialdata = {"referred_by":referred_by};
         data['url']=$('#url').val();
         data['username']=$('#username').val();
         if($('#password').val() != $('#confirm_password').val()){
