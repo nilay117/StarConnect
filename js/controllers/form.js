@@ -15,7 +15,7 @@ $(document).ready(function(){
         profile['last_name'] = $('#last_name').val();
         profile['college'] = $('#college').val();
         profile['email'] = $('#email').val();
-        if($("#phone_no") < 1000000000 || $('phone_no') > 9999999999){
+        if($("#phone_no").val() < 1000000000 || $('#phone_no').val() > 9999999999){
             alert("Phone Number is invalid!");
             return false;
         }
@@ -43,7 +43,7 @@ $(document).ready(function(){
             url:'https://starconnect.org.in/connect/api/register/',
             data:data,
             headers:{
-                'Content-Type': 'application/x-www-form-urlencoded'
+                'Content-Type': 'application/json'
             }
         }).then(function successCallback(response){
             alert(response.data['message'])
