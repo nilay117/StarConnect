@@ -21,11 +21,11 @@ $(document).ready(function(){
             return false;
         }
         profile['phone_no'] = $('#phone_no').val();
-        if(isNaN($('#reffered_by'))){
-            alert("Refferal code invalid!");
+        if(isNaN($('#referred_by'))){
+            alert("Referral code invalid!");
         }
-        var referred_by = $('#reffered_by').val();
-        var initialdata = {"reffered_by":reffered_by};
+        var referred_by = $('#referred_by').val();
+        var initialdata = {"referred_by":reffered_by};
         data['url']=$('#url').val();
         data['username']=$('#username').val();
         if($('#password').val() != $('#confirm_password').val()){
@@ -43,15 +43,15 @@ $(document).ready(function(){
         }]);
         $http({
             method:'POST',
-            url:'https://starconnect.org.in/connect/api/get_ambassador_id',
+            url:'https://starconnect.org.in/connect/api/get_ambassador_id/',
             data:initialdata,
             headers:{
                 'Content-Type':'application/json'
             }
         }).then(function successCallback(response){
-            var id = response.data['reffered_by'];
+            var id = response.data['referred_by'];
             console.log(id);
-            data['reffered_by'] = id;
+            data['referred_by'] = id;
             console.log(data);
             $http({
             method:'POST',
