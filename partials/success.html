@@ -1,6 +1,6 @@
 <div class="artistWrapper">
-	<div class="header" style="height:auto">
-	<div class="top">
+<div class="header" style="height:auto">
+			<div class="top">
 				<nav style="background-color:transparent;box-shadow:none;z-index:5">
 					<div class="nav-wrapper">
 					  <a class="brand-logo" style="height:100%;font-weight:bold;display:flex;align-items:center" ng-href="#!/"><img src="img/logo.png"/ style="height:50px;width:50px;">star connect</a>
@@ -14,7 +14,7 @@
 
 						<li class="login-link" ng-hide="login"><a ng-href="#!login" >Login</a></li>
 						<li class="signup-button" ng-hide="login"><a ng-href="/#!/joinus">Join Us</a></li>
-<li class=profile-button ng-show="login"><a ng-href="#!profile">Hi, {{currentUser.first_name}}</a></li>
+						<li class=profile-button ng-show="login"><a ng-href="#!profile">Hi, {{currentUser.first_name}}</a></li>
 				      </ul>
 				      <ul class="side-nav" id="mobile-demo">
 				      	<li><a ng-href="#!trending">Trending</a></li>
@@ -28,42 +28,15 @@
 <li class=profile-button ng-show="login"><a ng-href="#!profile">Hi, {{currentUser.first_name}}</a></li>
 				      </ul>
 				    </div>
-</nav>
-
+				    </nav>
 			</div>
-	</div>
-	<div class="about" style="padding-bottom:0%;">
+</div>
+<div class="about">
 		<div class="heading">
-			Celebrities
+			Thank You!
 			<div class="underline" style="width:3em;"></div>
 		</div>
 		<p class="centerpara">
-			The most loved maestros, the evangelists of music and the flagbearers of social change! 
+			{{thankyou_data}}
 		</p>
-	</div>
-		<div ng-repeat="celeb in celebs" ng-click="setCeleb(celeb.code)" style="margin-bottom:5vh;">
-		<a href="/#!/celebrity/{{currentCeleb.code}}">
-			<div class="container" style="height:80vh;background:url({{celeb.img}});background-size:cover;background-repeat:no-repeat;">
-			<div style="width:100%;height:100%;display:flex;font-size:400%;color:#fff;justify-content:center;align-items:center">
-				{{celeb.name}}
-			</div>
-		</div></a>
-<!-- 	<div class="celebCards" style="margin-top:0;padding-top:0">
-		<div class="noscroll">
-			<div class="celebCard" ng-repeat="celeb in celebs" ng-click="setCeleb(celeb.code)">
-			<a ng-href="#!celebrity/{{currentCeleb.code}}">
-				<div class= "image" style="background:url({{celeb.img}});background-size:cover;background-position:50% 50% ;"></div></a>
-				<div class="wrapper">
-					<div class="name">{{celeb.name}}</div>
-						<div class="subtitle">{{celeb.subtitle}}</div>
-						<div class="underline" style="width:8em;height:4px;"></div>
-						<div class="links" >
-							<a href={{celeb.fb}}><img src="img/fb.png" /></a>
-							<a href={{celeb.twitter}}><img src="img/twitter.png" /></a>
-							<a href={{celeb.insta}}><img src="img/insta.png" /></a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div> -->
 </div>
