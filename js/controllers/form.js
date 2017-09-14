@@ -48,7 +48,7 @@ $(document).ready(function(){
         }).then(function successCallback(response){
             var id = response.data['referred_by'];
             console.log(id);
-            data['referred_by'] = id.toString();
+            data['referred_by'] = id;
             console.log(data);
             $http({
             method:'POST',
