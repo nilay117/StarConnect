@@ -13,7 +13,10 @@ app.controller("caController", function ($scope, $http) {
             	'content-type':'application/json'
             }
         }).then(function successCallback(response){
-        	alert(response['message'])
-        })
+            alert(response.data['message'])
+            console.log("Form successfully submited!");
+        }, function errorCallback(response) {
+            alert(response.data['message']);
+        });
 })
 })
