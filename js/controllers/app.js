@@ -34,7 +34,7 @@ app.controller("AppController",function ($scope,$http,$window){
 					headers: {
 						'Accept' : undefined,
 						'Authorization' : 'JWT ' + $window.sessionStorage.token,
-						'Content-Type' : 'text/plain',
+						'Content-Type' : 'application/x-www-form-urlencoded',
 						'Access-Control-Max-Age': 300
 					},
 				}).then(function successCallback(response){

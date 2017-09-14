@@ -27,4 +27,8 @@ app.config(function($routeProvider){
 				controller:'loginController'
 			})
 			.when("/user",{templateUrl:"../partials/user.html"})
+			.when("/campusambassador",{
+				templateUrl:"../partials/form_ca.html",
+				controller:'caController'
+			})
 });
