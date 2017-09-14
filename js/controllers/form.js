@@ -31,7 +31,6 @@ $(document).ready(function(){
         }
         data['password'] = $('#password').val();
         // profile['profile_pic'] = fd;
-        data['profile'] = profile;
         console.log(data);
         var app = angular.module("starConnect",["ngRoute"]);
         app.config(['$httpProvider', function($httpProvider) {
@@ -48,7 +47,8 @@ $(document).ready(function(){
         }).then(function successCallback(response){
             var id = response.data['referred_by'];
             console.log(id);
-            data['referred_by'] = id;
+            profile['referred_by'] = id;
+        data['profile'] = profile;    
             console.log(data);
             $http({
             method:'POST',
