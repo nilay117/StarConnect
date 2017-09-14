@@ -15,7 +15,12 @@ $(document).ready(function(){
         profile['last_name'] = $('#last_name').val();
         profile['college'] = $('#college').val();
         profile['email'] = $('#email').val();
+        if($("#phone_no") < 1000000000 || $('phone_no') > 9999999999){
+            alert("Phone Number is invalid!");
+            return false;
+        }
         profile['phone_no'] = $('#phone_no').val();
+
         // profile['referred_by'] = $('#reffered_by').val();
         data['url']=$('#url').val();
         data['username']=$('#username').val();
