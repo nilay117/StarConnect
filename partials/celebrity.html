@@ -11,7 +11,8 @@
 						<li><a ng-href="#!whatsup">What's Up?</a></li>
 						<li><a ng-href="#!artistlist">Artists</a></li>
 						<li><a ng-href="#!celebritylist">Celebrities</a></li>
-						<li><a ng-href="#!videolist">Videos</a></li>
+						<!--<li><a ng-href="#!videolist">Videos</a></li>-->
+
 						<li class="login-link" ng-hide="login"><a ng-href="#!login" >Login</a></li>
 						<li class="signup-button" ng-hide="login"><a ng-href="/#!/joinus">Join Us</a></li>
 <li class=profile-button ng-show="login"><a ng-href="#!profile">Hi, {{currentUser.first_name}}</a></li>
@@ -21,14 +22,15 @@
 						<li><a ng-href="#!whatsup">What's Up?</a></li>
 						<li><a ng-href="#!artistlist">Artists</a></li>
 						<li><a ng-href="#!celebritylist">Celebrities</a></li>
-						<li><a ng-href="#!videolist">Videos</a></li>
+						<!--<li><a ng-href="#!videolist">Videos</a></li>-->
+
 						<li class="login-link" ng-hide="login"><a ng-href="#!login" >Login</a></li>
 						<li class="signup-button" ng-hide="login"><a ng-href="/#!/joinus">Join Us</a></li>
 <li class=profile-button ng-show="login"><a ng-href="#!profile">Hi, {{currentUser.first_name}}</a></li>
 				      </ul>
 				    </div>
-				    </nav>
-			  </nav>
+</nav>
+
 			</div>
 			<div class="heading" style="height:30vh;">
 				<p style="font-size:350%;">{{currentCeleb.name}} (Celebrity)</p>
@@ -38,7 +40,7 @@
 		</div>
 		<div class="content">
 			<div class="box">
-					<div class="image" style="background:url({{currentCeleb.img}});background-size:cover;background-position: 100% 50%;"><div class="button">FOLLOW</div></div>
+					<div class="image" style="background:url({{currentCeleb.img}});background-size:cover;background-position: 60% 50%;"><div class="button">FOLLOW</div></div>
 					<div class="dataArtist">
 							<div class="about">
 								<p style="color:#5a449a;font-size:250%;font-weight:bold;margin-bottom:3%">ABOUT</p>

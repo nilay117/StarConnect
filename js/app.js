@@ -31,4 +31,5 @@ app.config(function($routeProvider){
 				templateUrl:"../partials/form_ca.html",
 				controller:'caController'
 			})
+			.when('/success',{templateUrl:"../partials/success.html"})
 });

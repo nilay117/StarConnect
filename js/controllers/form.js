@@ -58,7 +58,8 @@ $(document).ready(function(){
                 'Content-Type': 'application/json'
             }
             }).then(function successCallback(response){
-                alert(response.data['message'])
+                $scope.thankyou_data = response.data['message']
+                $window.location.href = '/success';
                 console.log("Form successfully submited!");
             }, function errorCallback(response) {
                 alert(response.data['message']);
