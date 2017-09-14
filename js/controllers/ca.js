@@ -1,4 +1,4 @@
-app.controller("formController", function ($scope, $http) {
+app.controller("caController", function ($scope, $http) {
 	$('#ca_btn').click(function(){
         var data = {};
         var a = $('#ca_form').serializeArray();
@@ -10,9 +10,9 @@ app.controller("formController", function ($scope, $http) {
             url:'https://starconnect.org.in/api/campusambassadors/',
             data:data,
             headers: {
-            	'content-type':'application/x-www-form-urlencoded'
+            	'content-type':'application/json'
             }
         }).then(function successCallback(response){
-
+        	alert(response.message)
         })
 })
