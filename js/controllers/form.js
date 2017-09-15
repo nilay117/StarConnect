@@ -1,3 +1,4 @@
+
 app.controller("formController", function ($scope, $http) {
 $(document).ready(function(){
     // var fd="";
@@ -58,8 +59,7 @@ $(document).ready(function(){
                 'Content-Type': 'application/json'
             }
             }).then(function successCallback(response){
-                $scope.thankyou_data = response.data['message']
-                $window.location.href = '/success';
+                alert(response.data['message']);
                 console.log("Form successfully submited!");
             }, function errorCallback(response) {
                 alert(response.data['message']);
