@@ -26,20 +26,17 @@ app.controller("AppController",function ($scope,$http,$window){
 				data:data
 			}).then(function successCallback(response){
 				$window.sessionStorage.token = response.data['token'];
-				$scope.login = true;
+				// $scope.login = true;
 				$http.defaults.headers.common['Authorization'] = 'JWT '+ $window.sessionStorage.token;
-				
 				$http({
 					method:'GET',
 					url:'https://starconnect.org.in/connect/api/profiles/',
 					headers: {
-						'Accept' : undefined,
-						'Authorization' : 'JWT ' + $window.sessionStorage.token,
-						'Content-Type' : 'application/x-www-form-urlencoded',
-						'Access-Control-Max-Age': 300
+						'Content-Type' : 'application/json'
 					},
 				}).then(function successCallback(response){
 					$scope.currentUser = response.data;
+					console.log(response.data,$scope.currentUser)
 					$scope.login = true;
 				});
 			});
