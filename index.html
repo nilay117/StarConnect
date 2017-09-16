@@ -5,7 +5,7 @@
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"
   		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   		crossorigin="anonymous"></script>
-  		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script> -->
+  		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 	<script type="text/javascript" src="js/lib/angular.min.js"></script>
 	<script src="js/lib/angular-route.min.js"></script>
 
@@ -23,6 +23,7 @@
 	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
 	 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<!-- <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.2/angular-materialize.min.js"></script>
 
 </head>
 <body >
@@ -33,7 +34,10 @@
 			
 		</div>
 		<script type="text/javascript">
-
+			$(document).ready(function(){
+				// console.log("QWERTYUIOP")
+			    $(".button-collapse").sideNav();
+			})
 		</script>
 </body>
 </html>

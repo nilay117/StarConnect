@@ -1,11 +1,11 @@
 app.controller("AppController",function ($scope,$http,$window){
-	jQuery(document).ready(function(){
-	console.log("QWERTYUIOP")
-    $scope.menuClick = function(){
-    	console.log("I am clicked")
-    	$(".side-nav").animate({left:"-0%"});
-    }
-	})
+	// jQuery(document).ready(function(){
+	// console.log("QWERTYUIOP")
+ //    $scope.menuClick = function(){
+ //    	console.log("I am clicked")
+ //    	$(".side-nav").animate({left:"-0%"});
+ //    }
+	// })
 	$scope.currentUser;
 	$scope.thankyou_data;
 	$scope.baseUrl = 'https://starconnect.org.in/'
