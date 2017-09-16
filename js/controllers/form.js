@@ -37,6 +37,7 @@ $(document).ready(function(){
         app.config(['$httpProvider', function($httpProvider) {
             $httpProvider.defaults.xsrfCookieName = 'csrftoken';
             $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken';
+		console.log("abcefgh",$httpProvider.defaults.xsrfCookieName)
         }]);
         $http({
             method:'POST',
