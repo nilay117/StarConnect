@@ -35,7 +35,9 @@ $(document).ready(function(){
         var app = angular.module("starConnect",["ngRoute"]);
         app.config(['$httpProvider', function($httpProvider) {
             $httpProvider.defaults.xsrfCookieName = 'csrftoken';
+            console.log("abcd")
             $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken';
+            console.log($httpProvider.defaults.xsrfHeaderName)
         }]);
         $http({
             method:'POST',
