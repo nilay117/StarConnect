@@ -37,8 +37,8 @@ a{
 	width: 80%;
 	/*height: 50vh;*/
 	padding: 10%;
-	padding-top: 3%;
-	padding-bottom: 3%;
+	padding-top: 13px;
+	padding-bottom: 13px;
 }
 .header .heading{
 	position: relative;
@@ -142,7 +142,7 @@ a{
 	margin-top: 5%;
 	margin-left: 0;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	flex-wrap: wrap;
 }
 .about .section li{
@@ -150,6 +150,24 @@ a{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	text-align: center;
+	padding: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.main-heading{
+	font-size:250%;
+	margin-bottom:2%;
+	text-align:center;
+}
+.main-heading2{
+	font-size:120%;
+	text-align:center;
+}
+.how-it-works{
+	text-align:center;
+	color:#808080;
+	font-size:120%
 }
 .about .section li img{
 	width: 150px;
@@ -185,7 +203,7 @@ a{
 	padding-top: 3%;
 	padding-bottom: 3%;
 }
-.celebCards ul,.artistCards ul{
+.artistul ,.celebul{
 	margin-top: 4%;
 	padding-bottom: 3%;
 	list-style-type:none;
@@ -263,7 +281,17 @@ a{
 .celebCard .image{
 	height: 100%;
 	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }	
+.celebCard .image p{
+	display: none;
+	font-size: 250%;
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+}
 .celebCard .wrapper{
 	padding: 0px;
 	display: flex;
@@ -493,6 +521,9 @@ form{
 	width: 100%;
 	height: auto;
 }
+.joinus_details{
+	margin-top:20px;font-size:180%;
+}
 label{
 	color: #d6d0e3 !important;
 	font-size: 100% !important;
@@ -555,6 +586,20 @@ input[type=file]{
 	text-align: center;
 	padding-bottom: 30px;
 }
+.bigCelebCard{
+	height:80vh;
+	background:url('../img/cb2.jpg');
+	background-size:cover;
+	background-repeat:no-repeat;
+	align-content:center;
+	justify-content:center;
+	display:flex;
+	font-size:400%;
+	color:#fff;
+}
+.bigCelebCard div{
+	margin:auto;
+}
 .altlist{
 	display: flex;
 	list-style-type: none;
@@ -583,7 +628,7 @@ input[type=file]{
 }
 .videos{
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	width: 80%;
 	margin-left: 10%;
 	list-style-type: none;
@@ -595,8 +640,11 @@ input[type=file]{
 	flex-basis: 300px;
 	font-weight: bold;
 	color: #808080;
-	margin-bottom: 10px;
+	margin-bottom: 50px;
 	font-size: 150%;
+}
+.videos li div{
+	text-align: center;
 }
 .videobox{
 	width: 100%;
@@ -716,4 +764,126 @@ p .user_heading{
 
 nav{
 	font-weight: bold !important;
+}
+
+@media screen and (max-width : 1200px) {
+	
+}
+@media screen and (max-width : 1036px) {
+
+}
+@media screen and (max-width : 979px) {
+	body,html{
+		font-size:14px; 
+	}
+	.main-heading{
+		font-size: 220%;
+	}	
+	.videos{
+		width: 120%;
+		margin-left: -10%;
+	}
+	.videos li{
+		flex-basis: 350px;
+	}
+	.videos li iframe{
+		width: 350px;
+		height: 200px;
+	}
+	.bigCelebCard{
+		height: 70vh;
+	}
+}
+@media screen and (max-width : 823px) {
+	body,html{
+		font-size: 14px;
+	}
+	.celebul{
+		flex-wrap: wrap;
+		overflow-x:hidden;
+		justify-content: space-around;
+		/*padding: 10px;*/
+	}
+	.celebul li{
+		padding: 10px;
+		margin: 10px;
+	}
+	.bigCelebCard{
+		height: 60vh;
+		width: 110% !important;
+		margin-left: -5% !important;
+	}
+	.form{
+		border-radius:5px;
+		padding:20px;
+		width: 80%
+	}
+}
+
+@media screen and (max-width : 480px) {
+	body,html{
+		font-size: 12px;
+		line-height: 1.7;
+	}
+	.main-heading{
+		font-size: 210%;
+		margin-top: 15px !important;
+		margin-bottom: 10px !important;
+	}
+	.main-heading2{
+		font-size: 110%;
+	}
+	.how-it-works{
+		font-size: 110%;
+		font-weight: 400;
+	}
+	.about .section li p{
+		font-size: 110%;
+		font-weight: 500;
+	}
+	.about .heading{
+		font-size: 210%;
+	}
+	.title{
+		font-size: 150%;
+		border-bottom: 4px solid #d44f8f;
+	}
+	.small-underline{
+		display: none;
+	}
+	.header{
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+	.about .section li{
+		width: 130px;
+	}
+	.about .section li img{
+		width: 120px;
+		height: 120px;
+	}
+	.celebCard .image p{
+		display: block;
+	}
+
+	.celebCard .wrapper{
+		display: none;
+	}
+	.bigCelebCard{
+		height: 40vh;
+	}
+	.submitButton{
+		padding: 10px;
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+}
+
+@media screen and (max-width : 320px) {
+	body,html{
+		font-size: 12px;
+	}
+	.bigCelebCard{
+		height: 30vh;
+	}
 }

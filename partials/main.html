@@ -31,8 +31,8 @@
 
 			</div>
 			<div class="heading">
-				<p style="font-size:250%;margin-bottom:2%;text-align:center">Everyone loves great art but who cares about great artists? We do.</p>
-               	<p style="font-size:120%;text-align:center">
+				<p class="main-heading">Everyone loves great art but who cares about great artists? We do.</p>
+               	<p class="main-heading2">
                		We are a multi - stakeholder network of upcoming artists,                                          
                		celebrities, fans and NGOs.
 				</p>
@@ -44,7 +44,7 @@
 				How it works?
 				<div class="underline" style="width:3em;"></div>
 			</div>
-			<p style="text-align:center;color:#808080;font-size:120%">We take content from promising musicians, showcase it on our platform and get the best video shared by celebrities from their Facebook pages. We then donate all money collected from registered artists to our partner NGO, which then acknowledges the celebrity’s contribution on Social Media.</p>
+			<p class="how-it-works">We take content from promising musicians, showcase it on our platform and get the best video shared by celebrities from their Facebook pages. We then donate all money collected from registered artists to our partner NGO, which then acknowledges the celebrity’s contribution on Social Media.</p>
 			<ul class="section">
 				<li>
 					<img src="img/artist.png"/>
@@ -81,10 +81,10 @@
 				Celebrities
 				<div class="underline" style="width:3em;"></div>
 			</div>
-			<ul >
+			<ul class="celebul">
 				<li class="celebCard" ng-repeat="celeb in celebs" ng-click="setCeleb(celeb.code)">
 				<a ng-href="#!celebrity/{{currentCeleb.code}}">
-					<div class= "image" style="background:url({{celeb.img}});background-size:cover;background-position:50% 50% ;"></div></a>
+					<div class= "image" style="background:url({{celeb.img}});background-size:cover;background-position:50% 50% ;"><p>{{celeb.name}}</p></div></a>
 					<div class="wrapper">
 						<div class="name">{{celeb.name}}</div>
 							<div class="subtitle">{{celeb.subtitle}}</div>
@@ -110,7 +110,7 @@
 				Artists
 			<div class="underline" style="width:5em;"></div>
 			</div>
-			<ul >
+			<ul class="artistul">
 				<li class="celebCard" ng-repeat="artist in artists" ng-click="setArtist(artist.code)">
 				<a ng-href="#!artist/{{currentArtist.code}}">
 					<div class= "image" style="background:url({{artist.profile_pic}});background-size:cover;background-position:50% 50% ;"></div></a>
