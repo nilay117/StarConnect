@@ -36,6 +36,9 @@ $(document).ready(function(){
             method:'POST',
             url:'https://starconnect.org.in/connect/api/get_ambassador_id/',
             data:initialdata,
+            headers:{
+                'Content-Type': 'application/json'
+            }
         }).then(function successCallback(response){
             var id = response.data['referred_by'];
             console.log(id);

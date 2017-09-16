@@ -30,10 +30,7 @@ app.controller("AppController",function ($scope,$http,$window){
 				$http.defaults.headers.common['Authorization'] = 'JWT '+ $window.sessionStorage.token;
 				$http({
 					method:'GET',
-					url:'https://starconnect.org.in/connect/api/profiles/',
-					headers: {
-						'Content-Type' : 'application/json'
-					},
+					url:'https://starconnect.org.in/connect/api/profiles/'
 				}).then(function successCallback(response){
 					$scope.currentUser = response.data;
 					console.log(response.data,$scope.currentUser)

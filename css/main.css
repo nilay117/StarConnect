@@ -354,7 +354,7 @@ a{
 }
 .box{
 	position: relative;
-	top: -15vh;
+	top: -110px;
 	margin-right:5%; 
 	background-color: #fff;
 	flex-grow: 0;
@@ -772,7 +772,9 @@ nav{
 	
 }
 @media screen and (max-width : 1036px) {
-
+		.box{
+			flex-basis: 30%;
+		}
 }
 @media screen and (max-width : 979px) {
 	body,html{
@@ -822,14 +824,22 @@ nav{
 	}
 	.altlist li:nth-of-type(even){
 		display: flex;
-		flex-direction: column;
+		flex-direction: column-reverse;
 	}
 	.altlist li:nth-of-type(odd){
 		display: flex;
-		flex-direction: column-reverse;
+		flex-direction: column;
 	}
 	.altlist li .title,.altlist li p{
-		text-align: center;
+		text-align: center !important;
+	}
+	.altlist li img{
+		margin: 0;
+		width: 80px;
+		height: 80px;
+	}
+	.altlist li{
+		margin-bottom: 40px;
 	}
 }
 
@@ -855,11 +865,15 @@ nav{
 		font-weight: 500;
 	}
 	.about .heading{
-		font-size: 210%;
+		font-size: 200%;
 	}
+
 	.title{
 		font-size: 150%;
 		border-bottom: 4px solid #d44f8f;
+	}
+	.altlist .title{
+		border-bottom: none;
 	}
 	.small-underline{
 		display: none;
@@ -890,6 +904,15 @@ nav{
 		padding-left: 30px;
 		padding-right: 30px;
 	}
+	.altlist li img{
+		margin: 0;
+		width: 70px;
+		height: 70px;
+	}
+	.leaderboard{
+		height: 300px;
+		width: 110%;
+	}
 }
 
 @media screen and (max-width : 320px) {
@@ -898,5 +921,9 @@ nav{
 	}
 	.bigCelebCard{
 		height: 30vh;
+	}
+	.leaderboard{
+		height: 250px;
+		width: 120%;
 	}
 }
