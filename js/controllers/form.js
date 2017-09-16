@@ -32,13 +32,6 @@ $(document).ready(function(){
         data['password'] = $('#password').val();
         // profile['profile_pic'] = fd;
         console.log(data);
-        var app = angular.module("starConnect",["ngRoute"]);
-        app.config(['$httpProvider', function($httpProvider) {
-            $httpProvider.defaults.xsrfCookieName = 'csrftoken';
-            console.log("abcd")
-            $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken';
-            console.log($httpProvider.defaults.xsrfHeaderName)
-        }]);
         $http({
             method:'POST',
             url:'https://starconnect.org.in/connect/api/get_ambassador_id/',

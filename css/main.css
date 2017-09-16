@@ -134,8 +134,9 @@ a{
 }
 .small-underline{
 	background-color: #d44f8f;
-	margin-top: 5px;
+	/*margin-top: 5px;*/
 	height: 5px;
+	margin-bottom: 5px;
 }
 .about .section{
 	list-style-type: none;
@@ -580,7 +581,7 @@ input[type=file]{
 .centerpara{
 	padding-left: 5%;
 	width: 90%;
-	font-size: 130%;
+	font-size: 120%;
 	line-height: 1.3em;
 	color: #808080;
 	text-align: center;
@@ -607,6 +608,7 @@ input[type=file]{
 	width: 80%;
 	margin-left: 10%;
 }
+
 .altlist li{
 	display: flex;
 	align-items: center;
@@ -817,6 +819,17 @@ nav{
 		border-radius:5px;
 		padding:20px;
 		width: 80%
+	}
+	.altlist li:nth-of-type(even){
+		display: flex;
+		flex-direction: column;
+	}
+	.altlist li:nth-of-type(odd){
+		display: flex;
+		flex-direction: column-reverse;
+	}
+	.altlist li .title,.altlist li p{
+		text-align: center;
 	}
 }
 
