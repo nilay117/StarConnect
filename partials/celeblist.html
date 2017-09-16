@@ -43,10 +43,8 @@
 	</div>
 		<div ng-repeat="celeb in celebs" ng-click="setCeleb(celeb.code)" style="margin-bottom:5vh;">
 		<a href="/#!/celebrity/{{currentCeleb.code}}">
-			<div class="container" style="height:80vh;background:url({{celeb.img}});background-size:cover;background-repeat:no-repeat;">
-			<div style="width:100%;height:100%;display:flex;font-size:400%;color:#fff;justify-content:center;align-items:center">
-				{{celeb.name}}
-			</div>
+			<div class="container bigCelebCard" style="background:url({{celeb.img}});background-size:cover;background-repeat:no-repeat;">
+				<div>{{celeb.name}}</div>
 		</div></a>
 <!-- 	<div class="celebCards" style="margin-top:0;padding-top:0">
 		<div class="noscroll">
