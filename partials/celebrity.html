@@ -1,11 +1,11 @@
 
 <div class="artistWrapper">
-		<div class="header" style="height:30vh">
+		<div class="header" >
 			<div class="top">
 				<nav style="background-color:transparent;box-shadow:none;z-index:5">
 					<div class="nav-wrapper">
 					  <a class="brand-logo" style="height:100%;font-weight:bold;display:flex;align-items:center" ng-href="#!/"><img src="img/logo.png"/ style="height:50px;width:50px;">star connect</a>
-				      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+				       <div id="button-collapse" class="button-collapse" style="cursor:pointer"><i ng-click="menuClick()" class="material-icons">menu</i></div>
 				      <ul class="right hide-on-med-and-down">
 				      	<li><a ng-href="#!trending">Trending</a></li>
 						<li><a ng-href="#!whatsup">What's Up?</a></li>
@@ -34,7 +34,7 @@
 			</div>
 			<div class="heading" style="height:30vh;">
 				<p style="font-size:350%;">{{currentCeleb.name}}</p>
-				<p style="font-size:100%;margin-top:0">{{currentCeleb.subtitle}}</p>
+				<p style="font-size:100%;margin-top:0;margin-bottom:50px;">{{currentCeleb.subtitle}}</p>
 				
 			</div>
 		</div>
@@ -43,8 +43,8 @@
 					<div class="image" style="background:url({{currentCeleb.img}});background-size:cover;background-position: 60% 50%;"><div class="button">FOLLOW</div></div>
 					<div class="dataArtist">
 							<div class="about">
-								<p style="color:#5a449a;font-size:250%;font-weight:bold;margin-bottom:3%">ABOUT</p>
-								<p style="color:#808080;font-size:150%;">{{currentCeleb.text}}</p>
+								<p style="color:#5a449a;font-size:200%;font-weight:bold;margin-bottom:3%">ABOUT</p>
+								<p style="color:#808080;font-size:120%;">{{currentCeleb.text}}</p>
 							</div>
 							<div class="follow">
 								<div class="sb">
@@ -62,11 +62,11 @@
 							</div>
 					</div> 
 			</div>
-			<div>	
+			<div>	<!-- 
 				<div class="applyButton">
 				<div style="margin:auto"> Apply</div>
-				</div>
-				<div class="title">Recent Endorsements</div>
+				</div> -->
+				<div class="title" style="white-space:nowrap" style="margin-top:50px;font-size:180%">Recent Endorsements</div>
 			<!-- 	<div class="endorsements">
 					<ul>
 					<li class="endorse">
