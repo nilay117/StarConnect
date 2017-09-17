@@ -4,7 +4,8 @@ G<div class="artistWrapper">
 				<nav style="background-color:transparent;box-shadow:none;z-index:5">
 					<div class="nav-wrapper">
 					  <a class="brand-logo" style="height:100%;font-weight:bold;display:flex;align-items:center" ng-href="#!/"><img src="img/logo.png"/ style="height:50px;width:50px;">star connect</a>
-				      <a href="!#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+				      <div class="button-collapse" style="cursor:pointer" ng-click="menuClick()"><i class="material-icons">menu</i></div>
+				      <div class="button-cross" ng-click="closeMenu()"><i class="material-icons">close</i></div>
 				      <ul class="right hide-on-med-and-down">
 				      	<li><a ng-href="#!trending">Trending</a></li>
 						<li><a ng-href="#!whatsup">What's Up?</a></li>
@@ -74,7 +75,8 @@ G<div class="artistWrapper">
 			<div class="col s12 m12 l6">
 			<label>College</label>
 			<select style="display:block !important">
-<option value="St. Stephen’s College">St. Stephen’s College</option>
+				<option ng-repeat = "college in colleges | orderBy:'name'" value={{college.name}}>{{college.name}}</option>
+<!-- <option value="St. Stephen’s College">St. Stephen’s College</option>
 <option value="Lady Shri Ram College For Women">Lady Shri Ram College For Women  </option>
 <option value="Hindu College"> Hindu College </option>
 <option value="Miranda House">Miranda House </option>
@@ -136,7 +138,7 @@ G<div class="artistWrapper">
 <option value = "Pearl Academy ">Pearl Academy</option>
 <option value = "Jawaharlal Nehru University (JNU)">Jawaharlal Nehru University (JNU)</option>
 <option value = "NOIDA International University">NOIDA International University</option>
-
+ -->
 			</select>
 			</div>
 			<div class="col s12 m12 l6">

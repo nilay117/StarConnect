@@ -1,4 +1,4 @@
-var app = angular.module("starConnect",["ngRoute","ui-materialize"]);
+var app = angular.module("starConnect",["ngRoute"]);
 app.config(function($routeProvider,$httpProvider){
 
 	$httpProvider.defaults.xsrfCookieName = 'csrftoken';
