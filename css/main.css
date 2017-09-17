@@ -867,6 +867,7 @@ nav{
 	}
 	.button-cross{
 		left:250px;
+		top: -20px;
 	}
 }
 
@@ -942,6 +943,7 @@ nav{
 	}
 	.button-cross{
 		left:280px;
+		top: -10px;
 	}
 }
 
@@ -958,5 +960,6 @@ nav{
 	}
 	.button-cross{
 		left:300px;
+		top: 0px;
 	}
 }

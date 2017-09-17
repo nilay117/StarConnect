@@ -1,4 +1,4 @@
-G<div class="artistWrapper">
+<div class="artistWrapper">
 <div class="header" style="height:auto">
 			<div class="top">
 				<nav style="background-color:transparent;box-shadow:none;z-index:5">
@@ -76,7 +76,7 @@ G<div class="artistWrapper">
 			<div class="row">
 			<div class="col s12 m12 l6">
 			<label>College</label>
-			<select style="display:block !important">
+			<select id="college" style="display:block !important">
 				<option ng-repeat = "college in colleges | orderBy:'name'" value={{college.name}}>{{college.name}}</option>
 			</select>
 			</div>
