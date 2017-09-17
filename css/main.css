@@ -764,25 +764,41 @@ p .user_heading{
 	color: #888888 !important;
 }
 .side-nav{
-	transform: none !important;
-	left: -100% !important;
+	transition: ease-in;
+	transition-duration: 1s;
+}
+.open{
+	transform: translateX(0%) !important;
+}
+.button-cross{
+	position: absolute;
+	width: auto;
+	height: auto;
+	top:-30px;
+	transform: scale(1.5);
+	left:220px;
+	display: none;
+	cursor: pointer;
+}
+.button-collapse{
+		display: none;
 }
 nav{
 	font-weight: bold !important;
 }
-
+@media screen and (max-width: 992px){
+	.button-collapse{
+		display: block;
+	}
+}
 @media screen and (max-width : 1200px) {
 	
 }
+
 @media screen and (max-width : 1036px) {
 		.box{
 			flex-basis: 30%;
 		}
-}
-@media only screen and (min-width: 993px){
-	nav div.button-collapse{
-		display: none;
-	}
 }
 @media screen and (max-width : 979px) {
 	body,html{
@@ -848,6 +864,9 @@ nav{
 	}
 	.altlist li{
 		margin-bottom: 40px;
+	}
+	.button-cross{
+		left:250px;
 	}
 }
 
@@ -921,6 +940,9 @@ nav{
 		height: 300px;
 		width: 110%;
 	}
+	.button-cross{
+		left:280px;
+	}
 }
 
 @media screen and (max-width : 320px) {
@@ -933,5 +955,8 @@ nav{
 	.leaderboard{
 		height: 250px;
 		width: 120%;
+	}
+	.button-cross{
+		left:300px;
 	}
 }

@@ -4,7 +4,8 @@ G<div class="artistWrapper">
 				<nav style="background-color:transparent;box-shadow:none;z-index:5">
 					<div class="nav-wrapper">
 					  <a class="brand-logo" style="height:100%;font-weight:bold;display:flex;align-items:center" ng-href="#!/"><img src="img/logo.png"/ style="height:50px;width:50px;">star connect</a>
-				       <div id="button-collapse" class="button-collapse" style="cursor:pointer"><i ng-click="menuClick()" class="material-icons">menu</i></div>
+				      <div class="button-collapse" style="cursor:pointer" ng-click="menuClick()"><i class="material-icons">menu</i></div>
+				      <div class="button-cross" ng-click="closeMenu()"><i class="material-icons">close</i></div>
 				      <ul class="right hide-on-med-and-down">
 				      	<li><a ng-href="#!trending">Trending</a></li>
 						<li><a ng-href="#!whatsup">What's Up?</a></li>
@@ -75,69 +76,8 @@ G<div class="artistWrapper">
 			<div class="row">
 			<div class="col s12 m12 l6">
 			<label>College</label>
-			<select style="display:block !important" id="college">
-<option value="St. Stephen’s College">St. Stephen’s College</option>
-<option value="Lady Shri Ram College For Women">Lady Shri Ram College For Women  </option>
-<option value="Hindu College"> Hindu College </option>
-<option value="Miranda House">Miranda House </option>
-<option value="Hansraj College">Hansraj College </option>
-<option value="Ramjas College">Ramjas College </option>
-<option value="Shri Ram College of Commerce"> Shri Ram College of Commerce </option>
-<option value="Indraprastha College For Women">Indraprastha College For Women  </option>
-<option value="Sri Venkateswara College">Sri Venkateswara College  </option>
-<option value="Jesus and Mary College">  Jesus and Mary College </option>
-<option value="Gargi College">Gargi College </option>
-<option value="Acharya Narendra Dev College"> Acharya Narendra Dev College </option>
-<option value=" Deen Dayal Upadhyay College"> Deen Dayal Upadhyay College </option>
-<option value="SGTB Khalsa College">SGTB Khalsa College </option>
-<option value="Sri Guru Gobind Singh College of Commerce">Sri Guru Gobind Singh College of Commerce </option>
-<option value="Shaheed Bhagat Singh College">Shaheed Bhagat Singh College </option>
-<option value="Kirori Mal College">Kirori Mal College </option>
-<option value="Daulat Ram College">Daulat Ram College </option>
-<option value="Sri Aurobindo College">Sri Aurobindo College  </option>
-<option value="Kamala Nehru College">Kamala Nehru College </option>
-<option value="Shaheed Sukhdev College of Business Studies">Shaheed Sukhdev College of Business Studies </option>
-<option value="Delhi College of Arts and Commerce">  Delhi College of Arts and Commerce </option>
-<option value="Dayal SIngh College">  Dayal SIngh College </option>
-<option value="Kirori Mal College">  Kirori Mal College </option>
-<option value="Motilal College">  Motilal College </option>
-<option value="Sri Guru Nanak Dev Khalsa College">  Sri Guru Nanak Dev Khalsa College </option>
-<option value="P.G.D.A.V. College">  P.G.D.A.V. College </option>
-<option value="Lakshmibai College">  Lakshmibai College </option>
-<option value="Lady Irwin College">  Lady Irwin College </option>
-<option value=" Vivekananda College">   Vivekananda College </option>
-<option value="College of Vocational Studies">  College of Vocational Studies </option>
-<option value="Maharaja Agrasen College">   Maharaja Agrasen College  </option>
-<option value="Delhi College of Arts and Commerce (DCAC)">  Delhi College of Arts and Commerce (DCAC) </option>
-<option value="Saraswati Music College">Saraswati Music College </option>
-<option value="Gandharva Mahavidhalaya">Gandharva Mahavidhalaya </option>
-<option value="Tecnia Institute Of Dance, Music and Fine Arts">Tecnia Institute Of Dance, Music and Fine Arts </option>
-<option value ="Indian Film and Television Institute - Meerut">Indian Film and Television Institute - Meerut </option>
-<option value="Sangit Niketan (Indira Kala Sangit Vishwavidyalaya Ballimaran)">Sangit Niketan (Indira Kala Sangit Vishwavidyalaya Ballimaran) </option>
-<option value="Swaranjali School of Music and Dance">  Swaranjali School of Music and Dance </option>
-<option value="Delhi School of Music">Delhi School of Music </option>
-<option value="Indian Film and Television Institute - Meerut">Indian Film and Television Institute - Meerut </option>
-<option value = "Shriram Bharatiya Kala Kendra">  Shriram Bharatiya Kala Kendra </option>
-<option value = "School of Symphony">  School of Symphony </option>
-<option value = "Capital College of fine Arts, New Delhi">Capital College of fine Arts, New Delhi</option>
-<option value = "Indian Institute of Technology, Delhi">Indian Institute of Technology, Delhi</option>
-<option value = "Delhi Technological University, Delhi">Delhi Technological University, Delhi</option>
-<option value ="Indira Gandhi Delhi Technical University for Women, Delhi">Indira Gandhi Delhi Technical University for Women, Delhi	 </option>
-<option value="Amity University"> Amity University</option>
-<option value="Ashoka University">Ashoka University</option>
-<option value="Netaji Subhas Institute of Technology, Delhi">Netaji Subhas Institute of Technology, Delhi</option>
-<option value="Jaypee institute of technology">Jaypee institute of technology</option>
-<option value="Sharda University">Sharda University</option>
-<option value="Shiv Nadar University">Shiv Nadar University</option>
-<option value = "Lovely Professional University ">Lovely Professional University</option>
-<option value = "BML Munjal University">BML Munjal University</option>
-<option value = "GD Goenka University">GD Goenka University</option>
-<option value = "K.R. Mangalam University">K.R. Mangalam University</option>
-<option value = "Guru Gobind Singh Indraprastha University">Guru Gobind Singh Indraprastha University</option>
-<option value = "Pearl Academy ">Pearl Academy</option>
-<option value = "Jawaharlal Nehru University (JNU)">Jawaharlal Nehru University (JNU)</option>
-<option value = "NOIDA International University">NOIDA International University</option>
-
+			<select style="display:block !important">
+				<option ng-repeat = "college in colleges | orderBy:'name'" value={{college.name}}>{{college.name}}</option>
 			</select>
 			</div>
 			<div class="col s12 m12 l6">

@@ -1,6 +1,6 @@
 var app = angular.module("starConnect",["ngRoute"]);
 app.config(function($routeProvider,$httpProvider){
-	
+
 	$httpProvider.defaults.xsrfCookieName = 'csrftoken';
     console.log("abcd")
     $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken';

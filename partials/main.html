@@ -3,7 +3,8 @@
 				<nav style="background-color:transparent;box-shadow:none;z-index:5">
 					<div class="nav-wrapper">
 					  <a class="brand-logo" style="height:100%;font-weight:bold;display:flex;align-items:center" ng-href="#!/"><img src="img/logo.png"/ style="height:50px;width:50px;">star connect</a>
-				       <div id="button-collapse" class="button-collapse" style="cursor:pointer"><i ng-click="menuClick()" class="material-icons">menu</i></div>
+				      <div class="button-collapse" style="cursor:pointer" ng-click="menuClick()"><i class="material-icons">menu</i></div>
+				      <div class="button-cross" ng-click="closeMenu()"><i class="material-icons">close</i></div>
 				      <ul class="right hide-on-med-and-down">
 				      	<li><a ng-href="#!trending">Trending</a></li>
 						<li><a ng-href="#!whatsup">What's Up?</a></li>
@@ -15,7 +16,7 @@
 						<li class="signup-button" ng-hide="login"><a ng-href="/#!/joinus">Join Us</a></li>
 						<li class=profile-button ng-show="login"><a ng-href="#!profile">Hi, {{currentUser.first_name}}</a></li>
 				      </ul>
-				      <ul class="side-nav" id="mobile-demo">
+				      <ul class="side-nav" id="nav-mobile">
 				      	<li><a ng-href="#!trending">Trending</a></li>
 						<li><a ng-href="#!whatsup">What's Up?</a></li>
 						<li><a ng-href="#!artistlist">Artists</a></li>
