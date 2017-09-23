@@ -251,6 +251,7 @@ app.controller("AppController",function ($scope,$http,$window){
 		{"name" : "Pearl Academy "},
 		{"name" : "Jawaharlal Nehru University (JNU)"},
 		{"name" : "NOIDA International University"},
+		{"name" : "BITS Pilani, Pilani Campus"},
 		{"name" : "Gateway College of Architecture"}
 	]
 	$scope.currentArtist = null;
