@@ -12,19 +12,15 @@ app.controller("videoController",function($scope,$routeParams,$window,$http){
       tag.src = "https://www.youtube.com/iframe_api";
       var firstScriptTag = document.getElementsByTagName('script')[0];
       firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-      console.log("Script loaded")
     
     //Function to add videos using YouTube API
     jQuery(document).ready(function(){
         angular.forEach($scope.videos,function(item){
       //  This function creates an <iframe> (and YouTube player)
       //    after the API code downloads.
-      console.log(item.connect['id'],item.connect['upload_link'])
       
       var player;
       $window.onYouTubeIframeAPIReady = function() {
-        console.log("Ready")
         player = new YT.Player(item.connect['id'], {
           height: '150',
           width: '300',

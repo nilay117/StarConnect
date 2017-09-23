@@ -1,7 +1,6 @@
 app.controller("artistController",function($scope,$routeParams,$window){
 	 $scope.currentArtist = $scope.artists[$routeParams.artistCode];
 	//This code loads the IFrame Player API code asynchronously.
-      console.log($scope.currentArtist);
       var tag = document.createElement('script');
 
       tag.src = "https://www.youtube.com/iframe_api";
@@ -13,7 +12,6 @@ app.controller("artistController",function($scope,$routeParams,$window){
           //    after the API code downloads.
           var player;
           $window.onYouTubeIframeAPIReady = function() {
-            console.log("Ready",$scope.currentArtist)
             player = new YT.Player('player', {
               height: '390',
               width: '640',

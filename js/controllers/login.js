@@ -1,5 +1,4 @@
 app.controller("loginController", function ($scope, $http, $window) {
-    console.log($window.sessionStorage.token)
     $('#login').click(function(){
         var data = {};
         var a = $('#login_form').serializeArray();
@@ -15,12 +14,10 @@ app.controller("loginController", function ($scope, $http, $window) {
         }).then(function successCallback(response){
             $window.sessionStorage.token = response.data['token'];
             $scope.message = 'Welcome';   
-            console.log($scope.message)
             $window.location.href = '/';
         }, function errorCallback(response) {
             delete $window.sessionStorage.token;
-            $scope.message = 'Error: Invalid user or password';
-            console.log($scope.message)                 
+            $scope.message = 'Error: Invalid user or password';                
         });
     })  
 

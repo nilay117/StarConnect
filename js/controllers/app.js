@@ -1,12 +1,10 @@
 app.controller("AppController",function ($scope,$http,$window){
 	jQuery(document).ready(function(){
-	console.log("QWERTYUIOP")
 	$scope.closeMenu = function(){
 		jQuery(".side-nav").removeClass('open');
 		jQuery('.button-cross').css("display","none")
 	}
     $scope.menuClick = function(){
-    	console.log("I am clicked")
     	jQuery(".side-nav").addClass('open');
     	jQuery('.button-cross').css("display","block")
     }
@@ -18,18 +16,14 @@ app.controller("AppController",function ($scope,$http,$window){
 		method:'GET',
 		url:'https://starconnect.org.in/connect/api/get_dashboard/'
 	}).then(function successCallback(response){
-		console.log(response.data)
 		$scope.artists = response.data['artists'];
-		console.log($scope.artists)
 		$scope.cas = response.data['ambassadors'];
 	});
 	$(document).ready(function(){
-		console.log("I am inside");
 		var data = {}
 		$scope.login = false;
 		if($window.sessionStorage.token){
 			delete $window.sessionStorage.token;
-			console.log(data)
 			data['username'] = $window.sessionStorage.username;
 			data['password'] = $window.sessionStorage.password
 			$http({
@@ -45,7 +39,6 @@ app.controller("AppController",function ($scope,$http,$window){
 					url:'https://starconnect.org.in/connect/api/profiles/'
 				}).then(function successCallback(response){
 					$scope.currentUser = response.data;
-					console.log(response.data,$scope.currentUser)
 					$scope.login = true;
 				});
 			});
@@ -259,5 +252,9 @@ app.controller("AppController",function ($scope,$http,$window){
 
 	$scope.setCeleb = function(code){
 		$scope.currentCeleb = $scope.celebs[code];
+	}
+
+	$scope.closeAlert = function(e){
+		document.getElementById('alert-wrapper').className = "hidden";
 	}
 });

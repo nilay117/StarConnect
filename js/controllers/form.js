@@ -6,7 +6,7 @@ $(document).ready(function(){
     //         //Take the first selected file
     //         fd.append("file", files[0]);
     //     }
-
+    $scope.thankyou_data;
     $('#submit').click(function(e){
         var data = {};
         var profile = {};
@@ -17,7 +17,8 @@ $(document).ready(function(){
         profile['email'] = $('#email').val();
 
         if($("#phone_no").val() < 1000000000 || $('#phone_no').val() > 9999999999){
-            alert("Phone Number is invalid!");
+            document.getElementById('alert-msg').innerHTML = "Phone Number is invalid!";
+            document.getElementById('alert-wrapper').className = "";
             return false;
         }
         profile['phone_no'] = $('#phone_no').val();
@@ -26,12 +27,12 @@ $(document).ready(function(){
         data['url']=$('#url').val();
         data['username']=$('#username').val();
         if($('#password').val() != $('#confirm_password').val()){
-            alert("Password and Confirm Password aren't same!");
+            document.getElementById('alert-msg').innerHTML = "Password and Confirm Password are not same!";
+            document.getElementById('alert-wrapper').className = "";
             return false;
         }
         data['password'] = $('#password').val();
         // profile['profile_pic'] = fd;
-        console.log(data);
         $http({
             method:'POST',
             url:'https://starconnect.org.in/connect/api/get_ambassador_id/',
@@ -41,10 +42,8 @@ $(document).ready(function(){
             }
         }).then(function successCallback(response){
             var id = response.data['referred_by'];
-            console.log(id);
             profile['referred_by'] = id;
         data['profile'] = profile;    
-            console.log(data);
             $http({
             method:'POST',
             url:'https://starconnect.org.in/connect/api/register/',
@@ -53,11 +52,11 @@ $(document).ready(function(){
                 'Content-Type': 'application/json'
             }
             }).then(function successCallback(response){
-                $scope.thankyou_data = response.data['message']
-                $window.location.href = '/success';
-                console.log("Form successfully submited!");
+                $scope.thankyou_data = response.data['message'];
+                $window.location.href = '/#/!success';
             }, function errorCallback(response) {
-                alert(response.data['message']);
+                document.getElementById('alert-msg').innerHTML = response.data['message'];
+                document.getElementById('alert-wrapper').className = "";
             });
         })
         
