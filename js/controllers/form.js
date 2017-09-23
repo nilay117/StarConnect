@@ -1,5 +1,5 @@
 
-app.controller("formController", function ($scope, $http) {
+app.controller("formController", function ($scope, $http, $window) {
 $(document).ready(function(){
     // var fd="";
     // $scope.uploadFile = function(files) {
@@ -7,8 +7,7 @@ $(document).ready(function(){
     //         //Take the first selected file
     //         fd.append("file", files[0]);
     //     }
-    $scope.thankyou_data;
-    $('#submit').click(function(e){
+        $('#submit').click(function(e){
         var data = {};
         var profile = {};
         var csrf = '{{ csrf_token }}'
@@ -53,7 +52,7 @@ $(document).ready(function(){
             }
             }).then(function successCallback(response){
                 $scope.thankyou_data = response.data['message'];
-                $window.location.href = '/#/!success';
+                $window.location.href = '/#!/success';
             }, function errorCallback(response) {
                 document.getElementById('alert-msg').innerHTML = response.data['message'];
                 document.getElementById('alert-wrapper').className = "";
