@@ -39,4 +39,5 @@ app.config(function($routeProvider,$httpProvider){
 				controller:'caController'
 			})
 			.when('/success',{templateUrl:"../partials/success.html"})
+			.when('/partners',{templateUrl:"../partials/partners.html"})
 });

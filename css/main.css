@@ -894,6 +894,14 @@ nav{
 	height: 150px;
 	margin: 10px;
 }
+.sponsor-card{
+	width: 350px;
+	height: 350px;
+	margin:20px;
+}
+.media-card{
+	margin:50px;
+}
 @media screen and (max-width: 992px){
 	.button-collapse{
 		display: block;
