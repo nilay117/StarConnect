@@ -1,5 +1,6 @@
 
 app.controller("formController", function ($scope, $http, $window) {
+    $scope.collegename = "bla";
 $(document).ready(function(){
     // var fd="";
     // $scope.uploadFile = function(files) {
@@ -7,13 +8,29 @@ $(document).ready(function(){
     //         //Take the first selected file
     //         fd.append("file", files[0]);
     //     }
-        $('#submit').click(function(e){
+    $scope.check = function(){
+        if($('#college').val() == "other"){
+            $('#college_other').removeAttr('disabled');
+            $('#disabled-field').removeClass('low_opacity');
+        }
+        else{
+            $('#college_other').attr('disabled',"true");
+            $('#disabled-field').addClass('low_opacity');            
+        }
+    }
+    $scope.thankyou_data;
+    $('#submit').click(function(e){
         var data = {};
         var profile = {};
         var csrf = '{{ csrf_token }}'
         profile['first_name'] = $('#first_name').val();
         profile['last_name'] = $('#last_name').val();
-        profile['college'] = $('#college').val();
+        if($('#college').val() == "Other"){
+            profile['college'] = $('#college_other').val()
+        }
+        else{
+            profile['college'] = $('#college').val();
+        }
         profile['email'] = $('#email').val();
 
         if($("#phone_no").val() < 1000000000 || $('#phone_no').val() > 9999999999){

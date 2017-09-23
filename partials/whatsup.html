@@ -8,7 +8,8 @@
 				      <div class="button-cross" ng-click="closeMenu()"><i class="material-icons">close</i></div>
 				      <ul class="right hide-on-med-and-down">
 				      	<li><a ng-href="#!trending">Trending</a></li>
-						<li><a ng-href="#!whatsup">What's Up?</a></li>
+						<li><a ng-href="#!whatsup">Dilli Beats</a></li>
+
 						<li><a ng-href="#!artistlist">Artists</a></li>
 						<li><a ng-href="#!celebritylist">Celebrities</a></li>
 						<!--<li><a ng-href="#!videolist">Videos</a></li>-->
@@ -19,7 +20,8 @@
 				      </ul>
 				      <ul class="side-nav" id="mobile-demo">
 				      	<li><a ng-href="#!trending">Trending</a></li>
-						<li><a ng-href="#!whatsup">What's Up?</a></li>
+						<li><a ng-href="#!whatsup">Dilli Beats</a></li>
+
 						<li><a ng-href="#!artistlist">Artists</a></li>
 						<li><a ng-href="#!celebritylist">Celebrities</a></li>
 						<!--<li><a ng-href="#!videolist">Videos</a></li>-->
@@ -35,22 +37,27 @@
 	</div>
 	<div class="about">
 		<div class="heading">
-			What's up
+			Dilli Beats
 			<div class="underline" style="width:3em;"></div>
 		</div>
-		<p class="centerpara">
-			In our mission to discover hidden talent, we believe that the search should start right where the youth resides. Yes, the colleges are buried treasures of undiscovered talent and we are striving to present it to the world stage. We are running an online college music competition in 50 Delhi Colleges wherein top 15 musicians get individual music videos recorded at exotic locations, get their work reviewed and shared by music celebrities like Parikrama, Swarathma, Thaikkudam Bridge and one lucky musician gets a global album release! Are you a musician? Register now! A music enthusiast? Support the top musicians through your votes and engagement!
+		<p class="centerpara" style="margin-bottom:20px">
+At Star Connect, it’s our mission to discover hidden talent and we believe that the search should start right where the youth resides. Star Connect in association with Namyoho Studios proudly presents Dilli Beats: an Online College Music Competition across 50 Delhi Colleges wherein the top 15 musicians get professional music videos and audio recordings each shot by Namyoho Studios for free. They then get their work reviewed by the likes of Parikrama, Thaikkudam Bridge, Swarathma and Euphoria and finally promoted by them through their social media handles (for a minimum of 4 artists)! What else? One lucky artist also gets the opportunity to go live on Facebook with Parikrama! Moreover, the registration fees will be used to donate a combined sum of Rs, 50,000 to the Smile Foundation to help underprivileged children.
 		</p>
 		<div class="heading" style="margin-bottom:5%;">
 			How it Works?
 			<div class="underline" style="width:3em;"></div>
 		</div>
-		<ul class="altlist">
+		<p class="centerpara">
+		Register with a video link of your past singing performance, get maximum engagement on your video to be a part of the top 30. After shortlisting of the top 15 from the top 30 by Namyoho Studios and Star Connect, free professional music videos will be recorded for the top 15 and these would be sent to celebrities for review. The top 4 would be promoted by celebrities.</p>
+		<p class="centerpara"><b>Registrations:</b> Fees - Rs. 250. All money collected from registrations will be used to donate a combined sum of Rs. 50,000 to the Smile Foundation to help underprivileged children. Registrations open till 5th October.</p>
+		<p class="centerpara"><b>Competition:</b> Get maximum points (views + engagement) on your video to win! Dates - 15th October - 25th October. More details to follow.</p>
+		<div class="buttons" style="margin-bottom:50px"><button class="seeall"><a ng-href="#!whatsup">Register Now!</a></button></div>
+		<!-- <ul class="altlist">
 			<li>
 				<img src="img/artist.png"/>
 				<div>
 					<div class="title">Artists</div>
-					<!-- <div class="small-underline" style="width:5.5em"></div> -->
+					<!-- <div class="small-underline" style="width:5.5em"></div> 
 					<p>
 						This is your opportunity to win love of music enthusiasts, work with professionals for music videos worth Rs. 4 Lakhs, get your work reviewed and shared by music celebrities and multiple social media channels! Register with us for a nominal amount which gets transferred to the Smile Foundation in order to help underprivileged children!
 					</p>
@@ -59,7 +66,7 @@
 			<li>
 				<div>
 					<div class="title" style="text-align:right">Music Lovers</div>
-					<!-- <div class="small-underline" style="width:12em;position:relative;left:75%;"></div> -->
+					<!-- <div class="small-underline" style="width:12em;position:relative;left:75%;"></div>
 					<p> Support your college, view undiscovered content, exert the power of being a music enthusiast by voting for the top musicians! Show us some love!</p>
 				</div>
 				<img src="img/artist.png"/>
@@ -68,11 +75,11 @@
 				<img src="img/artist.png"/>
 				<div>
 					<div class="title">Leaderboard</div>
-					<!-- <div class="small-underline" style="width:11em"></div> -->
+					<!-- <div class="small-underline" style="width:11em"></div>
 					<p>Keep track of the top artists, the winning colleges and make sure that you don’t let your support fall short! </p>
 				</div>
 			</li>
-		</ul>
+		</ul> -->
 		<div class="heading" style="margin-bottom:5%;">
 			Leaderboard (Artist)
 			<div class="underline" style="width:3em;"></div>
@@ -125,10 +132,10 @@
 						<ul>
 							<li ng-repeat="college in colleges">
 							<a href="#">
-								<div class= "image" style="background:url({{college.img}});background-size:cover;background-position:50% 50%;"></div>
-								<div>
+								<!-- <div class= "image" style="background:url({{college.img}});background-sie:cover;background-position:50% 50%;"></div>
+								 --><div>
 									<div class="name" style="font-size:130%;">{{college.name}}</div>
-									<div >{{college.city}}</div>
+								<!-- 	<div >{{college.city}}</div> -->
 									<div class="view">{{college.views}} Views</div>
 								</div>
 							</a>
@@ -136,6 +143,18 @@
 						</ul>
 					</div>
 				</div>
+			</div>
+		</div>
+		<div class="heading" style="margin-bottom:5%;">
+			Contact Us!
+			<div class="underline" style="width:3em;"></div>
+		</div>
+		<div class="container">
+			<div class="contact-links">
+				<a href="https://www.facebook.com/StarConnectHQ/"><img src="../img/fb_link.png"></a>
+				<a href="https://www.twitter.com/StarConnectHQ/"><img src="../img/twitter_link.svg"></a>
+				<a href="https://www.instagram.com/starconnecthq/"><img src="../img/insta_link.png"></a>
+				<a href="mailto:vinayakaggarwal2507@gmail.com"><img src="../img/email_link.png"></a>
 			</div>
 		</div>
 	</div>

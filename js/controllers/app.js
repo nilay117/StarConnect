@@ -1,4 +1,5 @@
 app.controller("AppController",function ($scope,$http,$window){
+	$scope.collegename = "cla"
 	jQuery(document).ready(function(){
 	$scope.closeMenu = function(){
 		jQuery(".side-nav").removeClass('open');
@@ -183,69 +184,258 @@ app.controller("AppController",function ($scope,$http,$window){
 	// 	"62":{"name" : "Gateway College of Architecture"}
 	// ]
 	$scope.colleges = [
-		{"name" : "St. Stephens College"},
-		{"name" : "Lady Shri Ram College For Women"},
-		{"name" : "Hindu College"},
-		{"name" : "Miranda House"},
-		{"name" : "Hansraj College"},
-		{"name" : "Ramjas College"},
-		{"name" : "Shri Ram College of Commerce"},
-		{"name" : "Indraprastha College For Women "},
-		{"name" : "Sri Venkateswara College "},
-		{"name" : "Jesus & Mary College"},
-		{"name" : "Gargi College"},
-		{"name" : "Acharya Narendra Dev College"},
-		{"name" : "Deen Dayal Upadhyay College"},
-		{"name" : "SGTB Khalsa College"},
-		{"name" : "Sri Guru Gobind Singh College of Commerce"},
-		{"name" : "Shaheed Bhagat Singh College"},
-		{"name" : "Kirori Mal College"},
-		{"name" : "Daulat Ram College"},
-		{"name" : "Sri Aurobindo College "},
-		{"name" : "Kamala Nehru College"},
-		{"name" : "Shaheed Sukhdev College of Business Studies"},
-		{"name" : "Delhi College of Arts & Commerce"},
-		{"name" : "Dayal SIngh College"},
-		{"name" : "Kirori Mal College"},
-		{"name" : "Motilal College"},
-		{"name" : "Sri Guru Nanak Dev Khalsa College"},
-		{"name" : "P.G.D.A.V. College"},
-		{"name" : "Lakshmibai College"},
-		{"name" : "Lady Irwin College"},
-		{"name" : "Vivekananda College"},
-		{"name" : "College of Vocational Studies"},
-		{"name" : "Maharaja Agrasen College "},
-		{"name" : "Delhi College of Arts and Commerce (DCAC)"},
-		{"name" : "Saraswati Music College"},
-		{"name" : "Gandharva Mahavidhalaya"},
-		{"name" : "Tecnia Institute Of Dance, Music & Fine Arts"},
-		{"name" : "Indian Film and Television Institute - Meerut"},
-		{"name" : "Sangit Niketan (Indira Kala Sangit Vishwavidyalaya Ballimaran)"},
-		{"name" : "Swaranjali School of Music & Dance"},
-		{"name" : "Delhi School of Music"},
-		{"name" : "Indian Film and Television Institute - Meerut"},
-		{"name" : "Shriram Bharatiya Kala Kendra"},
-		{"name" : "School of Symphony"},
-		{"name" : "Capital College of fine Arts, New Delhi "},
-		{"name" : "Indian Institute of Technology, Delhi"},
-		{"name" : "Delhi Technological University, Delhi"},
-		{"name" : "Indira Gandhi Delhi Technical University for Women, Delhi"},
-		{"name" : "Amity University"},
-		{"name" : "Ashoka University"},
-		{"name" : "Netaji Subhas Institute of Technology, Delhi"},
-		{"name" : "Jaypee institute of technology"},
-		{"name" : "Sharda University"},
-		{"name" : "Shiv Nadar University"},
-		{"name" : "Lovely Professional University"},
-		{"name" : "BML Munjal University"},
-		{"name" : "GD Goenka University"},
-		{"name" : "K.R. Mangalam University"},
-		{"name" : "Guru Gobind Singh Indraprastha University"},
-		{"name" : "Pearl Academy "},
-		{"name" : "Jawaharlal Nehru University (JNU)"},
-		{"name" : "NOIDA International University"},
-		{"name" : "BITS Pilani, Pilani Campus"},
-		{"name" : "Gateway College of Architecture"}
+		{
+			"name" : "St. Stephens College",
+			"views":0
+		},
+		{
+			"name" : "Lady Shri Ram College For Women",
+			"views":0
+		},
+		{
+			"name" : "Hindu College",
+			"views":0
+		},
+		{
+			"name" : "Miranda House",
+			"views":0
+		},
+		{
+			"name" : "Hansraj College",
+			"views":0
+		},
+		{
+			"name" : "Ramjas College",
+			"views":0
+		},
+		{
+			"name" : "Shri Ram College of Commerce",
+			"views":0
+		},
+		{
+			"name" : "Indraprastha College For Women ",
+			"views":0
+		},
+		{
+			"name" : "Sri Venkateswara College ",
+			"views":0
+		},
+		{
+			"name" : "Jesus & Mary College",
+			"views":0
+		},
+		{
+			"name" : "Gargi College",
+			"views":0
+		},
+		{
+			"name" : "Acharya Narendra Dev College",
+			"views":0
+		},
+		{
+			"name" : "Deen Dayal Upadhyay College",
+			"views":0
+		},
+		{
+			"name" : "SGTB Khalsa College",
+			"views":0
+		},
+		{
+			"name" : "Sri Guru Gobind Singh College of Commerce",
+			"views":0
+		},
+		{
+			"name" : "Shaheed Bhagat Singh College",
+			"views":0
+		},
+		{
+			"name" : "Kirori Mal College",
+			"views":0
+		},
+		{
+			"name" : "Daulat Ram College",
+			"views":0
+		},
+		{
+			"name" : "Sri Aurobindo College ",
+			"views":0
+		},
+		{
+			"name" : "Kamala Nehru College",
+			"views":0
+		},
+		{
+			"name" : "Shaheed Sukhdev College of Business Studies",
+			"views":0
+		},
+		{
+			"name" : "Delhi College of Arts & Commerce",
+			"views":0
+		},
+		{
+			"name" : "Dayal SIngh College",
+			"views":0
+		},
+		{
+			"name" : "Kirori Mal College",
+			"views":0
+		},
+		{
+			"name" : "Motilal College",
+			"views":0
+		},
+		{
+			"name" : "Sri Guru Nanak Dev Khalsa College",
+			"views":0
+		},
+		{
+			"name" : "P.G.D.A.V. College",
+			"views":0
+		},
+		{
+			"name" : "Lakshmibai College",
+			"views":0
+		},
+		{
+			"name" : "Lady Irwin College",
+			"views":0
+		},
+		{
+			"name" : "Vivekananda College",
+			"views":0
+		},
+		{
+			"name" : "College of Vocational Studies",
+			"views":0
+		},
+		{
+			"name" : "Maharaja Agrasen College ",
+			"views":0
+		},
+		{
+			"name" : "Delhi College of Arts and Commerce (DCAC)",
+			"views":0
+		},
+		{
+			"name" : "Saraswati Music College",
+			"views":0
+		},
+		{
+			"name" : "Gandharva Mahavidhalaya",
+			"views":0
+		},
+		{
+			"name" : "Tecnia Institute Of Dance, Music & Fine Arts",
+			"views":0
+		},
+		{
+			"name" : "Indian Film and Television Institute - Meerut",
+			"views":0
+		},
+		{
+			"name" : "Sangit Niketan (Indira Kala Sangit Vishwavidyalaya Ballimaran)",
+			"views":0
+		},
+		{
+			"name" : "Swaranjali School of Music & Dance",
+			"views":0
+		},
+		{
+			"name" : "Delhi School of Music",
+			"views":0
+		},
+		{
+			"name" : "Indian Film and Television Institute - Meerut",
+			"views":0
+		},
+		{
+			"name" : "Shriram Bharatiya Kala Kendra",
+			"views":0
+		},
+		{
+			"name" : "School of Symphony",
+			"views":0
+		},
+		{
+			"name" : "Capital College of fine Arts, New Delhi ",
+			"views":0
+		},
+		{
+			"name" : "Indian Institute of Technology, Delhi",
+			"views":0
+		},
+		{
+			"name" : "Delhi Technological University, Delhi",
+			"views":0
+		},
+		{
+			"name" : "Indira Gandhi Delhi Technical University for Women, Delhi",
+			"views":0
+		},
+		{
+			"name" : "Amity University",
+			"views":0
+		},
+		{
+			"name" : "Ashoka University",
+			"views":0
+		},
+		{
+			"name" : "Netaji Subhas Institute of Technology, Delhi",
+			"views":0
+		},
+		{
+			"name" : "Jaypee institute of technology",
+			"views":0
+		},
+		{
+			"name" : "Sharda University",
+			"views":0
+		},
+		{
+			"name" : "Shiv Nadar University",
+			"views":0
+		},
+		{
+			"name" : "Lovely Professional University",
+			"views":0
+		},
+		{
+			"name" : "BML Munjal University",
+			"views":0
+		},
+		{
+			"name" : "GD Goenka University",
+			"views":0
+		},
+		{
+			"name" : "K.R. Mangalam University",
+			"views":0
+		},
+		{
+			"name" : "Guru Gobind Singh Indraprastha University",
+			"views":0
+		},
+		{
+			"name" : "Pearl Academy ",
+			"views":0
+		},
+		{
+			"name" : "Jawaharlal Nehru University (JNU)",
+			"views":0
+		},
+		{
+			"name" : "NOIDA International University",
+			"views":0
+		},
+		{
+			"name" : "Gateway College of Architecture",
+			"views":0
+		},
+		{
+			"name":"Birla Institute of Technology and Sciences,Pilani, Pilani Campus",
+			"view":0
+		}
 	]
 	$scope.currentArtist = null;
 
