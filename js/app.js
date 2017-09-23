@@ -2,7 +2,7 @@ var app = angular.module("starConnect",["ngRoute"]);
 app.config(function($routeProvider,$httpProvider){
 
 	$httpProvider.defaults.xsrfCookieName = 'csrftoken';
-    console.log("abcd")
+
     $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken';
 
 	$routeProvider
@@ -26,7 +26,9 @@ app.config(function($routeProvider,$httpProvider){
 				templateUrl:"../partials/videolist.html",
 				controller:'videoController'
 			})
-			.when("/trending",{templateUrl:"../partials/trending.html"})
+			.when("/trending",{
+				templateUrl:"../partials/trending.html",
+			})
 			.when("/login",{
 				templateUrl:"../partials/login.html",
 				controller:'loginController'

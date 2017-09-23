@@ -14,7 +14,6 @@ app.controller("caController", function ($scope, $http) {
             }
         }).then(function successCallback(response){
             alert(response.data['message'])
-            console.log("Form successfully submited!");
         }, function errorCallback(response) {
             alert(response.data['message']);
         });

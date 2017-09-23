@@ -74,9 +74,23 @@
 					<p>This self - sustaining cycle discovers new talent and empowers social causes through 
                                celebrities who care.<p>
 				</li>
-			</ul> 
-		</div>
-
+			</ul>
+			<div class="heading">
+				Dilli Beatz!
+				<div class="underline" style="width:3em;"></div>
+			</div>
+			<p class="how-it-works">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat.</p>
+			
+			<div class="db-video">
+				<iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FStarConnectHQ%2Fvideos%2F344023576023558%2F&show_text=0&width=560" width="600" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+			</div>
+			<div class="buttons">
+				<button class="seeall"><a ng-href="#!whatsup">What's Up?</a></button>
+				<button class="seeall"><a ng-href="#!joinus">Register</a></button>
+			</div>
 		<div class="celebCards" style="height:auto;padding-bottom:0;">
 			<div class="heading">
 				Celebrities
@@ -84,7 +98,7 @@
 			</div>
 			<ul class="celebul">
 				<li class="celebCard" ng-repeat="celeb in celebs" ng-click="setCeleb(celeb.code)">
-				<a ng-href="#!celebrity/{{currentCeleb.code}}">
+				<a ng-href="#!celebrity/{{currentCeleb.code}}/">
 					<div class= "image" style="background:url({{celeb.img}});background-size:cover;background-position:50% 50% ;"><p>{{celeb.name}}</p></div></a>
 					<div class="wrapper">
 						<div class="name">{{celeb.name}}</div>
