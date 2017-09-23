@@ -881,6 +881,19 @@ nav{
 .buttons .seeall{
 	white-space: nowrap;
 }
+.low_opacity{
+	opacity: 0.3;
+}
+.contact-links{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.contact-links img{
+	width: 150px;
+	height: 150px;
+	margin: 10px;
+}
 @media screen and (max-width: 992px){
 	.button-collapse{
 		display: block;

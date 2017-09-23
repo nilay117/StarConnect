@@ -8,7 +8,8 @@
 				      <div class="button-cross" ng-click="closeMenu()"><i class="material-icons">close</i></div>
 				      <ul class="right hide-on-med-and-down">
 				      	<li><a ng-href="#!trending">Trending</a></li>
-						<li><a ng-href="#!whatsup">What's Up?</a></li>
+						<li><a ng-href="#!whatsup">Dilli Beats</a></li>
+
 						<li><a ng-href="#!artistlist">Artists</a></li>
 						<li><a ng-href="#!celebritylist">Celebrities</a></li>
 						<!--<li><a ng-href="#!videolist">Videos</a></li>-->
@@ -19,7 +20,8 @@
 				      </ul>
 				      <ul class="side-nav" id="mobile-demo">
 				      	<li><a ng-href="#!trending">Trending</a></li>
-						<li><a ng-href="#!whatsup">What's Up?</a></li>
+						<li><a ng-href="#!whatsup">Dilli Beats</a></li>
+
 						<li><a ng-href="#!artistlist">Artists</a></li>
 						<li><a ng-href="#!celebritylist">Celebrities</a></li>
 						<!--<li><a ng-href="#!videolist">Videos</a></li>-->
@@ -72,15 +74,22 @@
 			</div>
 			</div>
 			<div class="row">
+				<div class="col s12">
+				<label>Email ID:</label>
+				<input type="text" name="email" id="email" placeholder="doejohn@contact.com">
+			</div>	
+			</div>
+			<div class="row">
 			<div class="col s12 m12 l6">
 			<label>College</label>
-			<select id="college" style="display:block !important">
+			<select id="college" style="display:block !important" ng-change="check()" ng-model="collegename">
 				<option ng-repeat = "college in colleges | orderBy:'name'" value={{college.name}}>{{college.name}}</option>
+				<option value="other" id="other-college">Other</option>
 			</select>
 			</div>
-			<div class="col s12 m12 l6">
-			<label>E-mail</label>
-			<input type="text" name="email" id="email" placeholder="doejohn@contact.com">
+			<div class="col s12 m12 l6" id="disabled-field" class="low_opacity">
+			<label>If other, please specify!</label>
+			<input type="text" disabled name="email" id="college_other" placeholder="doejohn@contact.com">
 			</div>	
 			</div>
 			<div class="row">
