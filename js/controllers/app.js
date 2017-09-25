@@ -1,3 +1,4 @@
+
 app.controller("AppController",function ($scope,$http,$window){
 
 	
@@ -41,7 +42,11 @@ app.controller("AppController",function ($scope,$http,$window){
 				$http.defaults.headers.common['Authorization'] = 'JWT '+ $window.sessionStorage.token;
 				$http({
 					method:'GET',
-					url:'https://starconnect.org.in/connect/api/profiles/'
+					url:'https://starconnect.org.in/connect/api/profile/',
+					headers:{
+						"content-type":"application/json",
+						"Access-Control-Allow-Origin":"*"
+						}
 				}).then(function successCallback(response){
 					$scope.currentUser = response.data;
 					$scope.login = true;
@@ -432,6 +437,10 @@ app.controller("AppController",function ($scope,$http,$window){
 			"name" : "Gateway College of Architecture",
 			"views":0
 		},
+		{
+			"name":"Birla Institute of Technology and Sciences,Pilani, Pilani Campus",
+			"view":0
+		}
 	]
 	$scope.currentArtist = null;
 
