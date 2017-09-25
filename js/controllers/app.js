@@ -1,4 +1,7 @@
 app.controller("AppController",function ($scope,$http,$window){
+
+	
+
 	$scope.collegename = "cla"
 	jQuery(document).ready(function(){
 	$scope.closeMenu = function(){
@@ -6,10 +9,11 @@ app.controller("AppController",function ($scope,$http,$window){
 		jQuery('.button-cross').css("display","none")
 	}
     $scope.menuClick = function(){
-    	jQuery(".side-nav").addClass('open');
-    	jQuery('.button-cross').css("display","block")
-    }
+  		 	jQuery(".side-nav").addClass('open');
+   			jQuery('.button-cross').css("display","block")
+    	}
 	})
+
 	$scope.currentUser;
 	$scope.thankyou_data;
 	$scope.baseUrl = 'https://starconnect.org.in/'
