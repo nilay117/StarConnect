@@ -28,12 +28,13 @@ app.config(function($routeProvider,$httpProvider){
 			})
 			.when("/trending",{
 				templateUrl:"../partials/trending.html",
+				controller:'trendingController'
 			})
 			.when("/login",{
 				templateUrl:"../partials/login.html",
 				controller:'loginController'
 			})
-			.when("/user",{templateUrl:"../partials/user.html"})
+			.when("/profile",{templateUrl:"../partials/user.html"})
 			.when("/campusambassador",{
 				templateUrl:"../partials/form_ca.html",
 				controller:'caController'

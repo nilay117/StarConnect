@@ -48,7 +48,7 @@ $(document).ready(function(){
             return false;
         }
         data['password'] = $('#password').val();
-        // profile['profile_pic'] = fd;
+        profile['profile_pic'] = $('#profile_pic').files[0].getAsDataURL();
         $http({
             method:'POST',
             url:'https://starconnect.org.in/connect/api/get_ambassador_id/',

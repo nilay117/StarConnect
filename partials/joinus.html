@@ -85,7 +85,7 @@
 			</div>
 			<div class="row">
 			<div class="col s12 m12 l6">
-			<label>College</label>
+			<label>College (Choose Other if college isn't present in the list)</label>
 			<select id="college" style="display:block !important" ng-change="check()" ng-model="collegename">
 				<option ng-repeat = "college in colleges | orderBy:'name'" value={{college.name}}>{{college.name}}</option>
 				<option value="other" id="other-college">Other</option>
@@ -102,8 +102,12 @@
 					<input type="text" name="url" id="url" placeholder="https://youtube.com/">
 				</div>
 			</div>
-			<!-- <label>Profile Picture</label>
-			<input type="file" name="file" onchange="angular.element(this).scope().uploadFile(this.files)"/> -->
+			<div class="row">
+				<div class="col s12">
+					<label>Profile Picture</label>
+					<input style="display:block;" id="profile_pic" type="file" name="file"/>							
+				</div>
+			</div>
 			<div class="row">
 				<div class=" col s12">		
 					<label>Referred By:</label>
