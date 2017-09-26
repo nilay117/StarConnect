@@ -1,6 +1,7 @@
 
 app.controller("AppController",function ($scope,$http,$window){
-	
+
+	$scope.currentArtist;
 	$scope.currentUser;
 	$scope.collegename = "cla"
 	jQuery(document).ready(function(){
@@ -35,7 +36,7 @@ app.controller("AppController",function ($scope,$http,$window){
         		var player;
         		var id = key.id;
         		var video_id = key.connects[0]['upload_link'].slice(32);
-        		player = new YT.Player(id, {
+        		player = new YT.Player(""+id+"", {
 		            height: '390',
 		            width: '640',
 		            videoId: video_id,
