@@ -1,6 +1,5 @@
 
 app.controller("AppController",function ($scope,$http,$window){
-
 	$scope.currentArtist;
 	$scope.currentUser;
 	$scope.collegename = "cla"
@@ -24,10 +23,10 @@ app.controller("AppController",function ($scope,$http,$window){
 	}).then(function successCallback(response){
 		$scope.artists = response.data['artists'];
 		$scope.cas = response.data['ambassadors'];
-		
+		artistsforvids = $scope.artists;
         })
 	$(document).ready(function(){
-		
+
 		var data = {}
 		$scope.login = false;
 		if($window.sessionStorage.token){
