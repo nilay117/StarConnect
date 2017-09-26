@@ -1,5 +1,6 @@
 
 app.controller("AppController",function ($scope,$http,$window){
+	
 	$scope.currentUser;
 	$scope.collegename = "cla"
 	jQuery(document).ready(function(){
@@ -22,7 +23,35 @@ app.controller("AppController",function ($scope,$http,$window){
 	}).then(function successCallback(response){
 		$scope.artists = response.data['artists'];
 		$scope.cas = response.data['ambassadors'];
-	});
+		var tag = document.createElement('script');
+
+    	tag.src = "https://www.youtube.com/iframe_api";
+      	var firstScriptTag = document.getElementsByTagName('script')[0];
+      	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+          //  This function creates an <iframe> (and YouTube player)
+          //    after the API code downloads.
+        $window.onYouTubeIframeAPIReady = function() {
+        	$.each($scope.artists,function(i,key){
+        		var player;
+        		console.log(key);
+        		var id = key.id;
+        		var video_id = key.connects[0]['upload_link'].slice(32);
+        		player = new YT.Player(id, {
+		            height: '390',
+		            width: '640',
+		            videoId: video_id,
+		            origin:"https://www.example.com",
+		            events: {
+		                'onReady': onPlayerReady
+		            }
+	        	});	
+        	})
+          }
+          // 4. The API will call this function when the video player is ready.
+          function onPlayerReady(event) {
+            event.target.playVideo();
+          }
+        })
 	$(document).ready(function(){
 		var data = {}
 		$scope.login = false;

@@ -1,6 +1,6 @@
 
 app.controller("artistController",function($scope,$routeParams,$window){
-        $scope.currentArtist = $scope.artists[$routeParams.artistCode];  
+      $scope.currentArtist = $scope.artists[$routeParams.artistCode];  
           //This code loads the IFrame Player API code asynchronously.
       var tag = document.createElement('script');
 
