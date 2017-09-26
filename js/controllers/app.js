@@ -1,5 +1,6 @@
 
 app.controller("AppController",function ($scope,$http,$window){
+	$scope.currentArtist;
 	$scope.currentUser;
 	$scope.collegename = "cla"
 	jQuery(document).ready(function(){
