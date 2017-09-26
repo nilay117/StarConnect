@@ -1,8 +1,6 @@
 
 app.controller("AppController",function ($scope,$http,$window){
-
-	
-
+	$scope.currentUser;
 	$scope.collegename = "cla"
 	jQuery(document).ready(function(){
 	$scope.closeMenu = function(){
@@ -31,7 +29,7 @@ app.controller("AppController",function ($scope,$http,$window){
 		if($window.sessionStorage.token){
 			delete $window.sessionStorage.token;
 			data['username'] = $window.sessionStorage.username;
-			data['password'] = $window.sessionStorage.password
+			data['password'] = $window.sessionStorage.password;
 			$http({
 				method:'POST',
 				url:'https://starconnect.org.in/connect/api/api_token',
@@ -49,6 +47,7 @@ app.controller("AppController",function ($scope,$http,$window){
 						}
 				}).then(function successCallback(response){
 					$scope.currentUser = response.data;
+					console.log('response.data')
 					$scope.login = true;
 				});
 			});

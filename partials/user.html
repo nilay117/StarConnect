@@ -1,11 +1,12 @@
-
+s
 <div class="artistWrapper" >
 		<div class="header" style="height:30vh">
 			<div class="top">
 				<nav style="background-color:transparent;box-shadow:none;z-index:5">
 					<div class="nav-wrapper">
 					  <a class="brand-logo" style="height:100%;font-weight:bold;display:flex;align-items:center" ng-href="#!/"><img src="img/logo.png"/ style="height:50px;width:50px;">star connect</a>
-				       <div id="button-collapse" class="button-collapse" style="cursor:pointer"><i ng-click="menuClick()" class="material-icons">menu</i></div>
+				      <div class="button-collapse" style="cursor:pointer" ng-click="menuClick()"><i class="material-icons">menu</i></div>
+				      <div class="button-cross" ng-click="closeMenu()"><i class="material-icons">close</i></div>
 				      <ul class="right hide-on-med-and-down">
 				      	<li><a ng-href="#!trending">Trending</a></li>
 						<li><a ng-href="#!whatsup">Dilli Beats</a></li>
@@ -39,85 +40,47 @@
 
 			</div>
 			<div class="heading" style="height:30vh;">
-				<p style="font-size:350%;position:relative;">{{currentArtist.name}}</p>
-				<p style="font-size:100%;position:relative;margin-top:0">{{currentArtist.subtitle}}</p>
+				<p style="font-size:350%;position:relative;">{{currentUser.first_name}}</p>
+				<p style="font-size:100%;position:relative;margin-top:0">{{currentUser.last_name}}</p>
 				
 			</div>
 		</div>
 		<div class="content">
 			<div class="box">
-					<div class="image" style="background:url('../img/artist.png');background-size:cover;background-position: 60% 50%;"><div class="button">FOLLOW</div></div>
+					<div class="image" style="background:url('../{{currentUser.profile_picture}}');background-size:cover;background-position: 60% 50%;"><div class="button">FOLLOW</div></div>
 					<div class="dataArtist">
 							<div class="about">
 								<p style="color:#5a449a;font-weight:bold;font-size:250%:;text-align:center">ABOUT</p>
-								<!-- <p>{{currentArtist.text}}</p> -->
-								<p style="color:#808080;font-size:150%;text-align:center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-								consequat. 	</p>
+								<!-- <p>{{currentUser.text}}</p> -->
+								<p style="color:#808080;font-size:150%;text-align:center">{{currentUser.about}}</p>
 							</div>
 							<div class="follow">
 								<div class="sb">
 									<p>FOLLOWERS</p>
-									<p>0</p>
+									<p>{{currentUser.followers}}</p>
 								</div>
 								<div class="sb">
 									<p>FOLLOWING</p>
-									<p>0</p>
+									<p>{{currentUser.following}}</p>
 								</div>
 							</div>
 					</div> 
 			</div>
 			<div style="flex-shrink:0;flex-grow:0;flex-basis:70%;">	
-				<div class="videoPlayer" style="padding-bottom:0;">
-				<p class="user_heading" style="	font-weight: bold;
-	font-size: 200%;
-	color:#464c4c;">Favorite Videos</p>
-				<div class="celebCards" style="padding:0;margin:0;width:20%">
-			
-			<ul >
-				<li class="celebCard" ng-repeat="artist in artists" ng-click="setArtist(artist.code)">
-				<a ng-href="#!artist/{{currentArtist.code}}">
-					<div class= "image" style="background:url({{artist.img}});background-size:cover;background-position:50% 50% ;"></div></a>
-					<div class="wrapper">
-						<div class="name">Vinayak</div>
-							<div class="subtitle"></div>
-							<div class="underline" style="width:8em;height:4px;"></div>
-							<div class="links" >
-								<a href={{artist.fb}}><img src="img/fb.png" /></a>
-								<a href={{artist.twitter}}><img src="img/twitter.png" /></a>
-								<a href={{artist.insta}}><img src="img/insta.png" /></a>
+				<div class="videoPlayer">
+						<div class="sb">
+							<div>
+								<div style="color:#edeeee;font-size:100%;margin-bottom:5px;font-weight:bold">Latest Workpiece</div>
+								<div style="color:#757575;font-size:200%;font-weight:bold">{{currentUser.song}}</div>
+							</div>	
+							<div class="logos">
+								<img src="../img/share.svg">
+								<img src="../img/like.svg">
+							</div>	
 						</div>
-					</div>
-				</li>
-			</ul>
-		</div>
+					<div id="player"></div>
+						
 				</div>
-				<div class="videoPlayer" style="padding-bottom:0;">
-				<p class="user_heading" style="	font-weight: bold;
-	font-size: 200%;
-	color:#464c4c;">Top Artists</p>
-				<div class="celebCards" style="padding:0;margin:0;width:20%">
-			
-			<ul >
-				<li class="celebCard" ng-repeat="artist in artists" ng-click="setArtist(artist.code)">
-				<a ng-href="#!artist/{{currentArtist.code}}">
-					<div class= "image" style="background:url({{artist.img}});background-size:cover;background-position:50% 50% ;"></div></a>
-					<div class="wrapper">
-						<div class="name">{{artist.name}}</div>
-							<div class="subtitle">{{artist.subtitle}}</div>
-							<div class="underline" style="width:8em;height:4px;"></div>
-							<div class="links" >
-								<a href={{artist.fb}}><img src="img/fb.png" /></a>
-								<a href={{artist.twitter}}><img src="img/twitter.png" /></a>
-								<a href={{artist.insta}}><img src="img/insta.png" /></a>
-						</div>
-					</div>
-				</li>
-			</ul>
-		</div>
-				</div>	
-			</div>
 				<!-- <div class="endorsements">
 					<ul>
 					<li class="endorse">
