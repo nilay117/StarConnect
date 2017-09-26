@@ -1,8 +1,8 @@
 
 app.controller("artistController",function($scope,$routeParams,$window){
-	
+        $scope.currentArtist = $scope.artists[$routeParams.artistCode];  
+  
         jQuery(document).ready(function(){
-		$scope.currentArtist = $scope.artists[$routeParams.artistCode];  
           //  This function creates an <iframe> (and YouTube player)
           //    after the API code downloads.
           var player;
