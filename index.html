@@ -58,13 +58,7 @@
 	<script type="text/javascript">
 	//This code loads the IFrame Player API code asynchronously.
       var tag = document.createElement('script');
-
-      tag.src = "https://www.youtube.com/iframe_api";
-      var firstScriptTag = document.getElementsByTagName('script')[0];
-      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-      
-	$(document).ready(function(){
+      	$(document).ready(function(){
 		var canvasLoader = function(){				
 			var self = this;
 	  		window.requestAnimFrame=function(){return window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||function(a){window.setTimeout(a,1E3/60)}}();

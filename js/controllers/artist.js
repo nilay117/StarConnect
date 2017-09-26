@@ -1,5 +1,12 @@
 
 app.controller("artistController",function($scope,$routeParams,$window){
+		//This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
         $scope.currentArtist = $scope.artists[$routeParams.artistCode];  
         jQuery(document).ready(function(){
           //  This function creates an <iframe> (and YouTube player)
