@@ -12,6 +12,7 @@ app.controller("artistController",function($scope,$routeParams,$window){
               height: '390',
               width: '640',
               videoId: $scope.currentArtist.connects[0]['upload_link'].slice(32),
+		origin:"https://www.example.com",
               events: {
                 'onReady': onPlayerReady
               }
