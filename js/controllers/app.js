@@ -33,7 +33,6 @@ app.controller("AppController",function ($scope,$http,$window){
         $window.onYouTubeIframeAPIReady = function() {
         	$.each($scope.artists,function(i,key){
         		var player;
-        		console.log(key);
         		var id = key.id;
         		var video_id = key.connects[0]['upload_link'].slice(32);
         		player = new YT.Player(id, {
