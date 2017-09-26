@@ -24,6 +24,9 @@ app.controller("AppController",function ($scope,$http,$window){
 	}).then(function successCallback(response){
 		$scope.artists = response.data['artists'];
 		$scope.cas = response.data['ambassadors'];
+		
+        })
+	$(document).ready(function(){
 		var tag = document.createElement('script');
 
     	tag.src = "https://www.youtube.com/iframe_api";
@@ -51,8 +54,6 @@ app.controller("AppController",function ($scope,$http,$window){
           function onPlayerReady(event) {
             event.target.playVideo();
           }
-        })
-	$(document).ready(function(){
 		var data = {}
 		$scope.login = false;
 		if($window.sessionStorage.token){
