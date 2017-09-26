@@ -1,43 +1,5 @@
 
 app.controller("artistController",function($scope,$routeParams,$window){
-      var tag = document.createElement('script');
-
-      tag.src = "https://www.youtube.com/iframe_api";
-      var firstScriptTag = document.getElementsByTagName('script')[0];
-      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-	$scope.currentArtist = $scope.artists[$routeParams.artistCode];  
-          //This code loads the IFrame Player API code asynchronously.
-      var id = $scope.currentArtist.id;
-        jQuery(document).ready(function(){
-          //  This function creates an <iframe> (and YouTube player)
-          //    after the API code downloads.
-          var player;
-	console.log("abcde");
-          $window.onYouTubeIframeAPIReady = function() {
-            console.log($scope.currentArtist,$scope.currentArtist.connects[0]['upload_link'],$scope.currentArtist.connects[0]['upload_link'].slice(32))
-	console.log(id)
-            player = new YT.Player(""+id+"", {
-              height: '390',
-              width: '640',
-              videoId: $scope.currentArtist.connects[0]['upload_link'].slice(32),
-              origin:"https://www.example.com",
-              events: {
-                'onReady': onPlayerReady
-              }
-            });
-          }
-          // 4. The API will call this function when the video player is ready.
-          function onPlayerReady(event) {
-            event.target.playVideo();
-          }
-        })
-	function endCall(){
-		console.log("removing")
-		tag.parent.removeChild(tag);
-	}
-	window.addEventListener('beforeunload',function(){
-		endCall();
-		return null;
-	});
+      $scope.currentArtist = $scope.artists[$routeParams.artistCode];  
+      
 });
