@@ -1,5 +1,31 @@
 
 app.controller("artistController",function($scope,$routeParams,$window){
       $scope.currentArtist = $scope.artists[$routeParams.artistCode];  
-      
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+          //  This function creates an <iframe> (and YouTube player)
+          //    after the API code downloads.
+        $window.onYouTubeIframeAPIReady = function() {
+          $.each($scope.artists,function(i,key){
+            var player;
+            var id = key.id;
+            var video_id = key.connects[0]['upload_link'].slice(32);
+            player = new YT.Player(""+id+"", {
+                height: '390',
+                width: '640',
+                videoId: video_id,
+                origin:"https://www.example.com",
+                events: {
+                    'onReady': onPlayerReady
+                }
+            }); 
+          })
+          }
+          // 4. The API will call this function when the video player is ready.
+          function onPlayerReady(event) {
+            event.target.playVideo();
+          }
 });
