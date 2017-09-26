@@ -8,7 +8,7 @@ app.controller("artistController",function($scope,$routeParams,$window){
           var player;
           $window.onYouTubeIframeAPIReady = function() {
             console.log($scope.currentArtist,$scope.currentArtist.connects[0]['upload_link'],$scope.currentArtist.connects[0]['upload_link'].slice(32))
-            player = new YT.Player('player' + $scope.currentArtist.id, {
+            player = new YT.Player($scope.currentArtist.id, {
               height: '390',
               width: '640',
               videoId: $scope.currentArtist.connects[0]['upload_link'].slice(32),
