@@ -953,7 +953,7 @@ nav{
 	body,html{
 		font-size:14px; 
 	}
-	.main-heading{
+	.main-heading,.content .title{
 		font-size: 220%;
 	}	
 	.videos{
@@ -1018,6 +1018,45 @@ nav{
 		left:250px;
 		top: -20px;
 	}
+	.content{
+		display: block;
+		padding:0;
+		margin:0;
+		padding-bottom: 50px;
+	}
+	.box
+	{
+		top:0;
+		margin-right: 0;
+	}
+	.box .image{
+		height: 50vh;
+	}
+	.box .image .button{
+		display: none;
+	}
+	.box .dataArtist .about{
+		text-align: center;
+		margin-bottom: 5%;
+	}
+	.box .dataArtist .follow{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.sb{
+		width: 40%;
+	}
+
+	.content .title{
+		text-align: center;
+	}
+	.header .heading{
+		height: auto !important;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
 }
 
 @media screen and (max-width : 480px) {
@@ -1025,8 +1064,13 @@ nav{
 		font-size: 12px;
 		line-height: 1.7;
 	}
-	.main-heading{
-		font-size: 210%;
+	.content .title{
+		white-space: pre-wrap;
+		text-align: center;
+		border-bottom: none;
+	}
+	.main-heading,.content .title{
+		font-size: 210% !important;
 		margin-top: 15px !important;
 		margin-bottom: 10px !important;
 	}
@@ -1076,6 +1120,10 @@ nav{
 	.bigCelebCard{
 		height: 40vh;
 	}
+
+	.box .image{
+		height: 35vh;
+	}
 	.submitButton{
 		padding: 10px;
 		padding-left: 30px;
@@ -1102,6 +1150,10 @@ nav{
 	}
 	.bigCelebCard{
 		height: 30vh;
+	}
+
+	.box .image{
+		height: 25vh;
 	}
 	.leaderboard{
 		height: 250px;

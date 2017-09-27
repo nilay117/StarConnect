@@ -5,7 +5,8 @@
 				<nav style="background-color:transparent;box-shadow:none;z-index:5">
 					<div class="nav-wrapper">
 					  <a class="brand-logo" style="height:100%;font-weight:bold;display:flex;align-items:center" ng-href="#!/"><img src="img/logo.png"/ style="height:50px;width:50px;">star connect</a>
-				      <a href="/" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+				      <div class="button-collapse" style="cursor:pointer" ng-click="menuClick()"><i class="material-icons">menu</i></div>
+				      <div class="button-cross" ng-click="closeMenu()"><i class="material-icons">close</i></div>
 				      <ul class="right hide-on-med-and-down">
 				      	<li><a ng-href="#!trending">Trending</a></li>
 						<li><a ng-href="#!whatsup">Dilli Beats</a></li>
@@ -18,9 +19,9 @@
 
 						<li class="login-link" ng-hide="login"><a ng-href="#!login" >Login</a></li>
 						<li class="signup-button" ng-hide="login"><a ng-href="/#!/joinus">Register</a></li>
-<li class=profile-button ng-show="login"><a ng-href="#!profile">Hi, {{currentUser.first_name}}</a></li>
+						<li class=profile-button ng-show="login"><a ng-href="#!profile">Hi, {{currentUser.first_name}}</a></li>
 				      </ul>
-				      <ul class="side-nav" id="mobile-demo">
+				      <ul class="side-nav" id="nav-mobile">
 				      	<li><a ng-href="#!trending">Trending</a></li>
 						<li><a ng-href="#!whatsup">Dilli Beats</a></li>
 
@@ -36,11 +37,10 @@
 				      </ul>
 				    </div>
 </nav>
-
 			</div>
 			<div class="heading" style="height:30vh;">
-				<p style="font-size:350%;">{{currentCeleb.name}}</p>
-				<p style="font-size:100%;margin-top:0;margin-bottom:50px;">{{currentCeleb.subtitle}}</p>
+				<p class="main-heading">{{currentCeleb.name}}</p>
+				<p class="main-heading2">{{currentCeleb.subtitle}}</p>
 				
 			</div>
 		</div>
