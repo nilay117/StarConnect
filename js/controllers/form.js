@@ -1,5 +1,5 @@
 
-app.controller("formController", function ($scope, $http) {
+app.controller("formController", function ($scope, $http, $window) {
     $scope.collegename = "bla";
 $(document).ready(function(){
     // var fd="";
