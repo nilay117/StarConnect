@@ -56,6 +56,21 @@
 		</div>
 
 	<script type="text/javascript">
+	(function(){
+		var p = document.createElement('script');
+		p.type = 'text/javascript';
+		p.async = true;
+		p.src = 'https://apis.google.com/js/client.js?onload=onGoogleLoadFunction';
+
+		var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(p, s);
+
+	})();
+
+	function onGoogleLoadFunction(){
+		gapi.client.setApiKey('AIzaSyAQOu6Tmq1P_Ty1_GaF63KY1DAhFnV7hd4');
+		gapi.client.load('plus','v1',function(){})
+	}
 	//This code loads the IFrame Player API code asynchronously.
 	var tag = document.createElement('script');
 

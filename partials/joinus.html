@@ -44,7 +44,7 @@
 	<p style="font-size:250%;color:#464c4c;font-weight:bold;margin:0;margin-top:3%;padding:0">Register</p>
 	<div class="underline" style="width:4em"></div>
 	<p class="centerpara joinus_details">
-			Check out the <a ng-href="#!whatsup">Dilli Beats</a> page for more details on what you're signing up for! You have to pay Rs.250 to register.
+			Check out the <a ng-href="#!whatsup" style="color:#808080 !important;font-weight:bold;text-decoration:underline">Dilli Beats</a> page for more details on what you're signing up for! You have to pay Rs.250 to register.
 	</p>
  	<div class="form">
 		<form id = "register_form">
@@ -86,14 +86,12 @@
 			</div>
 			<div class="row">
 			<div class="col s12 m12 l6">
-			<label>College (Choose Other if college isn't present in the list)</label>
+			<label>College (Choose Other if college isn't present)</label>
 			<select id="college" style="display:block !important" ng-change="check()" ng-model="collegename">
 				<option ng-repeat = "college in colleges | orderBy:'name'" value={{college.name}}>{{college.name}}</option>
 				<option value="other" id="other-college">Other</option>
 			</select>
 			</div>
-			</div>
-			<div class="row">
 			<div class="col s12 m12 l6" id="disabled-field" class="low_opacity">
 			<label>If other, please specify!</label>
 			<input type="text" disabled name="email" id="college_other" placeholder="doejohn@contact.com">
@@ -115,5 +113,8 @@
 		</form>
 	</div>
 	<button class="submitButton" id="submit">Submit</button>
+	<p style="font-size:250%;color:#464c4c;font-weight:bold;margin:0;margin-top:3%;padding:0">Sign-up(Music Enthusiasts)</p>
+	<div class="underline" style="width:4em"></div>
+	<input type="button" name="google" value="Google Login" ng-click="onGoogleLogin">
 </div>
 </div>

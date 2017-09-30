@@ -1,7 +1,6 @@
 
 app.controller("AppController",function ($scope,$http,$window){
 	$scope.currentArtist;
-	$scope.currentUser;
 	$scope.collegename = "cla"
 	jQuery(document).ready(function(){
 	$scope.closeMenu = function(){
@@ -13,7 +12,7 @@ app.controller("AppController",function ($scope,$http,$window){
    			jQuery('.button-cross').css("display","block")
     	}
 	})
-	  
+	
 	$scope.currentUser;
 	$scope.thankyou_data;
 	$scope.baseUrl = 'https://starconnect.org.in/'
@@ -56,6 +55,36 @@ app.controller("AppController",function ($scope,$http,$window){
 			});
 		}
 	})
+
+	$scope.onGoogleLogin = function(){
+		var params = {
+			'clientid':'673271682426-3r79fohr72fgqvvp3dldk3837t3vafl2.apps.googleusercontent.com',
+			'cookiepolicy':'single_host_origin',
+			'callback':function(result){
+				if(result['status']['signed_in']){
+					$scope.login = true;
+					var request = gapi.client.plus.people.get(
+						{
+							'userId':'me'
+						}
+					);
+
+					request.execute(function(resp){
+						$scope.apply(function(){
+							$scope.currentUser.first_name = resp.displayName;
+							$scope.currentUser.email = resp.emails[0].value;
+							$scope.currentUser.profile_pic = resp.image.url;
+						});
+					});
+					console.log($scope.currentUser)
+				}
+			},
+			'approvalprompt':'force',
+			'scope':'https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/plus.profile.email.read'
+		}
+
+		gapi.auth.signIn(params);
+	}
 	$scope.celebs = {
 		"1": {
 			"code":"1",
