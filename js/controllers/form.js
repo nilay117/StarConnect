@@ -70,7 +70,7 @@ $(document).ready(function(){
             }
             }).then(function successCallback(response){
                 $scope.thankyou_data = response.data['message'];
-                $window.location.href = '/#/!success';
+                $window.location.href = '/#!success';
             }, function errorCallback(response) {
                 document.getElementById('alert-msg').innerHTML = response.data['message'];
                 document.getElementById('alert-wrapper').className = "";
