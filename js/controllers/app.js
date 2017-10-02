@@ -13,7 +13,7 @@ app.controller("AppController",function ($scope,$http,$window){
     	}
 	})
 	
-	$scope.currentUser;
+	$scope.currentUser = {};
 	$scope.thankyou_data;
 	$scope.baseUrl = 'https://starconnect.org.in/'
 	$http({
@@ -28,6 +28,13 @@ app.controller("AppController",function ($scope,$http,$window){
 
 		var data = {}
 		$scope.login = false;
+		console.log("check",$window.sessionStorage.currentUser);
+		if($window.sessionStorage.currentUser){
+			$scope.currentUser["first_name"] = $window.sessionStorage.name;
+			$scope.currentUser["email"] = $window.sessionStorage.email;
+			$scope.currentUser["profile_pic"] = $window.sessionStorage.profile_pic;
+			$scope.login = true;
+		}
 		if($window.sessionStorage.token){
 			delete $window.sessionStorage.token;
 			data['username'] = $window.sessionStorage.username;
@@ -57,6 +64,7 @@ app.controller("AppController",function ($scope,$http,$window){
 	})
 
 	$scope.onGoogleLogin = function(){
+		console.log("Google is clicked!!")
 		var params = {
 			'clientid':'673271682426-3r79fohr72fgqvvp3dldk3837t3vafl2.apps.googleusercontent.com',
 			'cookiepolicy':'single_host_origin',
@@ -70,17 +78,22 @@ app.controller("AppController",function ($scope,$http,$window){
 					);
 
 					request.execute(function(resp){
-						$scope.apply(function(){
-							$scope.currentUser.first_name = resp.displayName;
-							$scope.currentUser.email = resp.emails[0].value;
-							$scope.currentUser.profile_pic = resp.image.url;
+						$scope.$apply(function(){
+							$scope.currentUser["first_name"] = resp.displayName;
+							$scope.currentUser["email"] = resp.emails[0].value;
+							$scope.currentUser["profile_pic"] = resp.image.url;
+							$window.sessionStorage.name = $scope.currentUser["first_name"];
+							$window.sessionStorage.email = $scope.currentUser["email"];
+							$window.sessionStorage.profile_pic = $scope.currentUser["profile_pic"];
+							$window.sessionStorage.currentUser = true;
+							$window.location.href = '/#!/';
 						});
-					});
-					console.log($scope.currentUser)
+						console.log($window.sessionStorage.currentUser);
+					});				
 				}
 			},
 			'approvalprompt':'force',
-			'scope':'https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/plus.profile.email.read'
+			'scope':'https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/plus.profile.emails.read'
 		}
 
 		gapi.auth.signIn(params);

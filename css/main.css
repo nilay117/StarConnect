@@ -935,6 +935,17 @@ nav{
 .media-card{
 	margin:50px;
 }
+.social-login{
+	display: flex;
+	width: 60%;
+	justify-content: space-around;
+}
+.social-login img{
+	cursor: pointer;
+	width: 330px;
+	height: 80px;
+	margin-top: 20px;
+}
 @media screen and (max-width: 992px){
 	.button-collapse{
 		display: block;
