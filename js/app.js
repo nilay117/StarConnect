@@ -41,4 +41,5 @@ app.config(function($routeProvider,$httpProvider){
 			})
 			.when('/success',{templateUrl:"../partials/success.html"})
 			.when('/partners',{templateUrl:"../partials/partners.html"})
+			.when('/thankyou',{templateUrl:"../partials/thankyou.html"})
 });
