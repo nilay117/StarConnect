@@ -16,6 +16,7 @@
 	<!-- <script type="text/javascript" src="js/main.js"></script> -->
 	<script type="text/javascript" src="js/app.js"></script>
 	<script type="text/javascript" src="js/controllers/app.js"></script>
+	<script type="text/javascript" src="js/controllers/alert.js"></script>
 	<script type="text/javascript" src="js/controllers/artist.js"></script>
 	<script type="text/javascript" src="js/controllers/celeb.js"></script>
 	<script type="text/javascript" src="js/controllers/form.js"></script>
@@ -39,7 +40,7 @@
 			<canvas id="canvas" width="250" height="250"></canvas>
 		</div>
 		<div ng-view class="wrapper" ng-controller="AppController"></div>
-		<div id="alert-wrapper" class="hidden">
+		<div id="alert-wrapper" ng-controller="alertController" class="hidden">
 			<div id="alert-box">
 				<div class="head">
 					Star Connect
@@ -56,10 +57,8 @@
 		</div>
 
 	<script type="text/javascript">
-	
-	$scope.closeAlert = function(e){
-		document.getElementById('alert-wrapper').className = "hidden";
-	}
+
+
 	(function(){
 		var p = document.createElement('script');
 		p.type = 'text/javascript';
