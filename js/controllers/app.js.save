@@ -42,9 +42,7 @@ app.controller("AppController",function ($scope,$http,$window){
             }); 
           })
       	}
-    
-     
-	$scope.currentUser = {};
+$scope.currentUser = {};
 	$scope.thankyou_data;
 	$scope.baseUrl = 'https://starconnect.org.in/'
 	$http({
