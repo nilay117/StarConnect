@@ -20,7 +20,7 @@
 	<script type="text/javascript" src="js/controllers/celeb.js"></script>
 	<script type="text/javascript" src="js/controllers/form.js"></script>
 	<script type="text/javascript" src="js/controllers/ca.js"></script>	
-	<script type="text/javascript" src="js/controllers/video.js"></script>	
+	<!-- <script type="text/javascript" src="js/controllers/video.js"></script>	 -->
 	<script type="text/javascript" src="js/controllers/login.js"></script>
 	<script type="text/javascript" src="js/controllers/trending.js"></script>
 
@@ -65,51 +65,22 @@
 		var s = document.getElementsByTagName('script')[0];
         s.parentNode.insertBefore(p, s);
 
+
+      	//This code loads the IFrame Player API code asynchronously.
+		var tag = document.createElement('script');
+
+		tag.src = "https://www.youtube.com/iframe_api?onload=onYoutubeLoadFunction";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+
 	})();
 
 	function onGoogleLoadFunction(){
 		gapi.client.setApiKey('AIzaSyAQOu6Tmq1P_Ty1_GaF63KY1DAhFnV7hd4');
 		gapi.client.load('plus','v1',function(){})
 	}
-	//This code loads the IFrame Player API code asynchronously.
-	var tag = document.createElement('script');
 
-	tag.src = "https://www.youtube.com/iframe_api";
-        var firstScriptTag = document.getElementsByTagName('script')[0];
-        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-	var artistsforvids;
-
-	$(document).ready(function(){
-		              //  This function creates an <iframe> (and YouTube player)
-          //    after the API code downloads.
-        var tag = document.createElement('script');
-
-      	tag.src = "https://www.youtube.com/iframe_api";
-      	var firstScriptTag = document.getElementsByTagName('script')[0];
-      	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-        
-        function onYouTubeIframeAPIReady() {
-          $.each(artistsforvids,function(i,key){
-            var player;
-            var id = key.id;
-	console.log(key,id);
-            var video_id = key.connects[0]['upload_link'].slice(32);
-            player = new YT.Player(""+id+"", {
-                height: '390',
-                width: '640',
-                videoId: video_id,
-                origin:"https://www.example.com",
-                events: {
-                    'onReady': onPlayerReady
-                }
-            }); 
-          })
-          }
-          // 4. The API will call this function when the video player is ready.
-          function onPlayerReady(event) {
-            event.target.playVideo();
-          }
 		var canvasLoader = function(){				
 			var self = this;
 	  		window.requestAnimFrame=function(){return window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||function(a){window.setTimeout(a,1E3/60)}}();
