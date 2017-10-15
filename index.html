@@ -56,6 +56,10 @@
 		</div>
 
 	<script type="text/javascript">
+	
+	$scope.closeAlert = function(e){
+		document.getElementById('alert-wrapper').className = "hidden";
+	}
 	(function(){
 		var p = document.createElement('script');
 		p.type = 'text/javascript';
