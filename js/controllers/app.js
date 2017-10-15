@@ -529,7 +529,4 @@ app.controller("AppController",function ($scope,$http,$window){
 		$scope.currentCeleb = $scope.celebs[code];
 	}
 
-	$scope.closeAlert = function(e){
-		document.getElementById('alert-wrapper').className = "hidden";
-	}
 });
