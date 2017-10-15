@@ -25,8 +25,11 @@ app.controller("AppController",function ($scope,$http,$window){
 		$scope.artists = response.data['artists'];
 		$scope.cas = response.data['ambassadors'];
 		artistsforvids = $scope.artists;
+ 
+       })
+	$(document).ready(function(){
 		
-		        var tag = document.createElement('script');
+		var tag = document.createElement('script');
 
 		tag.src = "https://www.youtube.com/iframe_api";
         var firstScriptTag = document.getElementsByTagName('script')[0];
@@ -53,10 +56,7 @@ app.controller("AppController",function ($scope,$http,$window){
                 }
             }); 
           })
-      	} 
-        })
-	$(document).ready(function(){
-
+      	}
 		var data = {}
 		$scope.login = false;
 		console.log("check",$window.sessionStorage.currentUser);
