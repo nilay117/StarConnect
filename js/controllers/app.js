@@ -11,6 +11,7 @@ app.controller("AppController",function ($scope,$http,$window){
   		 	jQuery(".side-nav").addClass('open');
    			jQuery('.button-cross').css("display","block")
     	}
+	});
 		var artistsforvids;
 		   	//This code loads the IFrame Player API code asynchronously.
 
@@ -27,7 +28,7 @@ app.controller("AppController",function ($scope,$http,$window){
 		
 		        var tag = document.createElement('script');
 
-		tag.src = "https://www.youtube.com/iframe_api?onload=onYoutubeLoadFunction";
+		tag.src = "https://www.youtube.com/iframe_api";
         var firstScriptTag = document.getElementsByTagName('script')[0];
         firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
@@ -35,7 +36,7 @@ app.controller("AppController",function ($scope,$http,$window){
 	     //  This function creates an <iframe> (and YouTube player)
     	  //    after the API code downloads.
         function onYouTubeIframeAPIReady() {
-
+		console.log("onYouTubeIframeAPIReady");
           $.each(artistsforvids,function(i,key){
           	console.log(i,key);
             var player;
@@ -527,5 +528,4 @@ app.controller("AppController",function ($scope,$http,$window){
 	$scope.setCeleb = function(code){
 		$scope.currentCeleb = $scope.celebs[code];
 	}
-
 });
