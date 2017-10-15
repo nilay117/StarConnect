@@ -11,16 +11,26 @@ app.controller("AppController",function ($scope,$http,$window){
   		 	jQuery(".side-nav").addClass('open');
    			jQuery('.button-cross').css("display","block")
     	}
-	})
-
-	   	//This code loads the IFrame Player API code asynchronously.
-		var tag = document.createElement('script');
+	})	
+	var artistsforvids;
+		 	var tag = document.createElement('script');
 
 		tag.src = "https://www.youtube.com/iframe_api?onload=onYoutubeLoadFunction";
         var firstScriptTag = document.getElementsByTagName('script')[0];
         firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-	var artistsforvids;
+	$scope.currentUser = {};
+	$scope.thankyou_data;
+	$scope.baseUrl = 'https://starconnect.org.in/'
+	$http({
+		method:'GET',
+		url:'https://starconnect.org.in/connect/api/get_dashboard/'
+	}).then(function successCallback(response){
+		$scope.artists = response.data['artists'];
+		$scope.cas = response.data['ambassadors'];
+		artistsforvids = $scope.artists;
+
+
 		console.log("Youtube loaded!")
 	     //  This function creates an <iframe> (and YouTube player)
     	  //    after the API code downloads.
@@ -42,18 +52,6 @@ app.controller("AppController",function ($scope,$http,$window){
             }); 
           })
       	}
-    
-     
-	$scope.currentUser = {};
-	$scope.thankyou_data;
-	$scope.baseUrl = 'https://starconnect.org.in/'
-	$http({
-		method:'GET',
-		url:'https://starconnect.org.in/connect/api/get_dashboard/'
-	}).then(function successCallback(response){
-		$scope.artists = response.data['artists'];
-		$scope.cas = response.data['ambassadors'];
-		artistsforvids = $scope.artists;
         })
 	$(document).ready(function(){
 
