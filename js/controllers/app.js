@@ -27,7 +27,7 @@ app.controller("AppController",function ($scope,$http,$window){
 		artistsforvids = $scope.artists;
  
        })
-	$(document).ready(function(){
+	jQuery(document).ready(function(){
 		
 		var tag = document.createElement('script');
 
