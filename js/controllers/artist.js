@@ -1,5 +1,5 @@
 
-app.controller("artistController",function($scope,$rootScope,$sce,$routeParams,$window){
+app.controller("artistController",function($scope,$rootScope,$http,$sce,$routeParams,$window){
     $scope.currentArtist = {};
     $scope.url = '';
     $scope.init = function(){
