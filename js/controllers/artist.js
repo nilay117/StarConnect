@@ -1,5 +1,5 @@
 
-app.controller("artistController",function($scope,$sce,,$routeParams,$window){
+app.controller("artistController",function($scope,$sce,$routeParams,$window){
     $scope.currentArtist = $scope.artists[$routeParams.artistCode];    
   //   var tag = document.createElement('script');
 
