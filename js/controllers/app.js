@@ -31,18 +31,18 @@ app.controller("AppController",function ($scope,$http,$window){
 		
 		var tag = document.createElement('script');
 
-		tag.src = "https://www.youtube.com/iframe_api?onload=onYoutubeLoadFunction";
+		tag.src = "https://www.youtube.com/iframe_api";
         var firstScriptTag = document.getElementsByTagName('script')[0];
         firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 		console.log("Youtube loaded!")
 	     //  This function creates an <iframe> (and YouTube player)
     	  //    after the API code downloads.
+        var player;
         function onYouTubeIframeAPIReady() {
 
           $.each(artistsforvids,function(i,key){
           	console.log(i,key);
-            var player;
             var id = key.id;
 			console.log(key,id);
             var video_id = key.connects[0]['upload_link'].slice(32);
