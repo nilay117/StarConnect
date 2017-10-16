@@ -27,7 +27,6 @@ app.controller("AppController",function ($scope,$rootScope,$http,$window){
 		// artistsforvids = $scope.artists;
  
        });
-		$rootScope.getData();
 		var data = {}
 		$scope.login = false;
 		console.log("check",$window.sessionStorage.currentUser);
