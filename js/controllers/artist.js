@@ -6,7 +6,7 @@ app.controller("artistController",function($scope,$sce,$routeParams,$window){
 		// tag.src = "https://www.youtube.com/iframe_api";
   //       var firstScriptTag = document.getElementsByTagName('script')[0];
   //       firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-        $scope.url = $sce.trustAsResourceUrl("https://www.youtube.com/embed/sENM2wA_FTg");
+        $scope.url = $sce.trustAsResourceUrl("https://www.youtube.com/embed/"+$scope.currentArtist.connects[0]['upload_link'].slice(32));
 		console.log("Youtube loaded!")
 	     //  This function creates an <iframe> (and YouTube player)
     	  //    after the API code downloads.
