@@ -10,6 +10,7 @@ app.controller("artistController",function($scope,$routeParams,$window){
 		console.log("Youtube loaded!")
 	     //  This function creates an <iframe> (and YouTube player)
     	  //    after the API code downloads.
+	jQuery(document).ready(function(){
         var player;
         function onYouTubeIframeAPIReady() {
         	console.log(1);
@@ -34,4 +35,5 @@ app.controller("artistController",function($scope,$routeParams,$window){
       	function onPlayerReady(event) {
         event.target.playVideo();
       }
+	});
 });
