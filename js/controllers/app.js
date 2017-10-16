@@ -40,23 +40,28 @@ app.controller("AppController",function ($scope,$http,$window){
     	  //    after the API code downloads.
         var player;
         function onYouTubeIframeAPIReady() {
-
-          $.each(artistsforvids,function(i,key){
-          	console.log(i,key);
-            var id = key.id;
-			console.log(key,id);
-            var video_id = key.connects[0]['upload_link'].slice(32);
-            player = new YT.Player(""+id+"", {
+            player = new YT.Player("player", {
                 height: '390',
                 width: '640',
-                videoId: video_id,
+                videoId: 'M7lc1UVf-VE',
                 origin:"https://www.example.com",
                 events: {
                     'onReady': onPlayerReady
                 }
             }); 
-          })
+
+   //        $.each(artistsforvids,function(i,key){
+   //        	console.log(i,key);
+   //          var id = key.id;
+			// console.log(key,id);
+   //          var video_id = key.connects[0]['upload_link'].slice(32);
+   //        })
       	}
+
+      	function onPlayerReady(event) {
+        event.target.playVideo();
+      }
+
 		var data = {}
 		$scope.login = false;
 		console.log("check",$window.sessionStorage.currentUser);
