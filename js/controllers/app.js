@@ -18,7 +18,6 @@ app.controller("AppController",function ($scope,$rootScope,$http,$window){
 	$scope.currentUser = {};
 	$scope.thankyou_data;
 	$scope.baseUrl = 'https://starconnect.org.in/'
-	$rootScope.getData = function(){
 		$http({
 		method:'GET',
 		url:'https://starconnect.org.in/connect/api/get_dashboard/'
@@ -28,7 +27,6 @@ app.controller("AppController",function ($scope,$rootScope,$http,$window){
 		// artistsforvids = $scope.artists;
  
        });
-}
 		$rootScope.getData();
 		var data = {}
 		$scope.login = false;
