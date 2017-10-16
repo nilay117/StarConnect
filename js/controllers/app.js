@@ -1,5 +1,5 @@
 
-app.controller("AppController",function ($scope,$http,$window){
+app.controller("AppController",function ($scope,$rootScope,$http,$window){
 	$scope.currentArtist;
 	$scope.collegename = "cla"
 	jQuery(document).ready(function(){
@@ -22,7 +22,7 @@ app.controller("AppController",function ($scope,$http,$window){
 		method:'GET',
 		url:'https://starconnect.org.in/connect/api/get_dashboard/'
 	}).then(function successCallback(response){
-		$scope.artists = response.data['artists'];
+		$rootScope.artists = response.data['artists'];
 		$scope.cas = response.data['ambassadors'];
 		artistsforvids = $scope.artists;
  

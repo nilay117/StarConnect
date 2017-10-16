@@ -1,6 +1,6 @@
 
-app.controller("artistController",function($scope,$sce,$routeParams,$window){
-    $scope.currentArtist = $scope.artists[$routeParams.artistCode];    
+app.controller("artistController",function($scope,$rootScope,$sce,$routeParams,$window){
+    $scope.currentArtist = $rootScope.artists[$routeParams.artistCode];    
   //   var tag = document.createElement('script');
 
 		// tag.src = "https://www.youtube.com/iframe_api";
