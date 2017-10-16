@@ -14,19 +14,22 @@ app.controller("AppController",function ($scope,$rootScope,$http,$window){
 	});
 		var artistsforvids;
 		   	//This code loads the IFrame Player API code asynchronously.
-
+    $rootScope.artists = {};
 	$scope.currentUser = {};
 	$scope.thankyou_data;
 	$scope.baseUrl = 'https://starconnect.org.in/'
-	$http({
+	$rootScope.getData = function(){
+		$http({
 		method:'GET',
 		url:'https://starconnect.org.in/connect/api/get_dashboard/'
 	}).then(function successCallback(response){
 		$rootScope.artists = response.data['artists'];
 		$scope.cas = response.data['ambassadors'];
-		artistsforvids = $scope.artists;
+		// artistsforvids = $scope.artists;
  
-       })
+       });
+}
+		$rootScope.getData();
 		var data = {}
 		$scope.login = false;
 		console.log("check",$window.sessionStorage.currentUser);
