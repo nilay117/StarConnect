@@ -1,14 +1,6 @@
 
 app.controller("artistController",function($scope,$rootScope,$sce,$routeParams,$window){
-    if(Object.keys($rootScope.artists).length == 0){
-    	$rootScope.getData();
-    	init();
-    }else{
-    	init();
-    }
-    $scope.currentArtist = {};
-    $scope.url = '';
-    var init = function(){
+    $scope.init = function(){
 
     $scope.currentArtist = $rootScope.artists[$routeParams.artistCode];    
     	console.log($rootScope.artists,$scope.currentArtist);
@@ -19,5 +11,13 @@ app.controller("artistController",function($scope,$rootScope,$sce,$routeParams,$
         $scope.url = $sce.trustAsResourceUrl("https://www.youtube.com/embed/"+videourl);
 		console.log("Youtube loaded!")
     }
+    if(Object.keys($rootScope.artists).length == 0){
+    	$rootScope.getData();
+    	$scope.init();
+    }else{
+    	$scope.init();
+    }
+    $scope.currentArtist = {};
+    $scope.url = '';
 
 });
