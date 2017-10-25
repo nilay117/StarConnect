@@ -23,7 +23,7 @@ app.controller("AppController",function ($scope,$rootScope,$http,$window){
    * Load the API's client and auth2 modules.
    * Call the initClient function after the modules load.
    */
-  function handleClientLoad() {
+  $rootScope.handleClientLoad = function() {
     gapi.load('client:auth2', initClient);
   }
 
