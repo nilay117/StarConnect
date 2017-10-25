@@ -9,7 +9,7 @@ app.controller("AppController",function ($scope,$rootScope,$http,$window){
 	}
     $scope.menuClick = function(){
   		 	jQuery(".side-nav").addClass('open');
-   			jQuery('.button-cross').css("display","block")
+   			jQuery('.button-cross').css("display","block")	
     	}
 	});
 		var artistsforvids;
