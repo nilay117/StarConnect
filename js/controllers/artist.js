@@ -48,7 +48,7 @@ app.controller("artistController",function($scope,$rootScope,$http,$sce,$routePa
     // 'scope' field specifies space-delimited list of access scopes
 
     gapi.client.init({
-        'clientId': 'REPLACE_ME',
+        'clientId': '673271682426-v02ov7tgrtrofqiu00e7cect8bkkgsk5.apps.googleusercontent.com',
         'discoveryDocs': ['https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest'],
         'scope': 'https://www.googleapis.com/auth/youtube.force-ssl https://www.googleapis.com/auth/youtubepartner'
     }).then(function () {
