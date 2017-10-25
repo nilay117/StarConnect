@@ -3,13 +3,14 @@ app.controller("artistController",function($scope,$rootScope,$http,$sce,$routePa
     $scope.currentArtist = {};
     $scope.url = '';
     $scope.currentArtist = $rootScope.artists[$routeParams.artistCode];    
+    var videourl;
 
+    $scope.init = function(){
+    	
 	var videourl = $scope.currentArtist.connects[0]['upload_link'].slice(32);
   	if(videourl.indexOf('&') != -1){
   		videourl = videourl.substr(0,videourl.indexOf('&'));
   	}
-
-    $scope.init = function(){
     	console.log($rootScope.artists,$scope.currentArtist);
         $scope.url = $sce.trustAsResourceUrl("https://www.youtube.com/embed/"+videourl);
 		// console.log("Youtube loaded!")
