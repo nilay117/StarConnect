@@ -137,8 +137,6 @@ app.controller("artistController",function($scope,$rootScope,$http,$sce,$routePa
     }
     executeRequest(request);
   }
-
-  /**
     $scope.init = function(){
     $scope.currentArtist = $rootScope.artists[$routeParams.artistCode];    
 	var videourl = $scope.currentArtist.connects[0]['upload_link'].slice(32);
