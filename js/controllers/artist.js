@@ -38,6 +38,7 @@ app.controller("artistController",function($scope,$rootScope,$http,$sce,$routePa
         'discoveryDocs': ['https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest'],
         'scope': 'https://www.googleapis.com/auth/youtube.force-ssl https://www.googleapis.com/auth/youtubepartner'
     }).then(function () {
+    	console.log("gapi successCallback");
       GoogleAuth = gapi.auth2.getAuthInstance();
 
       // Listen for sign-in state changes.
@@ -47,7 +48,8 @@ app.controller("artistController",function($scope,$rootScope,$http,$sce,$routePa
       setSigninStatus();
 
       // Call handleAuthClick function when user clicks on "Authorize" button.
-      likeVideo = function(){
+      $scope.likeVideo = function(){
+      	console.log("clicked");
         handleAuthClick(event);
     }
     });
