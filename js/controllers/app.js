@@ -8,7 +8,7 @@ app.controller("AppController",function ($scope,$rootScope,$http,$window){
 		jQuery('.button-cross').css("display","none")
 	}
     $scope.menuClick = function(){
-  		 	jQuery(".side-nav").addClass('open');
+  		 	jQuery(".side-nav").addClass('open');	
    			jQuery('.button-cross').css("display","block")	
     	}
 	});
@@ -23,7 +23,7 @@ app.controller("AppController",function ($scope,$rootScope,$http,$window){
    * Load the API's client and auth2 modules.
    * Call the initClient function after the modules load.
    */
-  $rootScope.handleClientLoad = function() {
+  function handleClientLoad() {
     gapi.load('client:auth2', initClient);
   }
 
@@ -33,7 +33,7 @@ app.controller("AppController",function ($scope,$rootScope,$http,$window){
     // 'scope' field specifies space-delimited list of access scopes
 
     gapi.client.init({
-        'clientId': 'REPLACE_ME',
+        'clientId': '673271682426-v02ov7tgrtrofqiu00e7cect8bkkgsk5.apps.googleusercontent.com',
         'discoveryDocs': ['https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest'],
         'scope': 'https://www.googleapis.com/auth/youtube.force-ssl https://www.googleapis.com/auth/youtubepartner'
     }).then(function () {
